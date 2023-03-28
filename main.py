@@ -82,17 +82,21 @@ def query_from_DOI(doi):
     try: 
         query = cr.works(doi)
     except: 
+        print(f"Failed to pull DOI {doi}")
         return None
     
     if query['message-type'] == 'work': 
+        print(f"Found paper: {doi}")
         return query
-    else: 
-        return None
+    
+    print(f"Unable to pull {doi}")
+    return None
 
 def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_start_weight=0.01, 
          keyword_discard=0.8, keywords=[]):
     
     if not current_paper.get_references(): 
+        print(f"Current paper does not have references on system: {current_paper.get_title()}")
         return choice(list(starting_papers))
      
     if random() < back_to_start_weight: 
@@ -102,18 +106,32 @@ def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_sta
     # if we have already seen paper, don't download again
 
     doi = random_reference.get_DOI()
+    if not doi: 
+        if not random_reference.get_title(): 
+            print("Empty paper title and empty DOI")
+        else:
+            print(f"No DOI for {random_reference.get_title()} found")
+        return choice(list(starting_papers))
+    
     if doi not in seen_DOIs:
-        query = cr.works(ids=doi)
+        try: 
+            query = query_from_DOI(doi)
+        except: 
+            return choice(list(starting_papers))
         try:
             random_paper = make_paper_from_query(query)
         except: 
+            print(f"Unable to get useful query for: {random_paper.get_title()}")
             return choice(list(starting_papers))
+
     else: 
+        print(f"Paper already seen: {random_reference.get_title()}")
         random_paper = next(x for x in seen_papers if x.get_DOI() == doi)
     
-    if random() > 0.8: 
+    if random() > 0.01: 
         return random_paper
     
+    """
     title = random_reference.get_title()
     if title: 
         title = title.lower()
@@ -121,6 +139,7 @@ def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_sta
             if i in title:
                 return random_paper
         
+    """
     return choice(list(starting_papers))
 
 def main(): 
@@ -138,14 +157,15 @@ def main():
                 starting_DOIs.add(doi)
 
     starting_papers = set()
-    seen_papers = dict()
+    seen_papers = set()
+    paper_counter = dict()
 
     for i in starting_DOIs:
-        result = cr.works(ids = i)
+        result = query_from_DOI(i)
         paper = make_paper_from_query(result)
         starting_papers.add(paper)
 
-    
+    """
     for i in starting_papers: 
         refs = i.get_references()
         dois = [i.get_DOI() for i in refs]
@@ -159,20 +179,26 @@ def main():
                 print(new_paper)
             else: 
                 print(q)
+    """
 
 
     paper_pointer = choice(list(starting_papers))
-    for _ in range(100): 
+    for _ in range(200): 
+        print(f"iteration {_}")
         new_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                          keywords=['pharmacokinetics', 'pharmacodynamics'])
         
         if new_paper not in starting_papers: 
             if new_paper not in seen_papers: 
-                seen_papers[new_paper] = 1
+                paper_counter[new_paper] = 1
+                seen_DOIs.add(new_paper.get_DOI())
+                seen_papers.add(new_paper)
             else: 
-                seen_papers[new_paper] += 1
+                paper_counter[new_paper] += 1
         
-    for i,j in seen_papers.items(): 
+        paper_pointer = new_paper
+        
+    for i,j in sorted(paper_counter.items(), key=lambda item: item[1]): 
         print(f"Paper {i.get_title()} seen {j} times")
 
 main()
