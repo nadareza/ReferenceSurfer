@@ -79,7 +79,11 @@ def make_paper_from_query(query):
 
 def query_from_DOI(doi): 
     cr = Crossref()
-    query = cr.works(doi)
+    try: 
+        query = cr.works(doi)
+    except: 
+        return None
+    
     if query['message-type'] == 'work': 
         return query
     else: 
@@ -141,21 +145,21 @@ def main():
         paper = make_paper_from_query(result)
         starting_papers.add(paper)
 
-    """
-        for i in starting_papers: 
-            refs = i.get_references()
-            dois = [i.get_DOI() for i in refs]
-            for d in dois: 
-                if d: 
-                    q = query_from_DOI(d)
-                else: 
-                    q = None
-                if q: 
-                    new_paper = make_paper_from_query(q)
-                    print(new_paper)
-                else: 
-                    print(q)
-    """
+    
+    for i in starting_papers: 
+        refs = i.get_references()
+        dois = [i.get_DOI() for i in refs]
+        for d in dois: 
+            if d: 
+                q = query_from_DOI(d)
+            else: 
+                q = None
+            if q: 
+                new_paper = make_paper_from_query(q)
+                print(new_paper)
+            else: 
+                print(q)
+
 
     paper_pointer = choice(list(starting_papers))
     for _ in range(100): 
