@@ -198,6 +198,10 @@ def main():
         
         if new_paper.get_references(): 
             paper_pointer = new_paper
+        elif seen_papers: 
+            paper_pointer = choice(list(seen_papers))
+        else: 
+            paper_pointer = choice(list(starting_papers))
         
     for i,j in sorted(paper_counter.items(), key=lambda item: item[1]): 
         print(f"Paper {i.get_title()} seen {j} times")
