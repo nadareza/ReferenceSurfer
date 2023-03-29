@@ -92,7 +92,7 @@ def query_from_DOI(doi):
     print(f"Unable to pull {doi}")
     return None
 
-def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_start_weight=0.01, 
+def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_start_weight=0.15, 
          keyword_discard=0.8, keywords=[]):
     
     if not current_paper.get_references(): 
@@ -102,44 +102,44 @@ def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_sta
     if random() < back_to_start_weight: 
         return choice(list(starting_papers))
     
-    random_reference = choice(current_paper.get_references())
-    # if we have already seen paper, don't download again
+    for _ in range(10): 
+        random_reference = choice(current_paper.get_references())
+        # if we have already seen paper, don't download again
 
-    doi = random_reference.get_DOI()
-    if not doi: 
-        if not random_reference.get_title(): 
-            print("Empty paper title and empty DOI")
-        else:
-            print(f"No DOI for {random_reference.get_title()} found")
-        return choice(list(starting_papers))
-    
-    if doi not in seen_DOIs:
-        try: 
-            query = query_from_DOI(doi)
-        except: 
-            return choice(list(starting_papers))
-        try:
-            random_paper = make_paper_from_query(query)
-        except: 
-            print(f"Unable to get useful query for: {random_paper.get_title()}")
-            return choice(list(starting_papers))
-
-    else: 
-        print(f"Paper already seen: {random_reference.get_title()}")
-        random_paper = next(x for x in seen_papers if x.get_DOI() == doi)
-    
-    if random() > 0.01: 
-        return random_paper
-    
-    """
-    title = random_reference.get_title()
-    if title: 
-        title = title.lower()
-        for i in keywords: 
-            if i in title:
-                return random_paper
+        doi = random_reference.get_DOI()
+        if not doi: 
+            if not random_reference.get_title(): 
+                print("Empty paper title and empty DOI")
+            else:
+                print(f"No DOI for {random_reference.get_title()} found")
+            continue
         
-    """
+        if doi not in seen_DOIs:
+            try: 
+                query = query_from_DOI(doi)
+            except: 
+                return choice(list(starting_papers))
+            try:
+                random_paper = make_paper_from_query(query)
+            except: 
+                print(f"Unable to get useful query for: {random_reference.get_title()}")
+                continue
+
+        else: 
+            print(f"Paper already seen: {random_reference.get_title()}")
+            random_paper = next(x for x in seen_papers if x.get_DOI() == doi)
+        
+        return random_paper
+        
+        """
+        title = random_reference.get_title()
+        if title: 
+            title = title.lower()
+            for i in keywords: 
+                if i in title:
+                    return random_paper
+            
+        """
     return choice(list(starting_papers))
 
 def main(): 
@@ -196,7 +196,8 @@ def main():
             else: 
                 paper_counter[new_paper] += 1
         
-        paper_pointer = new_paper
+        if new_paper.get_references(): 
+            paper_pointer = new_paper
         
     for i,j in sorted(paper_counter.items(), key=lambda item: item[1]): 
         print(f"Paper {i.get_title()} seen {j} times")
