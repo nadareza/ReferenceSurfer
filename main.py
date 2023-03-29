@@ -183,7 +183,7 @@ def main():
 
 
     paper_pointer = choice(list(starting_papers))
-    for _ in range(200): 
+    for _ in range(10): 
         print(f"iteration {_}")
         new_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                          keywords=['pharmacokinetics', 'pharmacodynamics'])
@@ -204,6 +204,15 @@ def main():
             paper_pointer = choice(list(starting_papers))
         
     for i,j in sorted(paper_counter.items(), key=lambda item: item[1]): 
-        print(f"Paper {i.get_title()} seen {j} times")
+        print(f"Paper {i.get_title()} DOI {i.get_DOI()} seen {j} times")
+
+    with open('rs_output_10.csv', 'w', newline='') as csvfile:
+
+        writer = csv.writer(csvfile, delimiter=",")
+        writer.writerow(['DOI', 'title', 'times_seen'])
+        for paper,times_seen in paper_counter.items(): 
+            writer.writerow([paper.get_DOI(), 
+                             paper.get_title(), 
+                             times_seen])
 
 main()
