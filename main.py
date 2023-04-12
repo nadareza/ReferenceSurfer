@@ -72,13 +72,14 @@ class Paper:
         name = f"{self.get_first_author()} et al, {self.get_year()}"
         return name
         
-class Tree(Paper, NodeMixin):
-    def __init__(self, DOI, title, author, year, name, node, references = None, parent = None, children = None):
-        super().__init__(self, DOI, title, author, year, name, references = None)
-        self._node = node
+class PaperNode(Paper, NodeMixin):
+    def __init__(self, DOI, title, author, year, references = None, parent = None, children = None):
+        super().__init__(DOI, title, author, year, references)
+        self.name = self.make_name()
         self._parent = parent
         self._children = children
     
+    # let's not use add_children for now
     def add_children(self):
         if self._references:
             for reference in self._references:
@@ -92,7 +93,7 @@ def make_paper_from_query(query):
     date_time = message['created']['date-time']
     year = datetime.fromisoformat(date_time).year
     references = message['reference'] if message['references-count'] > 0 else None
-    return Paper(DOI=doi,
+    return PaperNode(DOI=doi,
                  title=title,
                  author=author,
                  year=year,
@@ -190,6 +191,7 @@ def main():
     for i in starting_DOIs:
         result = query_from_DOI(i)
         paper = make_paper_from_query(result)
+        paper.children = [PaperNode('123', 'test', 'Me', '1920'), PaperNode('456', 'testing', 'you', '1924')]
         starting_papers.add(paper)
 
     """
@@ -208,15 +210,18 @@ def main():
                 print(q)
     """
 
+    for each_node in starting_papers:
+        for pre, fill, node in RenderTree(each_node): 
+            treestr = u"%s%s" % (pre, node.name)
+            print(treestr.ljust(8), node.make_name())
+
     paper_pointer = choice(list(starting_papers))
     for _ in range(10): 
         print(f"iteration {_}")
         new_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                          keywords=['pharmacokinetics', 'pharmacodynamics'])
         
-        make_nodes(new_paper)
-        for each_node in tree_nodes:
-             print(RenderTree(each_node))
+        #make_nodes(new_paper)
 
         if new_paper not in starting_papers: 
             if new_paper not in seen_papers: 
