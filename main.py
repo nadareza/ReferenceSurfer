@@ -12,6 +12,7 @@ from habanero import Crossref
 import csv
 from datetime import datetime
 from random import random, choice
+from anytree import Node, RenderTree, NodeMixin
 
 class Paper:
     def __init__(self, DOI, title, author, year, references = None):
@@ -19,10 +20,11 @@ class Paper:
         self._title = title[0] if title else None
         self._author = author
         self._year = year
+        self._name = self.make_name()
         self._references = []
         if references:
             self.add_references(references)
-
+    
     def add_references(self, references):
         for i in references:
             doi = i['DOI'] if 'DOI' in i else None
@@ -30,7 +32,7 @@ class Paper:
             author = i['author'] if 'author' in i else None
             year = i['year'] if 'year' in i else None
             ref = Paper(doi, title, author, year)
-            self._references.append(ref)
+            self._references.append(ref)                     
     
     def __repr__(self) -> str:
         return f"""
@@ -63,6 +65,25 @@ class Paper:
     def get_DOI(self):
         return self._DOI
     
+    def get_year(self):
+        return self._year   
+    
+    def make_name(self):
+        name = f"{self.get_first_author()} et al, {self.get_year()}"
+        return name
+        
+class Tree(Paper, NodeMixin):
+    def __init__(self, DOI, title, author, year, name, node, references = None, parent = None, children = None):
+        super().__init__(self, DOI, title, author, year, name, references = None)
+        self._node = node
+        self._parent = parent
+        self._children = children
+    
+    def add_children(self):
+        if self._references:
+            for reference in self._references:
+                self._children.append = reference        
+       
 def make_paper_from_query(query):
     message = query['message']
     doi = message['DOI']
@@ -142,6 +163,12 @@ def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_sta
         """
     return choice(list(starting_papers))
 
+def make_nodes(self, new_paper):
+    tree_nodes = []
+    new_node = Node(new_paper.make_name(), children = self._children)
+    tree_nodes.add(new_node)
+    return tree_nodes
+
 def main(): 
     cr = Crossref()
     STARTING_CORPUS_PATH = 'corpus.csv'
@@ -181,13 +208,16 @@ def main():
                 print(q)
     """
 
-
     paper_pointer = choice(list(starting_papers))
     for _ in range(10): 
         print(f"iteration {_}")
         new_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                          keywords=['pharmacokinetics', 'pharmacodynamics'])
         
+        make_nodes(new_paper)
+        for each_node in tree_nodes:
+             print(RenderTree(each_node))
+
         if new_paper not in starting_papers: 
             if new_paper not in seen_papers: 
                 paper_counter[new_paper] = 1
