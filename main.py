@@ -164,12 +164,6 @@ def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_sta
         """
     return choice(list(starting_papers))
 
-def make_nodes(self, new_paper):
-    tree_nodes = []
-    new_node = Node(new_paper.make_name(), children = self._children)
-    tree_nodes.add(new_node)
-    return tree_nodes
-
 def main(): 
     cr = Crossref()
     STARTING_CORPUS_PATH = 'corpus.csv'
@@ -187,43 +181,32 @@ def main():
     starting_papers = set()
     seen_papers = set()
     paper_counter = dict()
+    tree = []
 
     for i in starting_DOIs:
         result = query_from_DOI(i)
         paper = make_paper_from_query(result)
-        paper.children = [PaperNode('123', 'test', 'Me', '1920'), PaperNode('456', 'testing', 'you', '1924')]
+        #paper.children = [PaperNode('123', 'test', 'Me', '1920'), PaperNode('456', 'testing', 'you', '1924')]
         starting_papers.add(paper)
 
-    """
-    for i in starting_papers: 
-        refs = i.get_references()
-        dois = [i.get_DOI() for i in refs]
-        for d in dois: 
-            if d: 
-                q = query_from_DOI(d)
-            else: 
-                q = None
-            if q: 
-                new_paper = make_paper_from_query(q)
-                print(new_paper)
-            else: 
-                print(q)
-    """
-
-    for each_node in starting_papers:
-        for pre, fill, node in RenderTree(each_node): 
-            treestr = u"%s%s" % (pre, node.name)
-            print(treestr.ljust(8), node.make_name())
 
     paper_pointer = choice(list(starting_papers))
-    for _ in range(10): 
+    for _ in range(300): 
         print(f"iteration {_}")
         new_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                          keywords=['pharmacokinetics', 'pharmacodynamics'])
-        
-        #make_nodes(new_paper)
 
         if new_paper not in starting_papers: 
+            if new_paper in tree:
+                # if we already have a node for this paper in tree, add another node only
+                # if parent different to previously recorded nodes
+                previous_nodes = [i for i in tree if i == new_paper]
+                if not any([True for i in previous_nodes if i.parent == paper_pointer]): 
+                    new_paper.parent = paper_pointer
+                    tree.append(new_paper)
+            else: 
+                new_paper.parent = paper_pointer
+                tree.append(new_paper)
             if new_paper not in seen_papers: 
                 paper_counter[new_paper] = 1
                 seen_DOIs.add(new_paper.get_DOI())
@@ -238,8 +221,17 @@ def main():
         else: 
             paper_pointer = choice(list(starting_papers))
         
-    for i,j in sorted(paper_counter.items(), key=lambda item: item[1]): 
+    sorted_paper_counter = sorted(paper_counter.items(), key=lambda item: item[1], reverse=True)
+
+    for i,j in sorted_paper_counter: 
         print(f"Paper {i.get_title()} DOI {i.get_DOI()} seen {j} times")
+
+    for top_paper,_ in sorted_paper_counter[:3]: 
+        for tree_node in tree:
+            if top_paper == tree_node: 
+                for pre, fill, node in RenderTree(tree_node): 
+                    treestr = u"%s%s" % (pre, node.name)
+                    print(treestr.ljust(8), node.make_name())
 
     with open('rs_output_10.csv', 'w', newline='') as csvfile:
 
