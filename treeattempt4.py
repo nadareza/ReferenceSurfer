@@ -290,10 +290,10 @@ def main():
 
 
     paper_pointer = choice(list(starting_papers))
-    for _ in range(10): 
+    for _ in range(50): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
-                         keywords=['pharmacokinetics', 'pharmacodynamics'], back_to_start_weight=0.15)
+                         keywords=['pharmacokinetics', 'pharmacodynamics'])
         new_paper = new_wrapped_paper.get_paper_node()
 
         if not new_wrapped_paper.is_back_to_start(): 

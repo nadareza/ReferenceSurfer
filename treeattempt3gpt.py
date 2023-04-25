@@ -1,13 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# Filename: 	main.py
-# Author: 	Alessandro Gerada, Nada Reza
-# Date: 	2023-03-24
-# Copyright: 	Alessandro Gerada, Nada Reza 2023
-# Email: 	alessandro.gerada@liverpool.ac.uk
-
-"""Documentation"""
-
 from habanero import Crossref
 import csv
 from datetime import datetime
@@ -69,7 +59,7 @@ class Paper:
         return self._year   
     
     def make_name(self):
-        name = f"{self.get_first_author()} et al, {self.get_year()} ({self.get_DOI()})" 
+        name = f"{self.get_first_author()} et al, {self.get_year()}"
         return name
         
 class PaperNode(Paper, NodeMixin):
@@ -80,6 +70,7 @@ class PaperNode(Paper, NodeMixin):
         if children:
             self.children = children
     
+    # let's not use add_children for now
     def add_children(self, children):
         if not children: 
             return
@@ -183,7 +174,6 @@ def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_sta
     
     for _ in range(10): 
         random_reference = choice(current_paper.get_references())
-
         # if we have already seen paper, don't download again
 
         doi = random_reference.get_DOI()
@@ -239,7 +229,6 @@ def walk_tree(node):
         new_node.add_children(node.get_children())
         return walk_tree(new_node)
 
-
 def main(): 
     cr = Crossref()
     STARTING_CORPUS_PATH = 'corpus.csv'
@@ -264,11 +253,10 @@ def main():
         paper = make_paper_from_query(result)
         #paper.children = [PaperNode('123', 'test', 'Me', '1920'), PaperNode('456', 'testing', 'you', '1924')]
         starting_papers.add(paper)
-        tree.append(paper)
 
 
     paper_pointer = choice(list(starting_papers))
-    for _ in range(50): 
+    for _ in range(10): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                          keywords=['pharmacokinetics', 'pharmacodynamics'])
@@ -305,30 +293,10 @@ def main():
 
     for i,j in sorted_paper_counter: 
         print(f"Paper {i.make_name()} {i.get_title()} DOI {i.get_DOI()} seen {j} times")
-    """""
+
     for top_paper,_ in sorted_paper_counter: 
         clean_root = walk_tree(top_paper)
         for pre, fill, node in RenderTree(clean_root): 
-                    treestr = u"%s%s" % (pre, node.name)
-                    print(treestr.ljust(8))
-    """
-
-    for leaf in tree:
-     try: 
-         print(f" ID:{leaf.name}, parent:{leaf.parent.name}, children{leaf.children.name}")
-     except: 
-         continue
-
-    tree_roots = set()
-    for leaf in tree:
-        if leaf.parent == None:
-            tree_roots.add(leaf)
-        else: 
-            continue
-    
-    for root in tree_roots:
-        print(f"Root: {root}")
-        for pre, fill, node in RenderTree(root): 
                     treestr = u"%s%s" % (pre, node.name)
                     print(treestr.ljust(8))
 

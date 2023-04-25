@@ -1,0 +1,764 @@
+DOI,title,author,year,times_seen
+10.1097/qco.0000000000000494,How to optimize antibiotic pharmacokinetic/pharmacodynamics for Gram-negative infections in critically ill patients,Heffernan,2018,2
+10.1016/j.accpm.2015.12.012,Assessment of the National French recommendations regarding the dosing regimen of 8mg/kg of gentamicin in patients hospitalised in intensive care units,Allou,2016,1
+10.1097/ftd.0b013e31818b6b2f,Suboptimal Aminoglycoside Dosing in Critically Ill Patients,Rea,2008,1
+10.1034/j.1399-6576.1999.430707.x,Factors affecting gentamicin pharmacokinetics in septic patients,Tang,2003,1
+10.1093/jac/dku567,Colistin and doripenem combinations against <i>Pseudomonas aeruginosa</i>: profiling the time course of synergistic killing and prevention of resistance,Ly,2015,5
+10.1093/cid/cit152,10 x '20 Progress--Development of New Drugs Active Against Gram-Negative Bacilli: An Update From the Infectious Diseases Society of America,Boucher,2013,1
+10.1086/510393,Infectious Diseases Society of America and the Society for Healthcare Epidemiology of America Guidelines for Developing an Institutional Program to Enhance Antimicrobial Stewardship,Dellit,2006,1
+10.1086/422647,Predicting Hospital Rates of Fluoroquinolone-Resistant Pseudomonas aeruginosa from Fluoroquinolone Use in US Hospitals and Their Surrounding Communities,Polk,2004,1
+10.1086/520193,Surveillance of Antimicrobial Use and Antimicrobial Resistance in United States Hospitals: Project ICARE Phase 2,Fridkin,2007,1
+10.1016/s0140-6736(07)61602-x,The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) statement: guidelines for reporting observational studies,von Elm,2007,1
+10.1136/bmj.325.7355.81,What is newsworthy? Longitudinal study of the reporting of medical research in two British newspapers,Bartlett,2002,1
+10.1086/520182,Impact of Infectious Diseases Specialists and Microbiological Data on the Appropriateness of Antimicrobial Therapy for Bacteremia,Byl,2008,1
+10.1128/aac.04099-14,Two Mechanisms of Killing of Pseudomonas aeruginosa by Tobramycin Assessed at Multiple Inocula via Mechanism-Based Modeling,Bulitta,2015,8
+10.2165/00003088-200544020-00005,Pharmacokinetic/Pharmacodynamic Modelling of Antibacterials In Vitro and In Vivo Using Bacterial Growth and Kill Kinetics,Mouton,2006,1
+10.1002/jps.2600751108,A Pharmacodynamic Model for the Activity of Antibiotics Against Microorganisms under Nonsaturable Conditions,Zhi,2006,1
+10.1007/bf01062346,A pharmacodynamic model for cell-cycle-specific chemotherapeutic agents,Jusko,2005,1
+10.1111/j.1749-6632.1971.tb46989.x,MATHEMATICAL SIMULATION IN CHEMOTHERAPY,Werkheiser,2006,1
+10.1128/jb.104.3.1223-1229.1970,"Kinetics of Allosteric Inhibition In Vivo: a Quantitative Analysis with Synchronous Cultures of
+            <i>Blastocladiella emersonii</i>",Smith,2020,1
+10.1146/annurev.bi.37.070168.002043,The Catalytic and Regulatory Properties of Enzymes,Koshland,2003,1
+10.1186/1471-2334-14-288,How do we use therapeutic drug monitoring to improve outcomes from severe infections in critically ill patients?,Wong,2014,1
+10.1093/jac/dkr442,Continuous versus intermittent infusion of vancomycin for the treatment of Gram-positive infections: systematic review and meta-analysis,Cataldo,2011,1
+10.1128/jcm.42.6.2398-2402.2004,"Relationship of MIC and Bactericidal Activity to Efficacy of Vancomycin for Treatment of Methicillin-Resistant
+            <i>Staphylococcus aureus</i>
+            Bacteremia",Sakoulas,2004,1
+10.1093/cid/cit334,Population Pharmacokinetics of Intravenous Polymyxin B in Critically Ill Patients: Implications for Selection of Dosage Regimens,Sandri,2013,4
+10.1128/aac.47.5.1766-1770.2003,Use of High-Performance Liquid Chromatography To Study the Pharmacokinetics of Colistin Sulfate in Rats following Intravenous Administration,Li,2003,1
+10.1016/s0378-4347(01)00326-7,"A simple method for the assay of colistin in human plasma, using pre-column derivatization with 9-fluorenylmethyl chloroformate in solid-phase extraction cartridges and reversed-phase high-performance liquid chromatography",Li,2002,2
+10.1016/s0021-9673(00)88926-8,Analytical and preparative methods for polymyxin antibiotics using high-performance liquid chromatography with a porous styrene-divinyllbenzene copolymer packing,Kimura,2002,1
+10.7164/antibiotics.22.449,"POLYMYXIN P, NEW ANTIBIOTICS OF POLYMYXIN GROUP",KIMURA,2012,1
+10.1016/s0021-9673(00)90888-4,"Quantitative high-pressure liquid chromatographic analysis of bacitracin, a polypeptide antibiotic",Tsuji,2002,1
+10.1042/bj0530597,Some properties of the bacitracin polypeptides,Newton,2015,1
+10.1111/imj.12036,Vancomycin therapeutics and monitoring: a contemporary approach,Avent,2012,1
+10.1016/j.clinthera.2007.06.014,A retrospective analysis of possible renal toxicity associated with vancomycin in patients with health care-associated methicillin-resistant Staphylococcus aureus pneumonia,Jeffres,2007,1
+10.1093/jac/32.2.325,Nephrotoxicity of vancomycin and aminoglycoside therapy separately and in combination,Goetz,2007,1
+10.1016/j.bmc.2016.11.008,Animal models in the pharmacokinetic/pharmacodynamic evaluation of antimicrobial agents,Zhao,2016,4
+10.1093/infdis/139.2.172,Prevention of Pyelonephritis Due to Escherichia coli in Rats with Gentamicin Stored in Kidney Tissue,Glauser,2011,1
+10.1016/j.mib.2013.06.010,PK/PD models in antibacterial development,Velkov,2013,3
+10.1007/bf01710009,Urinary tract infections in the 90s: Pathogenesis and management,Andriole,2005,1
+10.1001/jama.1980.03310060017014,Single-Dose Amoxicillin Therapy for Urinary Tract Infection,Rubin,2011,1
+10.2307/2528132,The Spectrum of a Linear Network: A Simple Approach to the n Compartment Problem,Turner,2006,1
+10.1111/1440-1681.13066,"Vancomycin dosing, monitoring and toxicity: Critical review of the clinical practice",Zamoner,2019,3
+10.1016/j.ijantimicag.2017.08.012,"Dose, duration, and animal sex predict vancomycin-associated acute kidney injury in preclinical studies",O'Donnell,2017,2
+10.1128/aac.01568-12,Systematic Review and Meta-Analysis of Vancomycin-Induced Nephrotoxicity Associated with Dosing Schedules That Maintain Troughs between 15 and 20 Milligrams per Liter,van Hal,2012,1
+10.1016/j.tiv.2004.03.013,Proliferative responses observed following vancomycin treatment in renal proximal tubule epithelial cells,King,2004,1
+10.1016/s0022-2143(98)90161-5,Purinergic receptors mediate cell proliferation and enhanced recovery from renal ischemia by adenosine triphosphate,Paller,2004,1
+10.1007/bf02634137,Purine nucleosides and nucleotides stimulate proliferation of a wide range of cell types,Rathbone,2007,1
+10.1111/j.1471-4159.1987.tb03419.x,"Extracellular Adenosine, Inosine, Hypoxanthine, and Xanthine in Relation to Tissue Nucleotides and Purines in Rat Striatum During Transient Ischemia",Hagberg,2006,2
+10.1111/j.1528-1157.1985.tb05684.x,Is Adenosine an Endogenous Anticonvulsant?,Dragunow,2007,1
+10.1128/aac.00483-18,Personalizing Polymyxin B Dosing Using an Adaptive Feedback Control Algorithm,Lakota,2018,4
+10.1111/cts.12490,"Precision Dosing: Public Health Need, Proposed Framework, and Anticipated Impact",Gonzalez,2017,1
+10.1128/aac.02025-12,Software for Dosage Individualization of Voriconazole for Immunocompromised Patients,Hope,2013,1
+10.1128/aac.50.4.1570-1572.2006,Voriconazole Therapeutic Drug Monitoring,Smith,2006,1
+10.1046/j.1365-2125.2003.01993.x,"Voriconazole, a novel wide-spectrum triazole: oral pharmacokinetics and safety",Purkins,2003,1
+10.1002/jcph.705,Pharmacometric Approaches to Personalize Use of Primarily Renally Eliminated Antibiotics in Preterm and Term Neonates,Wilbaux,2016,6
+10.5414/cpp49247,Getting the dose of vancomycin right in the neonate,Anker,2011,1
+10.1161/01.res.35.2.262,Release of Adenosine from Ischemic Brain,BERNE,2012,1
+10.1128/cmr.05041-11,Combination Therapy for Treatment of Infections with Gram-Negative Bacteria,Tamma,2012,6
+10.1001/archsurg.1988.01400260032002,Treatment of Severe Intra-abdominal Sepsis and/or Necrotic Foci by an 'Open-Abdomen' Approach,Garcia-Sabrido,2011,1
+10.1016/s0924-8579(02)00022-5,Animal model pharmacokinetics and pharmacodynamics: a critical review,Andes,2002,5
+10.1093/infdis/158.1.200,Evidence for a Slow Elimination Phase for Penicillin G,Ebert,2011,1
+10.1093/jac/dkw293,"Polymyxin B in combination with doripenem against heteroresistant
+            <i>Acinetobacter baumannii</i>
+            : pharmacodynamics of new dosing strategies",Rao,2016,6
+10.1093/jac/dks437,Pharmacokinetics of polymyxin B in patients on continuous venovenous haemodialysis,Sandri,2012,1
+10.1093/jac/dkq226,fAUC/MIC is the most predictive pharmacokinetic/pharmacodynamic index of colistin against Acinetobacter baumannii in murine thigh and lung infection models,Dudhani,2010,1
+10.1128/aac.00035-06,"Colistin Methanesulfonate Is an Inactive Prodrug of Colistin against
+            <i>Pseudomonas aeruginosa</i>",Bergen,2006,2
+10.1111/j.1469-0691.2005.01076.x,Development of a novel assay method for colistin sulphomethate,Wootton,2005,1
+10.1183/09031936.98.12030592,Four years' experience of intravenous colomycin in an adult cystic fibrosis unit,Ledson,2002,1
+10.1093/jac/dkx209,Too much of a good thing: a retrospective study of β-lactam concentration–toxicity relationships,Imani,2017,1
+10.1038/clpt.2011.58,Case Definition and Phenotype Standardization in Drug-Induced Liver Injury,Aithal,2011,1
+10.1002/hep.1840030510,Relapse Following Treatment Withdrawal in Patients with Autoimmune Chronic Active Hepatitis,Hegarty,2010,1
+10.1016/s0140-6736(73)92125-9,CONTROLLED TRIAL OF PREDNISONE AND AZATHIOPRINE IN ACTIVE CHRONIC HEPATITIS,Murray-Lyon,2004,1
+10.1093/oxfordjournals.qjmed.a067264,Controlled Prospective Trial of Corticosteroid Therapy in Active Chronic Hepatitis,COOK,2015,1
+10.1093/infdis/158.1.7,"Single, Large, Daily Dosing Versus Intermittent Dosing of Tobramycin for Treating Experimental Pseudomonas Pneumonia",Kapusnik,2011,1
+10.1001/jama.1978.03290180037019,Staphylococcus aureus Endocarditis,Faville,2011,1
+10.1128/aac.01707-09,Colistin Dosing and Nephrotoxicity in a Large Community Teaching Hospital,DeRyke,2010,1
+10.1016/s1473-3099(06)70580-1,Colistin: the re-emerging antibiotic for multidrug-resistant Gram-negative bacterial infections,Li,2006,1
+10.1191/1479972305cd045rs,Nebulized antibiotic therapy: the evidence,Conway,2005,1
+10.1378/chest.116.3.775,Use of Aerosolized Antibiotics in Patients With Cystic Fibrosis,Campbell,2003,1
+10.4172/2167-1052.s1-007,The Hollow Fiber Infection Model for Antimicrobial Pharmacodynamics and Pharmacokinetics,J.S. Cadwell,2013,2
+10.1093/jac/dkw355,High-intensity meropenem combinations with polymyxin B: new strategies to overcome carbapenem resistance in<i>Acinetobacter baumannii</i>,Lenhard,2016,6
+10.1038/nrd2201,Drugs for bad bugs: confronting the challenges of antibacterial discovery,Payne,2006,1
+10.1126/science.1106753,"A Diarylquinoline Drug Active on the ATP Synthase of
+            <i>Mycobacterium tuberculosis</i>",Andries,2004,1
+10.1016/s0960-894x(03)00074-x,Substituted 4-methylquinolines as a new class of anti-tuberculosis agents,Jain,2003,1
+10.1021/jo00354a026,"A general, selective, and convenient procedure of homolytic formylation of heteroaromatic bases",Giordano,2005,1
+10.1128/cmr.18.4.657-686.2005,Extended-Spectrum β-Lactamases: a Clinical Update,Paterson,2005,1
+10.1093/jac/43.1.79,Pharmacodynamics of levofloxacin and ciprofloxacin against Streptococcus pneumoniae,Lister,2002,3
+10.1093/jac/31.2.273,"Susceptibility of 170 penicillin-susceptible and penicillin-resistant pneumococci to six oral cephalosporins, four quinolones, desacetylcefotaxime, Ro 23-9424 and RP 67829",Spangler,2007,1
+10.1128/aac.01466-19,"Simultaneous Infection with
+            <i>Enterobacteriaceae</i>
+            and Pseudomonas aeruginosa Harboring Multiple Carbapenemases in a Returning Traveler Colonized with Candida auris",Khan,2019,6
+10.1128/aac.01733-10,Population Pharmacokinetics of Colistin Methanesulfonate and Formed Colistin in Critically Ill Patients from a Multicenter Study Provide Dosing Suggestions for Various Categories of Patients,Garonzik,2011,3
+10.1016/0020-7101(94)90100-7,Design of dosage regimens: A multiple model stochastic control approach,Bayard,2005,1
+10.1007/bf01061210,APriori lithium dosage regimen using population characteristics of pharmacokinetic parameters,Gaillot,2005,1
+10.1128/jb.59.5.625-643.1950,"THE EFFECTIVE CONCENTRATIONS OF PENICILLIN IN VITRO AND IN VIVO FOR STREPTOCOCCI, PNEUMOCOCCI, AND TREPONEMA PALLIDUM",Eagle,2020,4
+10.1001/jama.1949.02900260001001,DISCONTINUOUS THERAPY WITH PENICILLIN,TOMPSETT,2011,1
+10.1128/aac.00103-06,"Heteroresistance to Colistin in Multidrug-Resistant
+            <i>Acinetobacter baumannii</i>",Li,2006,1
+10.1128/aac.46.10.3304-3307.2002,Simple Method for Assaying Colistin Methanesulfonate in Plasma and Urine Using High-Performance Liquid Chromatography,Li,2002,1
+10.1097/00007691-200010000-00014,High-Performance Liquid Chromatographic Method for the Determination of Colistin in Serum,Le Brun,2003,1
+10.1016/0378-4347(93)80369-f,"Estimation of the lower limit of quantitation, a method detection performance parameter for biomedical assays, from calibration curves",Kucharczyk,2002,1
+10.1016/j.ijantimicag.2006.01.004,Multiplex PCR for genes encoding prevalent OXA carbapenemases in Acinetobacter spp.,WOODFORD,2006,1
+10.1128/aac.00327-13,New Dosing Strategies for an Old Antibiotic: Pharmacodynamics of Front-Loaded Regimens of Colistin at Simulated Pharmacokinetics in Patients with Kidney or Liver Disease,Rao,2013,5
+10.1111/j.1469-0691.2005.01161.x,Treatment and control of severe infections caused by multiresistant Pseudomonas aeruginosa,Rossolini,2005,1
+10.1128/aac.05028-11,Clinically Relevant Plasma Concentrations of Colistin in Combination with Imipenem Enhance Pharmacodynamic Activity against Multidrug-Resistant Pseudomonas aeruginosa at Multiple Inocula,Bergen,2011,1
+10.1016/j.clinthera.2008.01.015,"Colistin serum concentrations after intravenous administration in critically ill patients with serious multidrug-resistant, gram-negative bacilli infections: A prospective, open-label, uncontrolled study",Markou,2008,1
+10.1093/jac/dki461,Pharmacokinetics of inhaled colistin in patients with cystic fibrosis,Ratjen,2006,1
+10.1164/rccm.200208-855oc,Significant Microbiological Effect of Inhaled Tobramycin in Young Children with Cystic Fibrosis,Gibson,2003,1
+10.1164/ajrccm.156.4.96-11058,Lower Airway Inflammation in Infants and Young Children with Cystic Fibrosis,ARMSTRONG,2013,1
+10.1007/bf00442171,Bronchial mucous glands in the newborn with cystic fibrosis,Chow,2004,1
+10.1001/archpedi.1965.02090020103003,Meconium Ileus,HOLSCLAW,2011,1
+10.1128/aac.02831-15,Paradoxical Effect of Polymyxin B: High Drug Exposure Amplifies Resistance in Acinetobacter baumannii,Tsuji,2016,4
+10.1093/jac/dku536,The transcriptomic response of <i>Acinetobacter baumannii</i> to colistin and doripenem alone and in combination in an <i>in vitro</i> pharmacokinetics/pharmacodynamics model,Henry,2015,1
+10.1007/s00203-011-0779-5,Characterization of the BaeSR two-component system from Salmonella Typhimurium and its role in ciprofloxacin-induced mdtA expression,Guerrero,2011,1
+10.1345/aph.1q294,Effectiveness and Tolerability of A Polymyxin B Dosing Protocol,Esaian,2012,1
+10.1128/aac.49.9.3624-3630.2005,"Pharmacodynamics of Polymyxin B against
+            <i>Pseudomonas aeruginosa</i>",Tam,2005,5
+10.1371/journal.ppat.1007297,Pathogen-based precision medicine for drug-resistant tuberculosis,Gröschel,2018,2
+10.2471/blt.11.096644,Challenging a dogma: antimicrobial susceptibility testing breakpoints for Mycobacterium tuberculosis,Ängeby,2012,1
+10.1086/600877,"Vancomycin Therapeutic Guidelines: A Summary of Consensus Recommendations from the Infectious Diseases Society of America, the American Society of Health-System Pharmacists, and the Society of Infectious Diseases Pharmacists",Rybak,2009,1
+10.2146/ajhp080434,"Therapeutic monitoring of vancomycin in adult patients: A consensus review of the American Society of Health-System Pharmacists, the Infectious Diseases Society of America, and the Society of Infectious Diseases Pharmacists",Rybak,2008,2
+10.1093/clinids/18.4.544,Editorial: Monitoring Serum Vancomycin Levels: Climbing the Mountain Because It Is There?,Moellering,2011,1
+10.1128/aac.00703-13,"Synergistic Activity of Colistin and Rifampin Combination against Multidrug-Resistant Acinetobacter baumannii in an
+            <i>In Vitro</i>
+            Pharmacokinetic/Pharmacodynamic Model",Lee,2013,1
+10.1186/s13054-015-1151-y,Can physicochemical properties of antimicrobials be used to predict their pharmacokinetics during extracorporeal membrane oxygenation? Illustrative data from ovine models,Shekar,2015,4
+10.1097/ccm.0b013e3181961bff,Pharmacokinetic issues for antibiotics in the critically ill patient,Roberts,2009,2
+10.1378/chest.115.2.462,Inadequate Antimicrobial Treatment of Infections,Kollef,2003,1
+10.1164/ajrccm.157.2.9705064,Ventilator-associated Pneumonia Caused by Potentially  Drug-resistant Bacteria,TROUILLET,2013,1
+10.1378/chest.101.6.1644,Definitions for Sepsis and Organ Failure and Guidelines for the Use of Innovative Therapies in Sepsis,Bone,2007,1
+10.1097/00005373-198412000-00005,Quantitative Evaluation of Clinical Course in Surgical ICU Patients,ABRAMS,2006,1
+10.1186/cc3995,,Falagas,2006,2
+10.1016/0140-6736(93)92422-p,Pathogenesis of cystic fibrosis,Koch,2003,1
+10.1126/science.2772657,Identification of the Cystic Fibrosis Gene: Chromosome Walking and Jumping,Rommens,2006,1
+10.1086/516284,State‐of‐the‐Art Clinical Article: Pharmacokinetic/Pharmacodynamic Parameters: Rationale for Antibacterial Dosing of Mice and Men,Craig,2007,5
+10.1016/s0140-6736(81)90422-0,HEPATIC COMPLICATIONS OF CYSTIC FIBROSIS,Psacharopoulos,2003,1
+10.1136/adc.55.9.696,Immune responses to liver membrane antigens in patients with cystic fibrosis and liver disease.,Mieli-Vergani,2008,1
+10.1111/j.1365-2222.1975.tb01860.x,Immediate hypersensitivity in patients with cystic fibrosis,ALLAN,2006,1
+10.1136/thx.20.5.385,Transient Pulmonary Infiltrations in Cystic Fibrosis due to Allergic Aspergillosis,Mearns,2008,1
+10.1136/thx.7.4.317,Broncho-pulmonary Aspergillosis : A Review and a Report of Eight New Cases,Hinson,2008,2
+10.1128/aac.01278-06,"Development and Persistence of Antimicrobial Resistance in
+            <i>Pseudomonas aeruginosa</i>
+            : a Longitudinal Observation in Mechanically Ventilated Patients",Reinhardt,2007,1
+10.1086/600036,Doripenem,Paterson,2009,1
+10.1016/j.tox.2007.12.031,Validation of putative genomic biomarkers of nephrotoxicity in rats,Wang,2008,1
+10.1152/ajprenal.00285.2002,Kidney injury molecule-1: a tissue and urinary biomarker for nephrotoxicant-induced renal injury,Ichimura,2004,1
+10.1074/jbc.273.7.4135,"Kidney Injury Molecule-1 (KIM-1), a Putative Epithelial Cell Adhesion Molecule Containing a Novel Immunoglobulin Domain, Is Up-regulated in Renal Cells after Injury",Ichimura,2002,1
+10.1016/0092-8674(93)90305-a,α4β7 integrin mediates lymphocyte binding to the mucosal vascular addressin MAdCAM-1,Berlin,2004,1
+10.1083/jcb.107.5.1853,Immunohistologic and functional characterization of a vascular addressin involved in lymphocyte homing into peripheral lymph nodes.,Streeter,2004,1
+10.1007/bf02267236,Clarification of the limit of detection in chromatography,Foley,2005,1
+10.1021/ac60259a007,Limits for qualitative detection and quantitative determination.  Application to radiochemistry,Currie,2005,1
+10.1016/j.clpt.2004.02.004,Pharmacokinetic studies in hepatic impairment: is the Maddrey function a relevant marker?,GARDMARK,2004,1
+10.1159/000220402,The Role of the Therapeutic Regimen in Dosage Design. Part II,Krüger-Thiemer,2009,1
+10.1093/jac/dkp262,Evaluation of wild-type MIC distributions as a tool for determination of clinical breakpoints for Mycobacterium tuberculosis,Schon,2009,1
+10.1183/09031936.05.00111304,Drug-susceptibility testing in tuberculosis: methods and reliability of results,Kim,2005,1
+10.1016/j.cmi.2020.02.004,Using machine learning to optimize antibiotic combinations: dosing strategies for meropenem and polymyxin B against carbapenem-resistant Acinetobacter baumannii,Smith,2020,1
+10.1128/cmr.00006-08,Polymyxins Revisited,Landman,2008,2
+10.1093/jac/dkh128,"In vitro susceptibility of Stenotrophomonas maltophilia isolates: comparison of disc diffusion, Etest and agar dilution methods",Nicodemo,2004,1
+10.1126/science.1175325,Looming Global-Scale Failures and Missing Institutions,Walker,2009,1
+10.1128/aac.01885-13,Clinical Population Pharmacokinetics and Toxicodynamics of Linezolid,Boak,2014,4
+10.1146/annurev.pharmtox.48.113006.094708,Mechanism-Based Concepts of Size and Maturity in Pharmacokinetics,Anderson,2007,1
+10.1007/s00467-006-0118-2,"Postnatal renal function in preterm newborns: a role of diseases, drugs and therapeutic interventions",Cuzzolin,2006,1
+10.1128/aac.47.3.905-909.2003,"Synergistic Activity of Colistin and Ceftazidime against Multiantibiotic-Resistant
+            <i>Pseudomonas aeruginosa</i>
+            in an In Vitro Pharmacodynamic Model",Gunderson,2003,2
+10.1177/106002809102501101,Toxicity of Colistin in Cystic Fibrosis Patients,Bosso,2017,1
+10.7326/0003-4819-72-6-857,Adverse Effects of Sodium Colistimethate,KOCH-WESER,2013,3
+10.1128/aac.00881-09,"Attenuation of Colistin Bactericidal Activity by High Inoculum of
+            <i>Pseudomonas aeruginosa</i>
+            Characterized by a New Mechanism-Based Population Pharmacodynamic Model",Bulitta,2010,2
+10.1146/annurev.me.27.020176.001443,Significance of Serum Protein and Tissue Binding of Antimicrobial Agents,Craig,2003,1
+10.3181/00379727-76-18383,Sequential Blocking of Metabolic Pathways in vivo,Potter,2013,1
+10.1093/cid/ciw839,Dosing guidance for intravenous colistin in critically-ill patients,Nation,2016,3
+10.1016/j.ijantimicag.2016.07.015,In vitro pharmacodynamic evaluation of ceftolozane/tazobactam against β-lactamase-producing Escherichia coli in a hollow-fibre infection model,Soon,2016,3
+10.1016/j.bcp.2016.10.005,"Antibiotics: Pharmacokinetics, toxicity, resistance and multidrug efflux pumps",Yılmaz,2016,2
+10.1128/aac.01989-12,"Human Simulated Studies of Aztreonam and Aztreonam-Avibactam To Evaluate Activity against Challenging Gram-Negative Organisms, Including Metallo-β-Lactamase Producers",Crandon,2013,1
+10.1016/j.coph.2012.06.003,Improving known classes of antibiotics: an optimistic approach for the future,Bush,2012,1
+10.1128/aac.01724-09,"Cellular Pharmacodynamics of the Novel Biaryloxazolidinone Radezolid: Studies with Infected Phagocytic and Nonphagocytic cells, Using
+            <i>Staphylococcus aureus</i>
+            ,
+            <i>Staphylococcus epidermidis</i>
+            ,
+            <i>Listeria monocytogenes</i>
+            , and
+            <i>Legionella pneumophila</i>",Lemaire,2010,1
+10.1038/nrmicro2171,Listeria monocytogenes — from saprophyte to intracellular pathogen,Freitag,2009,1
+10.1099/00221287-138-12-2619,The use of bacterial luciferase for monitoring the environmental regulation of expression of genes encoding virulence factors in Listeria monocytogenes,Park,2009,1
+10.1093/jac/31.suppl_d.159,The post-antibiotic sub-MIC effect in vitro and in vivo,Cars,2012,1
+10.1016/j.ijantimicag.2004.10.001,Evaluation of colistin as an agent against multi-resistant Gram-negative bacteria,Li,2004,1
+10.1089/mdr.1995.1.1,Editorial: The Prospects of Treatment Failure in the Chemotherapy of Infectious Diseases in the 1990s,ARMSTRONG,2009,1
+10.1056/nejm199404283301725,Multiple-Antibiotic-Resistant Pathogenic Bacteria -- A Report on the Rockefeller University Workshop,Tomasz,2002,1
+10.7326/0003-4819-118-7-199304010-00011,Resistance to Antimicrobial Drugs—A Worldwide Calamity,Kunin,2013,1
+10.1128/aac.47.2.548-553.2003,Population Pharmacokinetics of Linezolid in Patients Treated in a Compassionate-Use Program,Meagher,2003,1
+10.1001/archinte.1962.03620240029006,Gram-Negative Bacteremia,McCABE,2011,1
+10.1093/biomet/66.2.237,A Bayesian extension of the minimum AIC procedure of autoregressive model fitting,AKAIKE,2007,1
+10.1124/dmd.31.5.540,Identification of the Cytochrome P450 Enzymes Involved in the<i>N</i>-Oxidation of Voriconazole,Hyland,2003,1
+10.1016/s0021-9258(20)82244-3,The Carbon Monoxide-binding Pigment of Liver Microsomes,Omura,2021,1
+10.1016/s0021-9258(18)70660-1,The Purification And Properties Of Microsomal Cytochrome Reductase,Strittmatter,2021,1
+10.1085/jgp.35.3.423,CRYSTALLINE INORGANIC PYROPHOSPHATASE ISOLATED FROM BAKER'S YEAST,Kunitz,2004,1
+10.1128/aac.00859-16,"Widespread Dissemination of Carbapenem-Resistant Escherichia coli Sequence Type 167 Strains Harboring
+            <i>bla</i>
+            <sub>NDM-5</sub>
+            in Clinical Settings in China",Huang,2016,1
+10.2217/fmb.10.171,NDM-1: a local clone emerges with worldwide aspirations,Marra,2011,1
+10.4103/0255-0857.66477,New Delhi metallo-beta-lactamases: A wake-up call for microbiologists,Krishna,2010,1
+10.1128/aac.00774-09,"Characterization of a New Metallo-β-Lactamase Gene,
+            <i>bla</i>
+            <sub>NDM-1</sub>
+            , and a Novel Erythromycin Esterase Gene Carried on a Unique Genetic Structure in
+            <i>Klebsiella pneumoniae</i>
+            Sequence Type 14 from India",Yong,2009,1
+10.1385/mb:28:1:47,"Resistance to Macrolide, Lincosamide, Streptogramin, Ketolide, and Oxazolidinone Antibiotics",Roberts,2004,1
+10.1093/jac/dkq459,"Antimicrobial activity of a novel aminoglycoside, ACHN-490, against Acinetobacter baumannii and Pseudomonas aeruginosa from New York City",Landman,2010,1
+10.1128/aac.39.1.185,PCR mapping of integrons reveals several novel combinations of resistance genes,Lévesque,2012,1
+10.1104/pp.59.3.478,Cytokinins: Metabolism and Biological Activity of N<sup>6</sup>-(Δ<sup>2</sup>-Isopentenyl)adenosine and N<sup>6</sup>-(Δ<sup>2</sup>-Isopentenyl)adenine in Tobacco Cells and Callus,Laloue,2008,1
+10.1086/596103,Epidemiology of Ventilator-Associated Pneumonia in a Long-Term Acute Care Hospital,Walkey,2009,1
+10.1128/aac.00090-11,"Evaluation of Pharmacokinetic/Pharmacodynamic Relationships of PD-0162819, a Biotin Carboxylase Inhibitor Representing a New Class of Antibacterial Compounds, Using
+            <i>In Vitro</i>
+            Infection Models",Ogden,2011,4
+10.1128/aac.29.3.496,Interaction of polycationic antibiotics with Pseudomonas aeruginosa lipopolysaccharide and lipid A studied by using dansyl-polymyxin,Moore,2012,2
+10.1093/jac/dkl509,"Porins, efflux pumps and multidrug resistance in Acinetobacter baumannii",Vila,2007,1
+10.1093/jac/28.6.791,Mechanisms of resistance to <i>β</i>-lactam antibiotics in <i>Acinetobacter calcoaceticus</i>,Obara,2007,1
+10.1093/ije/dym018,Tools for assessing quality and susceptibility to bias in observational studies in epidemiology: a systematic review and annotated bibliography,Sanderson,2007,1
+10.3310/hta7270,Evaluating non-randomised intervention studies,Deeks,2014,1
+10.1016/j.ijantimicag.2016.07.023,Colistin versus polymyxin B for the treatment of patients with multidrug-resistant Gram-negative infections: a systematic review and meta-analysis,Vardakas,2016,1
+10.1248/cpb.55.1724,"Semi-synthesis of Polymyxin B (2-10) and Colistin (2-10) Analogs Employing the Trichloroethoxycarbonyl (Troc) Group for Side Chain Protection of .ALPHA.,.GAMMA.-Diaminobutyric Acid Residues",Okimura,2007,1
+10.1016/0019-2791(76)90181-6,Binding of polymyxin B to the lipid A portion of bacterial lipopolysaccharides,Morrison,2003,1
+10.1016/s0021-9258(19)41574-3,Fractions of lipopolysaccharide from Escherichia coli O111:B4 prepared by two extraction procedures.,Morrison,2021,1
+10.1016/s0021-9258(19)43278-x,The Biosynthesis of Cell Wall Lipopolysaccharide in Escherichia coli,Fuller,2021,1
+10.1016/s0021-9258(18)70158-0,The Formation of 2-Keto-3-deoxyheptonic Acid in Extracts of Escherichia coli B,Weissbach,2021,1
+10.1515/bchm2.1939.258.2-3.117,"Über die Bestimmung kleiner Pentosemengen, insbesondere in Derivaten der Adenylsäure",Mejbaum,2011,1
+10.1128/jcm.34.5.1129-1135.1996,Random amplified polymorphic DNA typing of Pseudomonas aeruginosa isolates recovered from patients with cystic fibrosis,Mahenthiralingam,2020,1
+10.1021/bi00778a004,Structural heterogeneity in the lipopolysaccharide of Aerobacter aerogenes NCTC 243,Conrad,2005,1
+10.1016/s0021-9258(18)56696-5,THE FLUOROMETRIC MEASUREMENT OF THE NUCLEOTIDES OF RIBOFLAVIN AND THEIR CONCENTRATION IN TISSUES,Bessey,2021,1
+10.1042/bj0400363,Effects of purines on fluorescent solutions,Weil-Malherbe,2015,1
+10.1086/429323,Colistin: The Revival of Polymyxins for the Management of Multidrug-Resistant Gram-Negative Bacterial Infections,Falagas,2005,2
+10.1046/j.1469-0691.2000.00169.x,"In vitro and in vivo synergistic activity of colistin, rifampin, and amikacin against a multiresistant Pseudomonas aeruginosa isolate",Tascini,2002,1
+10.1093/clinids/5.supplement_3.s412,Rifampin: Spectrum of Antibacterial Activity,Thornsberry,2011,1
+10.1038/ki.1990.143,Changes in gene expression after temporary renal ischemia,Safirstein,2007,1
+10.1016/0022-2836(77)90052-3,Labeling deoxyribonucleic acid to high specific activity in vitro by nick translation with DNA polymerase I,Rigby,2004,1
+10.1128/jvi.18.3.885-893.1976,Herpes simplex virus DNA in transformed cells: sequence complexity in five hamster cell lines and one derived hamster tumor,Frenkel,2020,1
+10.1128/aac.39.11.2387,MICs of 28 antibiotic compounds for 14 Bartonella (formerly Rochalimaea) isolates,Maurin,2012,1
+10.1128/aac.02012-13,Overexpression of MexCD-OprJ Reduces Pseudomonas aeruginosa Virulence by Increasing Its Susceptibility to Complement-Mediated Killing,Martínez-Ramos,2014,1
+10.1128/aac.01107-07,"Resistance and Virulence of
+            <i>Pseudomonas aeruginosa</i>
+            Clinical Strains Overproducing the MexCD-OprJ Efflux Pump",Jeannot,2008,1
+10.1172/jci200316814,Application of a mathematical model to prevent in vivo amplification of antibiotic-resistant bacterial populations during therapy,Jumbe,2003,2
+10.1128/aac.45.1.13-22.2001,Use of Preclinical Data for Selection of a Phase II/III Dose for Evernimicin and Identification of a Preclinical MIC Breakpoint,Drusano,2002,1
+10.1016/s0732-8893(98)00093-5,Antimicrobial activity and spectrum of SCH27899 (ziracin®) tested against gram-positive species including recommendations for routine susceptibility testing methods and quality control,Jones,2002,1
+10.1089/mdr.1998.4.137,"Association Between Decreased Susceptibility to a New Antibiotic for Treatment of Human Diseases, Everninomicin (SCH 27899), and Resistance to an Antibiotic Used for Growth Promotion in Animals, Avilamycin",AARESTRUP,2009,1
+10.1128/jb.179.7.2274-2280.1997,"MdfA, an Escherichia coli multidrug resistance protein with an extraordinarily broad spectrum of drug recognition",Edgar,2016,1
+10.1073/pnas.89.19.8938,"Emr, an Escherichia coli locus for multidrug resistance.",Lomovskaya,2006,1
+10.1128/aac.02243-16,Can Ceftazidime-Avibactam and Aztreonam Overcome β-Lactam Resistance Conferred by Metallo-β-Lactamases in Enterobacteriaceae?,Marshall,2017,1
+10.1016/j.diagmicrobio.2014.07.007,Dual beta-lactam therapy for serious Gram-negative infections: is it time to revisit?,Rahme,2014,1
+10.1128/aac.34.3.487,"In vitro activities of combinations of aztreonam, ciprofloxacin, and ceftazidime against clinical isolates of Pseudomonas aeruginosa and Pseudomonas cepacia from patients with cystic fibrosis",Bosso,2012,1
+10.1128/aac.40.3.720,"In vitro antimicrobial activities and spectra of U-100592 and U-100766, two novel fluorinated oxazolidinones",Jones,2018,1
+10.1016/j.ijantimicag.2016.09.010,Pharmacokinetics/pharmacodynamics of colistin and polymyxin B: are we there yet?,Tran,2016,5
+10.1093/jac/19.4.487,Efficacy of different dosing schedules of tobramycin for treating a murine <i>Klebsiella pneumoniae</i> bronchopneumonia,Pechère,2007,1
+10.1007/s00134-013-3080-z,Can optimal drug dosing during ECMO improve outcomes?,Shekar,2013,1
+10.1186/1471-2253-13-7,The ECMO PK Project: an incremental research approach to advance understanding of the pharmacokinetic alterations and improve patient outcomes during extracorporeal membrane oxygenation,Shekar,2013,1
+10.1016/0888-6296(90)90041-d,In vitro variability in fentanyl absorption by different membrane oxygenators,Rosen,2004,1
+10.1038/clpt.1981.16,Effect of cardiopulmonary bypass on fentanyl distribution and elimination,Koska,2010,1
+10.4103/0972-5229.120319,To study the clinical efficacy and nephrotoxicity along with the risk factors for acute kidney injury associated with parenteral polymyxin B,Mandal,2013,1
+10.1086/499406,"The Relationship between Antimicrobial Resistance and Patient Outcomes: Mortality, Length of Hospital Stay, and Health Care Costs",Cosgrove,2005,1
+10.1086/367653,Adverse Clinical and Economic Outcomes Attributable to Methicillin Resistance among Patients with<i>Staphylococcus aureus</i>Surgical Site Infection,Engemann,2003,1
+10.1001/jama.282.18.1745,Control of Endemic Methicillin-Resistant Staphylococcus aureus,Chaix,2003,1
+10.1164/ajrccm/148.6_pt_1.1665,"α<sub>1</sub>-Proteinase Inhibitor, Elastase Activity, and Lung Disease Severity in Cystic Fibrosis",O'Connor,2011,1
+10.1016/s0022-3476(87)80068-9,Granulocyte elastase-α1-antiproteinase complex in cystic fibrosis: Sensitive plasma assay for monitoring pulmonary infections,Hollsing,2006,1
+10.1016/s0031-3955(16)34541-2,Cystic Fibrosis—A Challenging Long-Term Chronic Disease,Matthews,2016,1
+10.1177/000992287201100911,"Use of a ""Heparin Lock"" in the Intermittent Adminstration of Intravenous Drugs",Stern,2008,1
+10.1056/nejm199907223410403,Decreased Susceptibility of<i>Streptococcus pneumoniae</i>to Fluoroquinolones in Canada,Chen,2002,1
+10.1128/aac.40.10.2252,ParC subunit of DNA topoisomerase IV of Streptococcus pneumoniae is a primary target of fluoroquinolones and cooperates with DNA gyrase A subunit in forming resistance phenotype,Muñoz,2018,1
+10.1016/j.coph.2017.10.014,Ensuring quality pharmacokinetic analyses in antimicrobial drug development programs,Lakota,2017,1
+10.1086/510079,Antimicrobial Resistance: Pharmacokinetics‐Pharmacodynamics of Antimicrobial Therapy: It’s Not Just for Mice Anymore,Ambrose,2006,1
+10.1016/j.ijantimicag.2014.03.003,"Prevalence and molecular characterisation of New Delhi metallo-β-lactamases NDM-1, NDM-5, NDM-6 and NDM-7 in multidrug-resistant Enterobacteriaceae from India",Rahman,2014,1
+10.1128/aac.47.12.3724-3732.2003,"Prevalence and Molecular Epidemiology of CTX-MExtended-Spectrum β-Lactamase-Producing
+            <i>Escherichia coli</i>
+            and
+            <i>Klebsiella pneumoniae</i>
+            in RussianHospitals",Edelstein,2003,1
+10.1128/aac.45.12.3355-3361.2001,CTX-M-Type Extended-Spectrum β-Lactamase That Hydrolyzes Ceftazidime through a Single Amino Acid Substitution in the Omega Loop,Poirel,2002,1
+10.1128/aac.44.6.1725-1727.2000,A New SHV-Derived Extended-Spectrum β-Lactamase (SHV-24) That Hydrolyzes Ceftazidime through a Single-Amino-Acid Substitution (D179G) in the Ω-Loop,Kurokawa,2002,1
+10.1111/j.1574-6968.2000.tb08989.x,A preliminary survey of extended-spectrum Î²-lactamases (ESBLs) in clinical isolates of<i>Klebsiella pneumoniae</i>and<i>Escherichia coli</i>in Japan,Yagi,2006,1
+10.1128/aac.34.9.1725,Nucleotide sequence and phylogeny of SHV-2 beta-lactamase,Huletsky,2012,1
+10.1016/j.bcp.2005.10.038,The role of pharmacodynamic research in the assessment and development of new antibacterial drugs,Lister,2005,6
+10.1128/aac.33.9.1500,Antipseudomonal activity of simulated infusions of gentamicin alone or with piperacillin assessed by serum bactericidal rate and area under the killing curve,Tisdale,2012,1
+10.1159/000180580,Prediction of Creatinine Clearance from Serum Creatinine,Cockcroft,2008,1
+10.1128/aac.00264-16,Successful Treatment of Bloodstream Infection Due to Metallo-β-Lactamase-Producing Stenotrophomonas maltophilia in a Renal Transplant Patient,Mojica,2016,1
+10.1128/aac.00206-15,"<i>In Vitro</i>
+            Activity of Aztreonam-Avibactam against a Global Collection of Gram-Negative Pathogens from 2012 and 2013",Biedenbach,2015,1
+10.1128/cmr.18.2.306-325.2005,Metallo-β-Lactamases: the Quiet before the Storm?,Walsh,2005,1
+10.1016/j.diagmicrobio.2017.05.009,Synergistic activity of ceftazidime-avibactam and aztreonam against serine and metallo-β-lactamase-producing gram-negative pathogens,Wenzler,2017,1
+10.1016/j.diagmicrobio.2013.07.006,Comparison of 3 Etest® methods and time-kill assay for determination of antimicrobial synergy against carbapenemase-producing Klebsiella species,Pankey,2013,2
+10.1016/j.diagmicrobio.2010.02.015,In vitro synergistic/additive activity of levofloxacin with meropenem against Stenotrophomonas maltophilia,Pankey,2010,1
+10.1093/jac/dkn301,Therapeutic options for Stenotrophomonas maltophilia infections beyond co-trimoxazole: a systematic review,Falagas,2008,1
+10.1128/jb.56.1.75-81.1948,The Action of Penicillin on Staphylococcus: Further Observations on the Effect of a Short Exposure,Parker,2020,1
+10.1016/j.ddtec.2016.08.004,Translational PK/PD of anti-infective therapeutics,Rathi,2016,4
+10.1124/pr.111.005769,Pharmacokinetic-Pharmacodynamic Modeling of Antibacterial Drugs,Nielsen,2013,1
+10.1208/s12248-012-9349-2,Performance Comparison of Various Maximum Likelihood Nonlinear Mixed-Effects Estimation Methods for Dose–Response Models,Plan,2012,1
+10.1007/bf01061030,Evaluation of methods for estimating population pharmacokinetic parameters II. Biexponential model and experimental pharmacokinetic data,Sheiner,2005,1
+10.1007/bf01060053,Evaluation of methods for estimating population pharmacokinetic parameters. I. Michaelis-menten model: Routine clinical pharmacokinetic data,Sheiner,2005,1
+10.1038/psp.2013.71,"Basic Concepts in Population Modeling, Simulation, and Model-Based Drug Development: Part 3-Introduction to Pharmacodynamic Modeling Methods",Upton,2014,1
+10.1002/cpt196910122,Kinetics of pharmacologic effects in man: The anticoagulant action of warfarin,Nagashima,2016,1
+10.1128/aac.00489-08,"Development and Qualification of a Pharmacodynamic Model for the Pronounced Inoculum Effect of Ceftazidime against
+            <i>Pseudomonas aeruginosa</i>",Bulitta,2008,1
+10.1128/aac.41.4.733,Pharmacokinetic-pharmacodynamic modeling of activity of ceftazidime during continuous and intermittent infusion,Mouton,2018,1
+10.1016/s0021-9258(19)52451-6,PROTEIN MEASUREMENT WITH THE FOLIN PHENOL REAGENT,Lowry,2021,1
+10.1016/s0021-9258(17)41291-9,THE ADAPTATION OF THE BECKMAN SPECTROPHOTOMETER TO MEASUREMENTS ON MINUTE QUANTITIES OF BIOLOGICAL MATERIALS,Lowry,2021,1
+10.1128/aac.00903-09,"Pharmacokinetic/Pharmacodynamic Investigation of Colistin against
+            <i>Pseudomonas aeruginosa</i>
+            Using an
+            <i>In Vitro</i>
+            Model",Bergen,2010,2
+10.1371/journal.pone.0156131,Defining the Active Fraction of Daptomycin against Methicillin-Resistant Staphylococcus aureus (MRSA) Using a Pharmacokinetic and Pharmacodynamic Approach,Garonzik,2016,1
+10.1128/aac.01254-07,"Attenuated Vancomycin Bactericidal Activity against
+            <i>Staphylococcus aureus hemB</i>
+            Mutants Expressing the Small-Colony-Variant Phenotype",Tsuji,2008,2
+10.1016/s1473-3099(01)00091-3,Vancomycin-resistant Staphylococcus aureus : a new model of antibiotic resistance,Hiramatsu,2002,1
+10.1128/aac.45.4.1292-1294.2001,"Combination Effect of Vancomycin and β-Lactams against a
+            <i>Staphylococcus</i>
+            <i>aureus</i>
+            Strain, Mu3, with Heterogeneous Resistance to Vancomycin",Aritaka,2002,1
+10.1128/jb.158.2.513-516.1984,Low-affinity penicillin-binding protein associated with beta-lactam resistance in Staphylococcus aureus,Hartman,2020,1
+10.1111/j.1574-6968.1981.tb06217.x,Penicillin-binding proteins of<i>Escherichia coli</i>identified with a<sup>125</sup>I-derivative of ampicillin,Schwarz,2006,1
+10.1111/j.1432-1033.1977.tb11258.x,Properties of the Penicillin-Binding Proteins of Escherichia coli K12,SPRATT,2005,1
+10.4103/ijmm.ijmm_17_278,Optimisation of Antimicrobial Dosing Based on Pharmacokinetic and Pharmacodynamic Principles,Ru Hoo,2018,1
+10.1097/ccm.0000000000000029,Augmented Renal Clearance in the ICU,Udy,2013,1
+10.1186/cc11391,Four hour creatinine clearance is better than plasma creatinine for monitoring renal function in critically ill patients,Pickering,2012,1
+10.1097/00007691-200502000-00014,The pH Dependency of the Binding of Drugs to Plasma Proteins in Man,Hinderling,2005,2
+10.1016/0006-2952(82)90597-4,Evidence for binding of certain acidic drugs to α1-acid glycoprotein,Urien,2002,1
+10.3109/03602537608995839,Plasma and Tissue Protein Binding of Drugs in Pharmacokinetics,Jusko,2007,1
+10.3181/00379727-148-38547,"Effect of Bilirubin on the Distribution, Elimination and Anticoagulant Action of Dicumarol in Gunn Rats",Wingard,2013,1
+10.1007/bf01720528,Characterization of intensive care unit patients using a model based on the presence or absence of organ dysfunctions and/or infection: The ODIN model,Fagon,2005,1
+10.1016/s0140-6736(82)92748-9,A COMPARISON OF INTENSIVE CARE IN THE U.S.A. AND FRANCE,KNAUS,2003,1
+10.1016/s0732-8893(98)00105-9,"Antimicrobial activity of SCH27899 (Ziracin®), a novel everninomicin derivative, tested against Streptococcus spp.: disk diffusion/Etest method evaluations and quality control guidelines",Marshall,2002,1
+10.1128/jb.57.1.119-126.1949,"THE SERUM CONCENTRATION OF PENICILLIN G IN MICE, RABBITS, AND MEN AFTER ITS INTRAMUSCULAR INJECTION IN AQUEOUS SOLUTION",Eagle,2020,1
+10.3181/00379727-51-13844,A Method for Determining the Concentration of Penicillin in Body Fluids and Exudates,Rammelkamp,2013,1
+10.1093/jac/dkm357,Polymyxin B for the treatment of multidrug-resistant pathogens: a critical review,Zavascki,2007,2
+10.1128/aac.00092-13,Quantifying Subpopulation Synergy for Antibiotic Combinations via Mechanism-Based Modeling and a Sequential Dosing Design,Landersdorfer,2013,2
+10.1093/jac/dks201,"Pharmacodynamics of early, high-dose linezolid against vancomycin-resistant enterococci with elevated MICs and pre-existing genetic mutations",Tsuji,2012,1
+10.1093/jac/dkm132,Triclosan resistance in methicillin-resistant Staphylococcus aureus expressed as small colony variants: a novel mode of evasion of susceptibility to antiseptics—authors' response,Bayston,2007,1
+10.1128/jcm.02483-16,Same-Day Diagnostic and Surveillance Data for Tuberculosis via Whole-Genome Sequencing of Direct Respiratory Samples,Votintseva,2017,1
+10.1517/14656566.2016.1145658,Treatment options for infections caused by carbapenem-resistant<i>Enterobacteriaceae</i>: can we apply “precision medicine” to antimicrobial chemotherapy?,Perez,2016,2
+10.1128/aac.01222-13,Antibiotic Treatment of Infections Due to Carbapenem-Resistant Enterobacteriaceae: Systematic Evaluation of the Available Evidence,Falagas,2013,1
+10.1128/aac.05036-11,"Nosocomial Outbreak of VIM-1-Producing Klebsiella pneumoniae Isolates of Multilocus Sequence Type 15: Molecular Basis, Clinical Risk Factors, and Outcome",Sánchez-Romero,2011,1
+10.1016/j.ijantimicag.2008.06.012,Emergence of imipenem resistance in clinical Escherichia coli during therapy,Oteo,2008,1
+10.1093/jac/dkn049,Characterization of carbapenem-non-susceptible Escherichia coli isolates from a university hospital in Taiwan,Liu,2008,1
+10.1093/jac/dkx121,Pharmacodynamics of dose-escalated ‘front-loading’ polymyxin B regimens against polymyxin-resistant mcr-1-harbouring Escherichia coli,Smith,2017,5
+10.1093/jac/dkw093,Detection of the plasmid-mediated<i>mcr-1</i>gene conferring colistin resistance in human and food isolates of<i>Salmonella enterica</i>and<i>Escherichia coli</i>in England and Wales,Doumith,2016,1
+10.1089/cmb.2012.0021,SPAdes: A New Genome Assembly Algorithm and Its Applications to Single-Cell Sequencing,Bankevich,2012,1
+10.1101/gr.089532.108,ABySS: A parallel assembler for short read sequence data,Simpson,2009,1
+10.1038/ng.128,Identification of somatically acquired rearrangements in cancer using genome-wide massively parallel paired-end sequencing,Campbell,2008,1
+10.1093/bioinformatics/btl646,A faster circular binary segmentation algorithm for the analysis of array CGH data,Venkatraman,2007,1
+10.1016/s0002-9343(89)80611-4,Antibiotic therapy for Pseudomonas aeruginosa bacteremia: Outcome correlations in a prospective study of 200 patients,Hilf,2004,1
+10.1016/0002-9343(86)90490-0,Aminoglycosides plus beta-lactams against gram-negative organisms: Evaluation of in vitro synergy and chemical interactions,Giamarellou,2004,1
+10.1093/infdis/137.1.14,Three Antibiotic Regimens in the Treatment of Infection in Febrile Granulocytopenic Patients with Cancer,,2011,1
+10.1016/0161-5890(65)90004-0,Immunochemical quantitation of antigens by single radial immunodiffusion,Mancini,2003,1
+10.1097/00006454-199109000-00018,"RECURRENT PENCILLIN-RESISTANT PNEUMOCOCCAL MENINGITIS AFTER CHLORAMPHENICOL, THERAPY",Friedland,2006,1
+10.1016/j.jpba.2014.01.015,Development and validation of a liquid chromatography–mass spectrometry assay for polymyxin B in bacterial growth media,Cheah,2014,3
+10.1016/j.jpba.2013.05.008,Determination of colistin A and colistin B in human plasma by UPLC–ESI high resolution tandem MS: Application to a pharmacokinetic study,Gikas,2013,1
+10.1208/s12248-011-9258-9,Performance and Robustness of the Monte Carlo Importance Sampling Algorithm Using Parallelized S-ADAPT for Basic and Complex Mechanistic Models,Bulitta,2011,2
+10.1023/a:1012299115260,,Beal,2002,1
+10.1093/jac/42.2.199,Activated cell-wall synthesis is associated with vancomycin resistance in methicillin-resistant Staphylococcus aureus clinical strains Mu3 and Mu50,Hanaki,2002,1
+10.1086/595011,"Bad Bugs, No Drugs: No ESKAPE! An Update from the Infectious Diseases Society of America",Boucher,2008,3
+10.1016/j.vascn.2010.02.002,Optimising in vivo pharmacology studies—Practical PKPD considerations,Gabrielsson,2010,1
+10.1023/a:1020678628317,,Chakraborty,2003,1
+10.1128/aac.49.7.2959-2964.2005,"In Vitro Synergy of Ciprofloxacin and Gatifloxacin against Ciprofloxacin-Resistant
+            <i>Pseudomonas aeruginosa</i>",Pankey,2005,1
+10.1007/s10096-002-0852-8,Use of the E test to Assess Synergy of Antibiotic Combinations Against Isolates of Burkholderia cepacia-Complex from Patients with Cystic Fibrosis,Manno,2019,1
+10.1164/ajrccm.161.4.9907147,Multiple Combination Bactericidal Antibiotic Testing for Patients with Cystic Fibrosis Infected with <i>Burkholderia cepacia</i>,AARON,2013,1
+10.1016/s0022-3476(99)70197-6,Comparison of a β-lactam alone versus β-lactam and an aminoglycoside for pulmonary exacerbation in cystic fibrosis,Smith,2005,1
+10.1002/ppul.1950070310,Treatment ofPseudomonas lung infection in cystic fibrosis with piperacillin plus tobramycin versus ceftazidime monotherapy: Preliminary communication,de Boeck,2007,1
+10.1001/archpedi.1980.02130240018007,Acute Pulmonary Exacerbations in Cystic Fibrosis,Wientzen,2011,1
+10.1007/bf01664875,Principles and limitations of operative management of intraabdominal infections,Farthmann,2005,1
+10.1007/bf01656406,Reintervention in abdominal surgery,Krause,2005,1
+10.1007/bf01655218,Planned relaparotomies in the surgical treatment of severe generalized peritonitis from intestinal origin,Penninckx,2005,1
+10.1128/cmr.00092-12,Importance of Relating Efficacy Measures to Unbound Drug Concentrations for Anti-Infective Agents,Gonzalez,2013,2
+10.1128/aac.01725-09,Brain Microdialysis Study of Meropenem in Two Patients with Acute Brain Injury,Dahyot-Fizelier,2010,1
+10.1093/jac/45.1.5,Neurotoxicity of carbapenem antibiotics: consequences for their use in bacterial meningitis,Norrby,2002,1
+10.1016/s1473-3099(08)70041-0,Extended-spectrum β-lactamase-producing Enterobacteriaceae: an emerging public-health concern,Pitout,2008,1
+10.1056/nejmra041359,The New β-Lactamases,Jacoby,2005,1
+10.1128/aac.48.1.1-14.2004,Growing Group of Extended-Spectrum β-Lactamases: the CTX-M Enzymes,Bonnet,2003,1
+10.1093/jac/dkp434,In vitro pharmacodynamic models to determine the effect of antibacterial drugs,Gloede,2009,3
+10.1128/iai.67.2.653-658.1999,"An In Vitro Tissue Culture Bilayer Model To Examine Early Events in
+            <i>Mycobacterium tuberculosis</i>
+            Infection",Birkness,2019,1
+10.1006/mpat.1994.1082,Receptor specificity of adherence of Streptococcus pneumoniae to human type-II pneumocytes and vascular endothelial cells in vitro,Cundell,2002,1
+10.1128/aac.41.9.1965,"A multicenter, randomized study comparing the efficacy and safety of intravenous and/or oral levofloxacin versus ceftriaxone and/or cefuroxime axetil in treatment of adults with community-acquired pneumonia",File,2018,1
+10.1016/j.ijantimicag.2010.10.013,Vancomycin-associated nephrotoxicity: a critical appraisal of risk with high-dose therapy,Wong-Beringer,2010,1
+10.1093/toxsci/kfn203,Gene Expression Analysis Reveals New Possible Mechanisms of Vancomycin-Induced Nephrotoxicity and Identifies Gene Markers Candidates,Dieterich,2008,1
+10.1006/meth.2001.1262,Analysis of Relative Gene Expression Data Using Real-Time Quantitative PCR and the 2−ΔΔCT Method,Livak,2002,1
+10.1006/meth.2001.1261,An Overview of Real-Time Quantitative PCR: Applications to Quantify Cytokine Gene Expression,Giulietti,2002,1
+10.1006/cyto.1998.0426,QUANTIFICATION OF MURINE CYTOKINE mRNAs USING REAL TIME QUANTITATIVE REVERSE TRANSCRIPTASE PCR,Overbergh,2002,1
+10.1128/aac.00418-17,"Multihospital Occurrence of Pan-Resistant Klebsiella pneumoniae Sequence Type 147 with an IS
+            <i>Ecp1</i>
+            -Directed
+            <i>bla</i>
+            <sub>OXA-181</sub>
+            Insertion in the
+            <i>mgrB</i>
+            Gene in the United Arab Emirates",Sonnevend,2017,1
+10.1007/s10096-015-2401-2,"An outbreak of colistin-resistant Klebsiella pneumoniae carbapenemase-producing Klebsiella pneumoniae in the Netherlands (July to December 2013), with inter-institutional spread",Weterings,2015,1
+10.2807/ese.16.33.19944-en,"Outbreak due to a Klebsiella pneumoniae strain harbouring KPC-2 and VIM-1 in a German university hospital, July 2010 to January 2011",Steinmann,2021,2
+10.1128/jcm.35.3.614-619.1997,Identification of Burkholderia cepacia isolates from patients with cystic fibrosis and use of a simple new selective medium,Henry,2020,1
+10.1086/320519,Intracellular Persistence of Staphylococcus aureus Small-Colony Variants within Keratinocytes: A Cause for Antibiotic Treatment Failure in a Patient with Darier's Disease,von Eiff,2002,1
+10.1086/515238,Persistent Infection with Small Colony Variant Strains of Staphylococcus aureus in Patients with Cystic Fibrosis,Kahl,2012,1
+10.1128/aac.01064-12,"The Combination of Colistin and Doripenem Is Synergistic against Klebsiella pneumoniae at Multiple Inocula and Suppresses Colistin Resistance in an
+            <i>In Vitro</i>
+            Pharmacokinetic/Pharmacodynamic Model",Deris,2012,1
+10.1111/j.1469-0691.2006.01364.x,Bacteraemia in cancer patients caused by colistin-resistant Gram-negative bacilli after previous exposure to ciprofloxacin and/or colistin,Beno,2006,1
+10.1093/jac/dki153,Citywide emergence of Pseudomonas aeruginosa strains with reduced susceptibility to polymyxin B,Landman,2005,1
+10.1128/aac.00062-10,"Comparative Efficacies of Human Simulated Exposures of Telavancin and Vancomycin against Methicillin-Resistant
+            <i>Staphylococcus aureus</i>
+            with a Range of Vancomycin MICs in a Murine Pneumonia Model",Crandon,2010,1
+10.1128/aac.41.9.1926,Rationale behind high-dose amoxicillin therapy for acute otitis media due to penicillin-nonsusceptible pneumococci: support from in vitro pharmacodynamic studies,Lister,2018,1
+10.1136/thx.23.6.670,Cystic fibrosis of the pancreas: structural changes in peripheral airways,Esterly,2008,1
+10.1136/bmj.1.5325.230,Hypoplasia of Lung with Congenital Diaphragmatic Hernia,Areechon,2009,1
+10.1093/jac/45.6.887,Retrospective screening for heterogeneous vancomycin resistance in diverse Staphylococcus aureus clones disseminated in French hospitals,Chesneau,2002,1
+10.1093/jac/43.5.729,Reduced susceptibility to vancomycin of nosocomial isolates of methicillin-resistant Staphylococcus aureus,Kantzanou,2002,1
+10.1128/jcm.8.3.342-343.1978,Search for Acinetobacter calcoaceticus subsp. anitratus: enrichment of fecal samples,Grehn,2021,1
+10.1016/0895-4356(94)90129-5,Validation of a combined comorbidity index,Charlson,2004,1
+10.1016/0021-9681(74)90017-4,The importance of classifying initial co-morbidity in evaluating the outcome of diabetes mellitus,Kaplan,2004,1
+10.1001/archinte.1969.00300130105014,The Epidemiology of Cancer Therapy,Feinstein,2011,1
+10.1002/phar.2209,"International Consensus Guidelines for the Optimal Use of the Polymyxins: Endorsed by the American College of Clinical Pharmacy (ACCP), European Society of Clinical Microbiology and Infectious Diseases (ESCMID), Infectious Diseases Society of America (IDSA), International Society for Anti‐infective Pharmacology (ISAP), Society of Critical Care Medicine (SCCM), and Society of Infectious Diseases Pharmacists (SIDP)",Tsuji,2019,3
+10.1093/jac/dkr483,Ascorbic acid protects against the nephrotoxicity and apoptosis caused by colistin and affects its pharmacokinetics,Yousef,2011,1
+10.1016/0041-008x(79)90257-6,The use of urinary N-acetyl-β-glucosaminidase in human renal toxicology I. Partial biochemical characterization and excretion in humans and release from the isolated perfused rat kidney,Lockwood,2004,1
+10.1210/endo-30-1-107,"THE ACID PHOSPHATASE ACTIVITY OF HUMAN URINE, AN INDEX OF PROSTATIC SECRETION1<sup>1</sup>",SCOTT,2009,1
+10.1016/s0732-8893(02)00443-1,Synergy of colistin with rifampin and trimethoprim/sulfamethoxazole on multidrug-resistant Stenotrophomonas maltophilia,Giamarellos-Bourboulis,2002,1
+10.1086/320183,"Emerging Importance of Multidrug‐Resistant<i>Acinetobacter</i>Species and<i>Stenotrophomonas maltophilia</i>as Pathogens in Seriously Ill Patients: Geographic Patterns, Epidemiological Features, and Trends in the SENTRY Antimicrobial Surveillance Program (1997–1999)",Gales,2002,1
+10.3171/jns.1997.87.1.0106,Stenotrophomonas maltophilia meningitis,Papadakis,2009,1
+10.1001/archinte.1987.00370090148025,Infections Caused by Pseudomonas maltophilia,Muder,2011,1
+10.1093/jac/17.suppl_a.11,Emergence of resistance after therapy with antibiotics used alone or combined in a marine model,Pechere,2012,1
+10.1002/lt.500030613,Minimal criteria for placement of adults on the liver transplant waiting list: A report of a national conference organized by the American Society of Transplant Physicians and the American Association for the Study of Liver Diseases,Lucey,2004,1
+10.1159/000102010,The Concept of Acute Kidney Injury and the RIFLE Criteria,Kellum,2007,1
+10.1016/j.cmi.2015.06.007,Use of old antibiotics now and in the future from a pharmacokinetic/pharmacodynamic perspective,Muller,2015,1
+10.1128/aac.01165-05,"Comparative Pharmacodynamics of Gentamicin against
+            <i>Staphylococcus aureus</i>
+            and
+            <i>Pseudomonas aeruginosa</i>",Tam,2006,1
+10.1016/0002-9343(86)90487-0,Experimental studies on nephrotoxicity of aminoglycosides at low doses: Mechanisms and perspectives,Tulkens,2004,1
+10.1038/ki.1984.69,"Early effects of gentamicin, tobramycin, and amikacin on the human kidney",De Broe,2007,1
+10.1159/000401771,Relation of Tubular Interstitial Disease to Renal Function,Wedeen,2015,1
+10.1128/aac.00497-10,"Synergy Testing by Etest, Microdilution Checkerboard, and Time-Kill Methods for Pan-Drug-Resistant
+            <i>Acinetobacter baumannii</i>",Sopirala,2010,1
+10.1093/jac/dki477,In vitro antibacterial activities of tigecycline in combination with other antimicrobial agents determined by chequerboard and time-kill kinetic analysis,Petersen,2006,1
+10.1128/aac.37.3.613,Reproducibility of the microdilution checkerboard method for antibiotic synergy,Rand,2012,1
+10.7326/0003-4819-119-5-199309010-00001,Nosocomial Outbreak of Klebsiella Infection Resistant to Late-Generation Cephalosporins,Meyer,2013,1
+10.1073/pnas.1231332100,Knowledge systems for sustainable development,Cash,2003,1
+10.1023/a:1004319423297,,Guston,2002,1
+10.1016/s0891-5520(03)00065-5,"Basic pharmacodynamics of antibacterials with clinical applications to the use of β-lactams, glycopeptides, and linezolid",Craig,2005,1
+10.1038/s41467-017-00721-2,A comprehensive characterization of PncA polymorphisms that confer resistance to pyrazinamide,Yadon,2017,1
+10.1128/cmr.14.4.836-871.2001,Molecular Detection of Antimicrobial Resistance,Fluit,2002,1
+10.1016/s0968-0004(99)01382-1,DNA chips: promising toys have become powerful tools,Gerhold,2002,1
+10.1038/nbt0198-27,DNA chips: An array of possibilities,Marshall,2004,1
+10.1101/gr.7.10.943,When the Chips are Down,Castellino,2017,1
+10.1038/ng1296-450,Quantitative phenotypic analysis of yeast deletion mutants using a highly parallel molecular bar–coding strategy,Shoemaker,2004,1
+10.1126/science.7618105,Simultaneous Identification of Bacterial Virulence Genes by Negative Selection,Hensel,2006,1
+10.1111/j.1365-2958.1988.tb00087.x,Identification and characterization of TnphoA mutants of Salmonella that are unable to pass through a polarized MDCK epithelial cell monolayer,Finlay,2006,1
+10.1083/jcb.107.1.221,Penetration of Salmonella through a polarized Madin-Darby canine kidney epithelial cell monolayer.,Finlay,2004,1
+10.1038/ng1296-441,Detection of heterozygous mutations in BRCA1 using high density oligonucleotide arrays and two–colour fluorescence analysis,Hacia,2004,1
+10.1378/chest.111.4.955,A Comparison of Peak Sputum Tobramycin Concentration in Patients With Cystic Fibrosis Using Jet and Ultrasonic Nebulizer Systems,Eisenberg,2008,1
+10.1128/aac.31.9.1383,Univariate and multivariate analyses of risk factors predisposing to auditory toxicity in patients receiving aminoglycosides,Gatell,2012,1
+10.7164/antibiotics.32.727,Comparative bactericidal effect of ceforanide (BL-S 786) and five other cephalosporins in an in vitro pharmacokinetic model.,RANDOLPH,2012,1
+10.1084/jem.176.1.99,Activated endothelium binds lymphocytes through a novel binding site in the alternately spliced domain of vascular cell adhesion molecule-1.,Osborn,2004,1
+10.1097/inf.0000000000000471,"Pediatric Carbapenem-resistant Enterobacteriaceae in Los Angeles, California, a High-prevalence Region in the United States",Pannaraj,2014,1
+10.1111/j.1469-0691.2012.03821.x,Rapid evolution and spread of carbapenemases among Enterobacteriaceae in Europe,Cantón,2012,1
+10.1128/aac.49.10.4423-4424.2005,"Plasmid-Mediated Carbapenem-Hydrolyzing β-Lactamase KPC in a
+            <i>Klebsiella pneumoniae</i>
+            Isolate from France",Naas,2005,1
+10.1128/aac.48.1.15-22.2004,"Emergence of Oxacillinase-Mediated Resistance to Imipenem in
+            <i>Klebsiella pneumoniae</i>",Poirel,2003,1
+10.1128/aac.45.8.2368-2371.2001,"Identification of a Plasmid Encoding SHV-12, TEM-1, and a Variant of IMP-2 Metallo-β-Lactamase, IMP-8, from a Clinical Isolate of
+            <i>Klebsiella pneumoniae</i>",Yan,2002,1
+10.1128/jcm.34.12.2909-2913.1996,PCR detection of metallo-beta-lactamase gene (blaIMP) in gram-negative rods resistant to broad-spectrum beta-lactams,Senda,2020,1
+10.1086/381972,Clinical Relevance of Bacteriostatic versus Bactericidal Mechanisms of Action in the Treatment of Gram‐Positive Bacterial Infections,Pankey,2004,2
+10.1007/bf02389870,Pharmacodynamics of antimicrobial agents as a Basis for Determining Dosage Regimens,Craig,2006,1
+10.1007/bf01963774,"Impact of the dosage schedule on the efficacy of ceftazidime, gentamicin and ciprofloxacin inKlebsiella pneumoniae pneumonia and septicemia in leukopenic rats",Roosendaal,2005,1
+10.7326/0003-4819-106-6-900,The Postantibiotic Effect,CRAIG,2013,1
+10.1002/ppul.10166,Transmission of colistin-resistantPseudomonas aeruginosa between patients attending a pediatric cystic fibrosis center,Denton,2002,1
+10.1016/0195-6701(95)90288-0,Epidemiology of Pseudomonas aeruginosa infection and the role of contamination of the environment in the Danish Cystic Fibrosis Centre,Zembrzuska-Sadkowska,2004,1
+10.1016/0195-6701(83)90062-2,Epidemiology of Pseudomonas aeruginosa infection and the role of contamination of the environment in a cystic fibrosis clinic,Zimakoff,2004,1
+10.1016/j.coph.2017.09.004,In vivo infection models in the pre-clinical pharmacokinetic/pharmacodynamic evaluation of antimicrobial agents,Andes,2017,2
+10.1128/aac.00281-17,Comparative Pharmacodynamics of Telavancin and Vancomycin in the Neutropenic Murine Thigh and Lung Infection Models against Staphylococcus aureus,Lepak,2017,1
+10.1586/14787210.2014.979789,"Efficacy of telavancin, a lipoglycopeptide antibiotic, in experimental models of Gram-positive infection",Hegde,2014,1
+10.1128/aac.47.11.3602-3604.2003,"In Vitro Activity of TD-6424 against
+            <i>Staphylococcus aureus</i>",Pace,2003,1
+10.1016/s0966-842x(01)02175-8,The emergence and evolution of methicillin-resistant Staphylococcus aureus,Hiramatsu,2002,1
+10.1097/00006454-200012000-00009,Current trends in community-acquired methicillin-resistant Staphylococcus aureus at a tertiary care pediatric facility,HUSSAIN,2003,1
+10.1016/0002-9343(81)90787-7,Eradication of epidemic methicillin-gentamicin-resistant staphylococcus aureus in an intensive care nursery,Dunkle,2004,1
+10.1017/s0195941700052590,Methicillin-Resistant Staphylococcus Aureus: Interstate Spread of Nosocomial Infections with Emergence of Gentamicin-Methicillin Resistant Strains,Saroglou,2016,1
+10.1136/jcp.30.2.165,An outbreak of infection caused by a gentamicin-resistant Staphylococcus aureus.,Bint,2007,1
+10.1128/aac.41.3.647,Evolution of extended-spectrum beta-lactam resistance (SHV-8) in a strain of Escherichia coli during multiple episodes of bacteremia,Rasheed,2018,1
+10.1126/science.1375392,Cystic fibrosis: molecular biology and therapeutic implications,Collins,2006,1
+10.1093/clinids/22.3.508,"Bacteremia Due to Stenotrophomonas (Xanthomonas) maltophilia: A Prospective, Multicenter Study of 91 Episodes",Muder,2011,1
+10.1093/bja/40.11.825,"BINDING OF SALICYLIC ACID AND SULPHANILAMIDE IN SERUM FROM PREGNANT PATIENTS, CORD BLOOD AND SUBJECTS TAKING ORAL CONTRACEPTIVES",CRAWFORD,2007,1
+10.1128/aac.45.9.2460-2467.2001,Continuous versus Intermittent Infusion of Vancomycin in Severe Staphylococcal Infections: Prospective Multicenter Randomized Study,Wysocki,2002,1
+10.1128/aac.38.10.2480,Efficacies of different vancomycin dosing regimens against Staphylococcus aureus determined with a dynamic in vitro model,Duffull,2012,1
+10.1016/j.jhin.2007.07.008,Device-associated nosocomial infection rates in intensive care units of seven Indian cities. Findings of the International Nosocomial Infection Control Consortium (INICC),Mehta,2007,1
+10.1016/0196-6553(88)90053-3,"CDC definitions for nosocomial infections, 1988",Garner,2005,1
+10.1007/s40262-012-0018-5,The Clinical Relevance of Plasma Protein Binding Changes,Roberts,2012,1
+10.1186/s13054-018-2155-1,Pharmacokinetics–pharmacodynamics issues relevant for the clinical use of beta-lactam antibiotics in critically ill patients,Veiga,2018,2
+10.1002/jcph.395,"Population pharmacokinetics of ceftolozane/tazobactam in healthy volunteers, subjects with varying degrees of renal function and patients with bacterial infections",Chandorkar,2014,1
+10.1128/aac.00049-14,"Multicenter, Double-Blind, Randomized, Phase II Trial To Assess the Safety and Efficacy of Ceftolozane-Tazobactam plus Metronidazole Compared with Meropenem in Adult Patients with Complicated Intra-Abdominal Infections",Lucasti,2014,1
+10.1128/aac.46.1.69-74.2002,"Pharmacodynamics of Gatifloxacin against
+            <i>Streptococcus pneumoniae</i>
+            in an In Vitro Pharmacokinetic Model: Impact of Area under the Curve/MIC Ratios on Eradication",Lister,2002,1
+10.1128/aac.37.3.483,Pharmacodynamics of a fluoroquinolone antimicrobial agent in a neutropenic rat model of Pseudomonas sepsis,Drusano,2012,1
+10.1128/aac.02412-14,"<i>In Silico</i>
+            Detection and Typing of Plasmids using PlasmidFinder and Plasmid Multilocus Sequence Typing",Carattoli,2014,1
+10.1128/mr.52.3.375-395.1988,Identification and classification of bacterial plasmids,Couturier,2020,1
+10.1128/jb.58.4.475-490.1949,THE SLOW RECOVERY OF BACTERIA FROM THE TOXIC EFFECTS OF PENICILLIN,Eagle,2020,1
+10.1016/s0140-6736(45)90042-0,BACTERICIDAL AND BACTERIOLYTIC ACTION OF PENICILLIN ON THE STAPHYLOCOCCUS,CHAIN,2003,1
+10.1016/j.healun.2008.03.023,Multidrug-resistant Acinetobacter baumannii Pneumonia in Lung Transplant Recipients,Sopirala,2008,1
+10.1128/aac.01666-15,"Daptomycin in Combination with Ceftolozane-Tazobactam or Cefazolin against Daptomycin-Susceptible and -Nonsusceptible Staphylococcus aureus in an
+            <i>In Vitro</i>
+            , Hollow-Fiber Model",Smith,2016,1
+10.1128/aac.05033-11,Plasma and Tissue Pharmacokinetics of Cefazolin in Patients Undergoing Elective and Semielective Abdominal Aortic Aneurysm Open Repair Surgery,Douglas,2011,1
+10.1007/s001340000741,Low cefpirome levels during twice daily dosing in critically ill septic patients: pharmacokinetic modelling calls for more frequent dosing,Lipman,2003,1
+10.1086/491712,The Pharmacokinetic and Pharmacodynamic Properties of Vancomycin,Rybak,2005,1
+10.2165/00003088-200443130-00005,Pharmacodynamics of Vancomycin and Other Antimicrobials in Patients with Staphylococcus aureus Lower Respiratory Tract Infections,Moise-Broder,2006,1
+10.1086/340353,Linezolid versus Vancomycin for the Treatment of Methicillin‐Resistant<i>Staphylococcus aureus</i>Infections,Stevens,2002,1
+10.1093/jac/dkq323,Determination of antibiotic dosage adjustments in patients with renal impairment: elements for success,Patel,2010,1
+10.1093/jac/48.2.259,Pharmacokinetic and pharmacodynamic profile of high dose extended interval piperacillin-tazobactam,Kim,2002,1
+10.1016/j.clinthera.2016.06.015,Pharmacokinetic and Pharmacodynamic Principles of Anti-infective Dosing,Onufrak,2016,1
+10.1128/aac.00589-08,In Vivo Microdialysis Study of the Penetration of Daptomycin into Soft Tissues in Diabetic versus Healthy Volunteers,Kim,2008,1
+10.1016/j.diabres.2008.01.009,Factors associated with treatment failure in patients with diabetic foot infections: An analysis of data from randomized controlled trials,Vardakas,2008,1
+10.1111/j.1462-5822.2012.01817.x,Host-microbe interactions that shape the pathogenesis of<i>Acinetobacter baumannii</i>infection,Mortensen,2012,1
+10.1128/iai.01029-08,"Role of NADPH Phagocyte Oxidase in Host Defense against Acute Respiratory
+            <i>Acinetobacter baumannii</i>
+            Infection in Mice",Qiu,2008,1
+10.1128/aac.41.2.345,Use of a new mouse model of Acinetobacter baumannii pneumonia to evaluate the postantibiotic effect of imipenem,Joly-Guillou,2018,1
+10.1128/jb.175.18.5798-5805.1993,Surface action of gentamicin on Pseudomonas aeruginosa,Kadurugamuwa,2016,1
+10.1128/aac.12.2.163,Effects of Membrane-Energy Mutations and Cations on Streptomycin and Gentamicin Accumulation by Bacteria: a Model for Entry of Streptomycin and Gentamicin in Susceptible and Resistant Bacteria,Bryan,2012,1
+10.1038/nrmicro862,Antimicrobial pharmacodynamics: critical interactions of 'bug and drug',Drusano,2004,1
+10.1128/aac.36.12.2577,Continuous infusion of beta-lactam antibiotics,Craig,2012,1
+10.1179/1973947815y.0000000050,"Telavancin activity tested against Gram-positive clinical isolates from European, Russian and Israeli hospitals (2011–2013) using a revised broth microdilution testing method: redefining the baseline activity of telavancin",Mendes,2015,1
+10.1128/aac.05849-11,"Evaluation of Telavancin Activity versus Daptomycin and Vancomycin against Daptomycin-Nonsusceptible Staphylococcus aureus in an
+            <i>In Vitro</i>
+            Pharmacokinetic/Pharmacodynamic Model",Steed,2011,1
+10.1128/aac.45.2.454-459.2001,"Bactericidal Activities of Two Daptomycin Regimens against Clinical Strains of Glycopeptide Intermediate-Resistant
+            <i>Staphylococcus aureus</i>
+            , Vancomycin-Resistant
+            <i>Enterococcus faecium</i>
+            , and Methicillin-Resistant
+            <i>Staphylococcus aureus</i>
+            Isolates in an In Vitro Pharmacodynamic Model with Simulated Endocardial Vegetations",Akins,2002,2
+10.1128/aac.36.5.1109,Pharmacokinetics and bactericidal rates of daptomycin and vancomycin in intravenous drug abusers being treated for gram-positive endocarditis and bacteremia,Rybak,2012,1
+10.1097/mcc.0000000000000235,New antibiotics and antimicrobial combination therapy for the treatment of gram-negative bacterial infections,Bassetti,2015,2
+10.1056/nejmra070741,Acinetobacter Infection,Munoz-Price,2008,1
+10.1097/00005792-199511000-00004,"Nosocomial Bacteremia due to Acinetobacter baumannii: Clinical Features, Epidemiology, and Predictors of Mortality",Seifert,2003,1
+10.1016/0002-9343(93)90060-3,Nosocomial pneumonia in ventilated patients: A cohort study evaluating attributable mortality and hospital stay,Fagon,2004,1
+10.1164/ajrccm/140.2.302,Long-term Respiratory Support and Risk of Pneumonia in Critically III Patients,Langer,2011,1
+10.1016/0002-9343(81)90561-1,"Nosocomial infections in U.S. hospitals, 1975–1976",Haley,2004,1
+10.1093/infdis/136.supplement.s151,Epidemiology of Nosocomial Infections Due to Gram-Negative Bacilli: Aspects Relevant to Development and Use of Vaccines,Stamm,2011,1
+10.7326/0003-4819-86-4-456,"Gram-Negative Rod Bacteremia: Microbiologic, Immunologic, and Therapeutic Considerations",YOUNG,2013,1
+10.1371/journal.pcbi.1001073,Pharmacodynamic Modeling of Anti-Cancer Activity of Tetraiodothyroacetic Acid in a Perfused Cell Culture System,Lin,2011,1
+10.1016/j.abb.2009.01.018,Multiple molecular targets of resveratrol: Anti-carcinogenic mechanisms,Athar,2009,1
+10.1038/sj.bjc.6601902,Oestrogen inhibits resveratrol-induced post-translational modification of p53 and apoptosis in breast cancer cells,Zhang,2004,1
+10.1016/s0022-5347(05)64739-8,Resveratrol Induced Serine Phosphorylation Of p53 Causes Apoptosis In A Mutant p53 Prostate Cancer Cell Line,Lin,2006,1
+10.1021/bi001978b,Thyroid Hormone Promotes Serine Phosphorylation of p53 by Mitogen-Activated Protein Kinase,Shih,2002,1
+10.1074/jbc.273.29.18623,Identification of a Novel Inhibitor of Mitogen-activated Protein Kinase Kinase,Favata,2002,1
+10.1046/j.1365-2036.1996.22164025.x,Cytokine modulation by glucocorticoids: mechanisms and actions in cellular studies.,Brattsand,2017,1
+10.1016/j.drup.2016.09.002,The rapid spread of carbapenem-resistant Enterobacteriaceae,Potter,2016,1
+10.1128/aac.02773-15,"Whole-Genome Sequence of a
+            <i>bla</i>
+            <sub>OXA-48</sub>
+            -Harboring Raoultella ornithinolytica Clinical Isolate from Lebanon",Al-Bayssari,2016,1
+10.1371/journal.pone.0121668,Carbapenem-Nonsusceptible Enterobacteriaceae in Taiwan,Wang,2015,1
+10.1093/jac/dkp256,The changing epidemiology of resistance,Hawkey,2009,1
+10.1128/aac.46.6.2014-2016.2002,"Detection of a Variant Metallo-β-Lactamase, IMP-10, from Two Unrelated Strains of
+            <i>Pseudomonas aeruginosa</i>
+            and an
+            <i>Alcaligenes xylosoxidans</i>
+            Strain",Iyobe,2002,1
+10.1128/aac.38.1.71,Molecular characterization of an enterobacterial metallo beta-lactamase found in a clinical isolate of Serratia marcescens that shows imipenem resistance,Osano,2012,1
+10.1128/aac.45.3.815-824.2001,"Eagle-Type Methicillin Resistance: New Phenotype of High Methicillin Resistance under
+            <i>mec</i>
+            Regulator Gene Control",Kondo,2002,1
+10.1128/aac.40.12.2680,Suppression of methicillin resistance in a mecA-containing pre-methicillin-resistant Staphylococcus aureus strain is caused by the mecI-mediated repression of PBP 2' production,Kuwahara-Arai,2018,1
+10.1016/s0022-2836(75)80086-6,Phage lambda receptor chromosomes for DNA fragments made with restriction endonuclease III of Haemophilus influenzae and restriction endonuclease I of Escherichia coli,Murray,2006,1
+10.1016/0022-2836(75)90383-6,Studies on the cleavage of bacteriophage lambda DNA with EcoRI restriction endonuclease,Thomas,2005,1
+10.1097/00005792-197709000-00002,INFECTIONS DUE TO STAPHYLOCOCCUS AUREUS,MUSHER,2006,1
+10.1086/592577,Pharmacokinetics of Intravenous Polymyxin B in Critically Ill Patients,Zavascki,2008,1
+10.1016/j.diagmicrobio.2007.08.008,Pharmacokinetics of polymyxin B1 in patients with multidrug-resistant Gram-negative bacterial infections,Kwa,2007,1
+10.1093/jac/dkg468,Steady-state pharmacokinetics of intravenous colistin methanesulphonate in patients with cystic fibrosis,Li,2003,1
+10.1073/pnas.83.14.5189,Mutants of Salmonella typhimurium that cannot survive within the macrophage are avirulent.,Fields,2006,1
+10.1086/430611,Bacterial‐Population Responses to Drug‐Selective Pressure: Examination of Garenoxacin's Effect on<i>Pseudomonas aeruginosa</i>,Tam,2005,1
+10.1128/aac.37.9.1931,Pharmacodynamic effects of extended dosing intervals of imipenem alone and in combination with amikacin against Pseudomonas aeruginosa in an in vitro model,McGrath,2012,1
+10.7164/antibiotics.51.492,Total Structures of Colistin Minor Components.,IKAI,2012,1
+10.1128/aac.00334-06,The Relationship between Quinolone Exposures and Resistance Amplification Is Characterized by an Inverted U: a New Paradigm for Optimizing Pharmacodynamics To Counterselect Resistance,Tam,2006,1
+10.1001/jama.279.2.125,Pharmacodynamics of Levofloxacin,Preston,2003,1
+10.1093/jac/12.suppl_a.101,A randomized study of ceftazidime compared to ceftazidime and tobramycin for the treatment of infections in cancer patients,Fainstein,2012,1
+10.1093/jac/13.suppl_a.9,Aminoglycoside toxicity - a review of clinical studies published between 1975 and 1982,Kahlmeter,2012,1
+10.1093/jac/dku561,Risk factors for acute kidney injury (AKI) in patients treated with polymyxin B and influence of AKI on mortality: a multicentre prospective cohort study,Rigatto,2015,1
+10.1056/nejmra1214243,Acute Kidney Injury and Chronic Kidney Disease as Interconnected Syndromes,Chawla,2014,2
+10.1038/nm.3299,The origin of scar-forming kidney myofibroblasts,Eddy,2013,1
+10.1128/aac.34.11.2081,Daptomycin compared with teicoplanin and vancomycin for therapy of experimental Staphylococcus aureus endocarditis,Kaatz,2012,1
+10.3201/eid0705.010508,Clinical Consequences and Cost of Limiting Use of Vancomycin for Perioperative Prophylaxis: Example of Coronary Artery Bypass Surgery,Zanetti,2009,1
+10.1016/s0002-8703(99)70357-1,Diagnosis of suspected coronary artery disease in women: A cost-effectiveness analysis,Kim,2005,1
+10.1177/0272989x8300300403,The Markov Process in Medical Prognosis,Beck,2007,1
+10.1056/nejm197607222950403,Systemic Embolism in Chronic Sinoatrial Disorder,Fairfax,2010,1
+10.1136/hrt.35.5.503,Permanent neurological deficits complicating sinoatrial block.,Samarasinghe,2007,1
+10.1016/0002-9149(66)90227-x,Adams-Stokes syndrome due to sinoatrial block,Müller,2004,1
+10.1128/aac.42.9.2375,"In Vivo Activities of Amoxicillin and Amoxicillin-Clavulanate against
+            <i>Streptococcus pneumoniae</i>
+            : Application to Breakpoint Determinations",Andes,2018,1
+10.1097/00006454-199603000-00015,Pharmacokinetics and pharmacodynamics of antibiotics in otitis media,CRAIG,2003,1
+10.1007/s004670000356,Progression of renal function in preterm neonates with gestational age ≤32 weeks,Gallini,2002,1
+10.1016/j.coph.2017.09.010,Clinical pharmacokinetic–pharmacodynamic analyses: a critical element for developing antibacterial agents,Bhavnani,2017,1
+10.1016/j.coph.2017.09.011,Pre-clinical in vitro infection models,Drusano,2017,1
+10.1371/journal.pone.0101311,Analysis of Combination Drug Therapy to Develop Regimens with Shortened Duration of Treatment for Tuberculosis,Drusano,2014,1
+10.1164/rccm.201304-0753oc,Assessment of Clofazimine Activity in a Second-Line Regimen for Tuberculosis in Mice,Grosset,2013,1
+10.1093/cid/cit522,The Urgent Need for Clear and Accurate Information on the Polymyxins,Nation,2013,1
+10.1592/phco.30.12.1279,"Resurgence of Colistin: A Review of Resistance, Toxicity, Pharmacodynamics, and Dosing",Lim,2010,1
+10.1128/aac.44.12.3317-3321.2000,"Interactions of Bacterial Cationic Peptide Antibiotics with Outer and Cytoplasmic Membranes of
+            <i>Pseudomonas aeruginosa</i>",Zhang,2002,1
+10.1128/br.20.1.14-27.1956,THE PROPERTIES AND MODE OF ACTION OF THE POLYMYXINS,Newton,2020,1
+10.7326/0003-4819-93-2-253,Meningitis Caused by Gram-Negative Bacilli,BERK,2013,1
+10.1021/bi9904104,Influence of Proline Residues on the Antibacterial and Synergistic Activities of α-Helical Peptides,Zhang,2002,1
+10.1128/jb.170.1.84-88.1988,Mode of action of the staphylococcinlike peptide Pep 5: voltage-dependent depolarization of bacterial and artificial membranes,Kordel,2016,1
+10.1007/bf01869983,Statistical analysis of alamethicin channels in black lipid membranes,Boheim,2005,1
+10.1007/bf01868075,The nature of the voltage-dependent conductance induced by alamethicin in black lipid membranes,Eisenberg,2005,1
+10.1016/0014-5793(71)80369-1,The conformation of alamethicin,McMullen,2002,1
+10.1016/0022-2836(70)90075-6,Nuclear magnetic resonance studies of the polypeptide alamethicin and its interaction with phospholipids,Hauser,2005,1
+10.1016/j.ijantimicag.2010.02.013,Augmented renal clearance in the Intensive Care Unit: an illustrative case series,Udy,2010,1
+10.2165/11318140-000000000-00000,Augmented Renal Clearance,Udy,2009,1
+10.1128/aac.00182-11,Pharmacokinetic/Pharmacodynamic (PK/PD) Indices of Antibiotics Predicted by a Semimechanistic PKPD Model: a Step toward Model-Based Dose Optimization,Nielsen,2011,1
+10.1128/aac.01586-06,Concentration-Effect Relationship of Ceftazidime Explains Why the Time above the MIC Is 40 Percent for a Static Effect In Vivo,Mouton,2007,1
+10.1093/clinids/13.supplement_10.s790,Role of Antimicrobial Pharmacokinetics and Pharmacodynamics in Surgical Prophylaxis,Redington,2011,1
+10.5694/j.1326-5377.1970.tb63262.x,ACUTE RENAL FAILURE DUE TO OVERDOSAGE OF COLISTIN,Brown,2019,1
+10.1056/nejm196204122661505,Neurotoxic and Nephrotoxic Effects of Colistin in Patients with Renal Disease,Wolinsky,2010,1
+10.1016/s0022-5347(17)68971-7,Use of Polymyxin in Gram Negative Urinary Tract Infections,Pulaski,2017,1
+10.1093/infdis/144.6.583,An Artificial Capillary in Vitro Kinetic Model of Antibiotic Bactericidal Activity,Zinner,2011,1
+10.1093/jac/22.6.811,Outer membrane proteins of polymyxin resistant <i>Pseudomonas aeruginosa</i>: effect of magnesium depletion,Shand,2007,1
+10.7326/0003-4819-138-1-200301070-00010,Towards Complete and Accurate Reporting of Studies of Diagnostic Accuracy: The STARD Initiative,Bossuyt,2013,1
+10.1172/jci114502,"Expression of two ""immediate early"" genes, Egr-1 and c-fos, in response to renal ischemia and during compensatory renal hypertrophy in mice.",Ouellette,2008,1
+10.1042/bj0650464,Studies on glucosaminidase. <i>N</i>-Acetyl-β-glucosaminidase in rat kidney,Pugh,2015,1
+10.1086/424846,Diagnosis and Treatment of Diabetic Foot Infections,Lipsky,2004,1
+10.1177/153857449703100403,"Prospective, Randomized Comparison of Ampicillin/Sulbactam and Cefoxitin for Diabetic Foot Infections",Erstad,2007,1
+10.1001/archsurg.1992.01420050145019,Trends in the Care of the Diabetic Foot,LoGerfo,2011,1
+10.1093/nar/gkm958,"DrugBank: a knowledgebase for drugs, drug actions and drug targets",Wishart,2007,1
+10.1038/nrd892,The druggable genome,Hopkins,2004,1
+10.1016/s0169-409x(96)00423-1,Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings,Lipinski,2002,1
+10.1007/bf00129753,Development of an automatic estimation system for both the partition coefficient and aqueous solubility,Suzuki,2004,1
+10.1002/cite.330370802,Eine einfache Korrelation zwischen Wasserlöslichkeit und Struktur von Kohlenwasserstoffen und Halogenkohlenwasserstoffen,Irmann,2004,1
+10.1016/j.ijantimicag.2016.06.023,Molecular mechanisms of polymyxin resistance: knowns and unknowns,Baron,2016,1
+10.1016/j.ijantimicag.2015.01.010,Acquisition of extended-spectrum cephalosporin- and colistin-resistant Salmonella enterica subsp. enterica serotype Newport by pilgrims during Hajj,Olaitan,2015,1
+10.1128/cvi.00314-12,Acquisition of Meningococcal Serogroup W-135 Carriage in Turkish Hajj Pilgrims Who Had Received the Quadrivalent Meningococcal Polysaccharide Vaccine,Ceyhan,2012,1
+10.1128/jcm.42.4.1764-1765.2004,"PCR-Based Assay for Detection of
+            <i>Neisseria meningitidis</i>
+            Capsular Serogroups 29E, X, and Z",Bennett,2004,1
+10.1128/jcm.40.1.75-79.2002,Detection of Meningococcal Carriage by Culture and PCR of Throat Swabs and Mouth Gargles,Jordens,2002,1
+10.1093/jac/dkm370,Mathematical modelling response of Pseudomonas aeruginosa to meropenem,Tam,2007,1
+10.1016/s0891-5520(03)00058-8,Polymyxins:,Hermsen,2005,1
+10.1016/j.ijantimicag.2009.11.005,Variability of polymyxin B major components in commercial formulations,He,2010,1
+10.1128/aac.47.8.2659-2662.2003,Polymyxin B Nephrotoxicity and Efficacy against Nosocomial Infections Caused by Multiresistant Gram-Negative Bacteria,Ouderkirk,2003,2
+10.1128/jcm.32.11.2677-2681.1994,Characterization of a hospital outbreak of imipenem-resistant Acinetobacter baumannii by phenotypic and genotypic typing methods,Tankovic,2020,1
+10.1128/aac.47.6.1824-1831.2003,Worldwide Assessment of Linezolid's Clinical Safety and Tolerability: Comparator-Controlled Phase III Studies,Rubinstein,2003,1
+10.1128/aac.01585-08,"Pharmacodynamics of Vancomycin at Simulated Epithelial Lining Fluid Concentrations against Methicillin-Resistant
+            <i>Staphylococcus aureus</i>
+            (MRSA): Implications for Dosing in MRSA Pneumonia",Harigaya,2009,1
+10.1128/aac.00006-09,"Pharmacodynamics of Levofloxacin in a Murine Pneumonia Model of
+            <i>Pseudomonas aeruginosa</i>
+            Infection: Determination of Epithelial Lining Fluid Targets",Louie,2009,1
+10.1378/chest.08-1116,Predictors of 30-Day Mortality and Hospital Costs in Patients With Ventilator-Associated Pneumonia Attributed to Potentially Antibiotic-Resistant Gram-Negative Bacteria,Kollef,2008,1
+10.1378/chest.128.6.3854,Epidemiology and Outcomes of Health-care–Associated Pneumonia,Kollef,2005,1
+10.1164/ajrccm.165.7.2105078,Ventilator-associated Pneumonia,Chastre,2013,1
+10.1164/ajrccm/143.5_pt_1.1055,Diagnosis of Nosocomial Pneumonia in Mechanically Ventilated Patients: Comparison of a Plugged Telescoping Catheter with the Protected Specimen Brush,Pham,2013,1
+10.1016/0002-9343(81)90595-7,Risk factors for postoperative pneumonia,Garibaldi,2004,1
+10.1016/0002-9343(80)90357-5,Deaths from nosocomial infections: Experience in a university hospital and a community hospital,Gross,2004,1
+10.1097/00003246-197407000-00006,Infection control in critical care units,SANFORD,2006,1
+10.1016/s0195-6701(96)90129-2,Stenotrophomonas maltophilia bacteraemia in cancer patients: report on 31 cases,Krcmery,2004,1
+10.1093/clinids/21.5.1134,"Spectrum of 2,836 Cases of Invasive Bacterial or Fungal Infections in Children: Results of Prospective Nationwide Five-Year Surveillance in Finland",Saarinen,2011,1
+10.1128/aac.38.6.1386,"Effect of 2',3'-didehydro-3'-deoxythymidine in an in vitro hollow-fiber pharmacodynamic model system correlates with results of dose-ranging clinical studies",Bilello,2012,1
+10.1093/carcin/20.2.237,Resveratrol suppresses cell transformation and induces apoptosis through a p53-dependent pathway,Huang,2002,1
+10.1128/aac.01273-07,In Vivo Pharmacodynamics of Ceftobiprole against Multiple Bacterial Pathogens in Murine Thigh and Lung Infection Models,Craig,2008,1
+10.1186/1471-2334-6-55,Neutropenia induced in outbred mice by a simplified low-dose cyclophosphamide regimen: characterization and applicability to diverse experimental models of infectious diseases,Zuluaga,2006,1
+10.1128/aac.42.4.862,"Efficacy of Trovafloxacin against Penicillin-Susceptible and Multiresistant Strains of
+            <i>Streptococcus pneumoniae</i>
+            in a Mouse Pneumonia Model",Bédos,2018,1
+10.1016/0169-2607(92)90103-e,"APIS: a software for model identification, simulation and dosage regimen calculations in clinical and experimental pharmacokinetics",Iliadis,2003,1
+10.1002/jps.2600780911,Application of Bayesian Estimation for the Prediction of an Appropriate Dosage Regimen of Amikacin,Garraffo,2006,1
+10.1093/infdis/130.2.150,The Unpredictability of Serum Concentrations of Gentamicin: Pharmacokinetics of Gentamicin in Patients with Normal and Abnormal Renal Function,Kaye,2011,1
+10.1016/j.diagmicrobio.2012.11.024,Update of dalbavancin spectrum and potency in the USA: report from the SENTRY Antimicrobial Surveillance Program (2011),Jones,2013,1
+10.1016/j.diagmicrobio.2005.03.004,Dalbavancin activity against selected populations of antimicrobial-resistant Gram-positive pathogens,Streit,2005,1
+10.1128/aac.48.3.1061-1064.2004,"Activities of Dalbavancin In Vitro and in a Rabbit Model of Experimental Endocarditis Due to
+            <i>Staphylococcus aureus</i>
+            with or without Reduced Susceptibility to Vancomycin and Teicoplanin",Lefort,2004,1
+10.1179/joc.2001.13.3.244,"<i>In Vitro</i>Evaluation of BI 397, a Novel Glycopeptide Antimicrobial Agent",Jones,2014,1
+10.1128/cmr.8.4.585,Current perspectives on glycopeptide resistance,Woodford,2018,1
+10.1038/ki.2009.289,Dialysis-requiring acute renal failure increases the risk of progressive chronic kidney disease,Lo,2009,1
+10.1038/ja.2015.127,Anthelmintic closantel enhances bacterial killing of polymyxin B against multidrug-resistant Acinetobacter baumannii,Tran,2015,1
+10.1111/tid.12210,Polymyxin use as a risk factor for colonization or infection with polymyxin-resistant<i>Acinetobacter baumannii</i>after liver transplantation,Freire,2014,1
+10.1016/j.jcrc.2010.12.018,Bloodstream infection after elective liver transplantation is associated with increased mortality in patients with cirrhosis,Karvellas,2011,1
+10.1053/jlts.2002.36239,Risk factors for invasive aspergillosis in liver transplant recipients,Fortún,2002,1
+10.1128/aac.00351-09,Meropenem Pharmacokinetics in the Newborn,van den Anker,2009,1
+10.1056/nejm199207233270401,Intravenous Immune Globulin for the Prevention of Nosocomial Infection in Low-Birth-Weight Neonates,Baker,2010,1
+10.1016/0002-9343(84)90322-x,Prolonged interval high-dose intravenous immunoglobulin in patients with primary immunodeficiency states,Montanaro,2004,1
+10.1007/bf00918361,Individual patient variations in the kinetics of intravenous immune globulin administration,Pirofsky,2005,1
+10.1038/nbt1196-1516,Genomic sciences and the medicine of tomorrow,Drews,2004,1
+10.1177/009286159603000113,Innovation Deficit in the Pharmaceutical Industry,Drews,2012,1
+10.1093/jac/dkv165,The ADMIN-ICU survey: a survey on antimicrobial dosing and monitoring in ICUs,Tabah,2015,1
+10.1128/aac.00554-15,Colistin Population Pharmacokinetics after Application of a Loading Dose of 9 MU Colistin Methanesulfonate in Critically Ill Patients,Karaiskos,2015,1
+10.1093/cid/cir611,Incidence of and Risk Factors for Colistin-Associated Nephrotoxicity in a Large Academic Health System,Pogue,2011,1
+10.1128/aac.01361-08,Population Pharmacokinetic Analysis of Colistin Methanesulfonate and Colistin after Intravenous Administration in Critically Ill Patients with Infections Caused by Gram-Negative Bacteria,Plachouras,2009,1
+10.1016/j.cmpb.2003.11.003,Perl-speaks-NONMEM (PsN)—a Perl module for NONMEM related programming,Lindbom,2004,1
+10.2165/00003088-199936040-00001,Software for Population Pharmacokinetics and Pharmacodynamics,Aarons,2006,1
+10.1034/j.1399-3062.2000.020203.x,Amphotericin B preparations: a maximum tolerated dose in severe invasive fungal infections?,Ellis,2003,1
+10.2165/00003088-199223040-00004,Liposomal and Lipid Formulations of Amphotericin B,Janknegt,2009,1
+10.1378/chest.76.1.11,Kinetics of Theophylline,Resar,2007,1
+10.1002/cpt1972133349,Pharmacokinetics of theophylline; Application to adjustment of the clinical dose of aminophylline,Jenne,2016,1
+10.1093/jac/dkw057,A pharmacokinetic–pharmacodynamic (PKPD) model based on<i>in vitro</i>time–kill data predicts the<i>in vivo</i>PK/PD index of colistin,Khan,2016,1
+10.1021/es60128a001,Partition coefficient and bioaccumulation of selected organic chemicals,Chiou,2005,1
+10.1093/jac/dkp029,Molecular mechanisms disrupting porin expression in ertapenem-resistant Klebsiella and Enterobacter spp. clinical isolates from the UK,Doumith,2009,1
+10.3201/eid1302.060747,Ertapenem Resistance of<i>Escherichia coli</i>,Lartigue,2009,1
+10.1111/j.1574-6968.2004.tb09534.x,Diversity of genetic environment of<i>bla</i><sub>CTX-M</sub>genes,Lartigue,2006,1
+10.1128/aac.46.2.534-537.2002,"CTX-M-1, CTX-M-3, and CTX-M-14 β-Lactamases from
+            <i>Enterobacteriaceae</i>
+            Isolated in France",Dutour,2002,1
+10.1093/clinids/10.4.867,Extended Broad-Spectrum  -Lactamases Conferring Transferable Resistance to Newer  -Lactam Agents in Enterobacteriaceae: Hospital Prevalence and Susceptibility Patterns,Jarlier,2011,1
+10.1203/00006450-198612000-00014,Complement Activation in Cystic Fibrosis Respiratory Fluids: in Vivo and in Vitro Generation of C5a and Chemotactic Activity,Fick,2007,1
+10.1126/science.107.2767.44,"A Paradoxical Zone Phenomenon in the Bactericidal Action of Penicillin
+            <i>in Vitro</i>",Eagle,2006,3
+10.1093/jac/dkh369,Combination therapy with polymyxin B for the treatment of multidrug-resistant Gram-negative respiratory tract infections,Sobieszczyk,2004,1
+10.1093/clinids/3.1.98,Intermittent or Continuous Therapy of Experimental Meningitis Due to Streptococcus pneumoniae in Rabbits: Preliminary Observations on the Postantibiotic Effect in Vivo,Sande,2011,1
+10.1038/srep26233,Polymyxin Resistance in Acinetobacter baumannii: Genetic Mutations and Transcriptomic Changes in Response to Clinically Relevant Dosage Regimens,Cheah,2016,1
+10.1128/aac.43.6.1317,Peptide Antibiotics,Hancock,2018,1
+10.1016/0014-5793(96)00168-8,Antibacterial activity of peptides homologous to a loop region in human lactoferrin,Odell,2002,1
+10.1016/s0021-9258(18)61088-9,Lactotransferrin is the major estrogen inducible protein of mouse uterine secretions.,Pentecost,2021,1
+10.1016/0006-291x(84)91648-6,Molecular cloning and sequence analysis of cDNA for human transferrin,Uzan,2004,1
+10.3109/00365516109137296,Albumin and Transferrin Metabolism in Infectious and Toxic Diseases,Jarnum,2008,1
+10.1128/aac.40.2.509,Sequences of beta-lactamase genes encoding CTX-M-1 (MEN-1) and CTX-M-2 and relationship of their amino acid sequences with those of other beta-lactamases,Bauernfeind,2018,1
+10.7883/yoken.jjid.2014.282,Ventilator-Associated Pneumonia: Epidemiology and Prognostic Indicators of 30-Day Mortality,Inchai,2014,1
+10.1093/jac/dkx002,"Polymyxin-resistant, carbapenem-resistant Acinetobacter baumannii is eradicated by a triple combination of agents that lack individual activity",Lenhard,2017,1
+10.1086/420937,Trends in Antimicrobial Drug Development: Implications for the Future,Spellberg,2004,1
+10.1016/s1010-7940(97)00230-3,Role of surgery in multi-drug-resistant tuberculosis: results of 27 cases,Kir,2002,1
+10.1016/s0021-9258(18)33888-2,Regulation of phospholipid synthesis in Escherichia coli. Composition of the acyl-acyl carrier protein pool in vivo.,Rock,2021,1
+10.1146/annurev.bi.44.070175.001531,Genetic Modification of Membrane Lipid,Silbert,2003,1
+10.1086/497831,Dissemination of the Metallo- -Lactamase Gene blaIMP-4 among Gram-Negative Pathogens in a Clinical Setting in Australia,Peleg,2005,1
+10.1093/jac/dkh095,Pseudomonas aeruginosa strains harbouring an unusual blaVIM-4 gene cassette isolated from hospitalized children in Poland (1998-2001),Patzer,2004,1
+10.1007/s00134-007-0745-5,Replacement of 24-h creatinine clearance by 2-h creatinine clearance in intensive care unit patients: a single-center study,Herrera-Gutiérrez,2007,1
+10.1038/ki.1985.101,Course of acute renal failure studied by a model of creatinine kinetics,Mark Moran,2007,1
+10.1093/clinchem/17.8.696,Automated Reaction-Rate Method for Determination of Serum Creatinine with the CentrifiChem,Fabiny,2020,1
+10.1177/0091270010377789,The Emerging Scientific Discipline of Pharmacometrics,Pfister,2010,1
+10.1007/bf01065167,Pharmacometrics: A new journal section,Benet,2005,1
+10.1016/j.tips.2016.10.012,Towards Precision Medicine in the Clinic: From Biomarker Discovery to Novel Therapeutics,Collins,2016,1
+10.1056/nejmoa1507643,Nivolumab versus Docetaxel in Advanced Nonsquamous Non–Small-Cell Lung Cancer,Borghaei,2015,1
+10.1056/nejmoa1504627,Nivolumab versus Docetaxel in Advanced Squamous-Cell Non–Small-Cell Lung Cancer,Brahmer,2015,1
+10.1016/s1470-2045(15)70054-9,"Activity and safety of nivolumab, an anti-PD-1 immune checkpoint inhibitor, for patients with advanced, refractory squamous non-small-cell lung cancer (CheckMate 063): a phase 2, single-arm trial",Rizvi,2015,1
+10.1186/1471-2334-13-380,Trough colistin plasma level is an independent risk factor for nephrotoxicity: a prospective observational cohort study,Sorlí,2013,1
+10.1086/514732,Intravenous Colistin as Therapy for Nosocomial Infections Caused by Multidrug‐Resistant Pseudomonas aeruginosa and Acinetobacter baumannii,Levin,2007,1
+10.1128/aac.01267-16,"Detection of
+            <i>mcr-1</i>
+            among Escherichia coli Clinical Isolates Collected Worldwide as Part of the SENTRY Antimicrobial Surveillance Program in 2014 and 2015",Castanheira,2016,1
+10.1016/s1473-3099(15)00424-7,Emergence of plasmid-mediated colistin resistance mechanism MCR-1 in animals and human beings in China: a microbiological and molecular biological study,Liu,2015,2
+10.1073/pnas.1503141112,Global trends in antimicrobial use in food animals,Van Boeckel,2015,1
+10.1016/s1473-3099(13)70318-9,Antibiotic resistance—the need for global solutions,Laxminarayan,2013,1
+10.1086/657140,Impact of International Nosocomial Infection Control Consortium (INICC) Strategy on Central Line–Associated Bloodstream Infection Rates in the Intensive Care Units of 15 Developing Countries,Rosenthal,2010,1
+10.4103/0971-9784.38445,Resistance in gram-negative bacilli in a cardiac intensive care unit in India: Risk factors and outcome,Mehta,2009,1
+10.1016/j.tim.2008.03.007,"The Salmonella PmrAB regulon: lipopolysaccharide modifications, antimicrobial peptide resistance and more",Gunn,2008,1
