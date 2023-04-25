@@ -15,7 +15,8 @@ from random import random, choice
 from anytree import Node, RenderTree
 from unidecode import unidecode
 from Surf import SurfWrapper, BackToStart, InvalidReferences, NewPaper, PreviouslySeenPaper
-from Paper import Paper, PaperNode
+from Paper import Paper, PaperNode, DAGNode, DAGEdge
+import networkx as nx 
 
 def make_paper_from_query(query):
     message = query['message']
@@ -93,7 +94,7 @@ def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_sta
       
     return SurfWrapper(choice(list(starting_papers)), 
                        action=BackToStart())
-
+"""""
 def copy_node(node): 
     """
     Return deep copy of node
@@ -110,7 +111,7 @@ def walk_tree(node):
         new_node.clear_children()
         new_node.add_children(node.get_children())
         return walk_tree(new_node)
-
+"""
 
 def main(): 
     cr = Crossref()
@@ -129,7 +130,8 @@ def main():
     starting_papers = set()
     seen_papers = set()
     paper_counter = dict()
-    tree = []
+    node_list = []
+    edge_list = [] 
 
     KEYWORDS = 'keywords.csv'
     #IMPORTANT_AUTHORS = 'important_authors.csv'
@@ -140,7 +142,9 @@ def main():
     with open(KEYWORDS, 'r') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            keyword = row['keyterms']
+            keyterm = row['keyterms']
+            value = row['value']
+            keyword = [keyterm, value]
             keywords.append(keyword)
     
     """""
@@ -156,34 +160,35 @@ def main():
     for i in starting_DOIs:
         result = query_from_DOI(i)
         paper = make_paper_from_query(result)
-        #paper.children = [PaperNode('123', 'test', 'Me', '1920'), PaperNode('456', 'testing', 'you', '1924')]
         starting_papers.add(paper)
-        tree.append(paper)
-        author = paper.get_first_author()
-        important_authors.append(author)
-
+        dag_node = DAGNode(paper)
+        node_list.append(dag_node)
 
     paper_pointer = choice(list(starting_papers))
-    for _ in range(50): 
+    for _ in range(10): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                          keywords=['pharmacokinetics', 'pharmacodynamics'], back_to_start_weight=0.15)
         new_paper = new_wrapped_paper.get_paper_node()
 
-        if not new_wrapped_paper.is_back_to_start(): 
-            paper_pointer.add_child_node(new_paper)
+        if new_paper not in node_list:
+                node_list.append(new_paper)
 
+        if not new_wrapped_paper.is_back_to_start(): 
+            new_paper.set_parent(paper_pointer)
+            edge_list.append(new_paper)
+            
         if new_paper not in starting_papers: 
-            if new_paper in tree:
-                # if we already have a node for this paper in tree, add another node only
+            if new_paper in edge_list:
+                # if we already have a node for this paper in edge list, add another node only
                 # if parent different to previously recorded nodes
-                previous_nodes = [i for i in tree if i == new_paper]
+                previous_nodes = [i for i in edge_list if i == new_paper]
                 if not any([True for i in previous_nodes if i.get_parent() == paper_pointer]): 
                     new_paper.set_parent(paper_pointer)
-                    tree.append(new_paper)
+                    edge_list.append(new_paper)
             else: 
                 new_paper.set_parent(paper_pointer)
-                tree.append(new_paper)
+                edge_list.append(new_paper)
             if new_paper not in seen_papers: 
                 paper_counter[new_paper] = 1
                 seen_DOIs.add(new_paper.get_DOI())
@@ -202,7 +207,7 @@ def main():
 
     for i,j in sorted_paper_counter: 
         print(f"Paper {i.make_name()} {i.get_title()} DOI {i.get_DOI()} seen {j} times")
-
+"""""
     for leaf in tree:
      try: 
          print(f" ID:{leaf.name}, parent:{leaf.parent.name}, children{leaf.children.name}")
@@ -221,6 +226,8 @@ def main():
         for pre, fill, node in RenderTree(root): 
                     treestr = u"%s%s" % (pre, node.name)
                     print(treestr.ljust(8))
+"""
+#for node in edge list, calculate score - then draw graph...
 
     with open('rs_output_10.csv', 'w', newline='') as csvfile:
 

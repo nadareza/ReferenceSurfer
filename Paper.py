@@ -87,63 +87,6 @@ class Paper:
     def make_name(self):
         name = f"{self.get_first_author()} et al, {self.get_year()} ({self.get_DOI()})" 
         return name
-        
-class PaperNode(Paper, NodeMixin):
-    def __init__(self, DOI, title, author, year, references = None, parent = None, children = None):
-        super().__init__(DOI, title, author, year, references)
-        self.name = self.make_name()
-        self.parent = parent
-        if children:
-            self.children = children
-    
-    def add_children(self, children):
-        if not children: 
-            return
-        self.children = children
-
-    def add_child_node(self, child_node): 
-        if not child_node: 
-            return
-        if type(child_node) != PaperNode: 
-            raise ValueError("Function .add_child_node() can only take PaperNode for parameter child_node") 
-        if child_node in self.get_children(): 
-            return
-        previous_children = self.get_children()
-        new_children = list(previous_children)
-        new_children.append(child_node)
-        self.children = new_children
-    
-    def get_children(self): 
-        return self.children
-    
-    def clear_children(self): 
-        self.children = tuple()
-
-    def set_parent(self, parent): 
-        self.parent = parent
-
-    def get_parent(self): 
-        return self.parent
-    
-    def count_ancestors(self):
-        ancestors = list(self.ancestors)
-        num_ancestors = len(ancestors)
-        return num_ancestors
-    
-class DAGNode(Paper):
-    def __init__(self):
-        self._name = self.make_name()
-    
-class DAGEdge(DAGNode):
-    def __init__ (self, parent):
-        self._parent = parent
-        self._score = self.calculate_score()
-    
-    def make_dagnode(self):
-        return self._name
-
-    def make_dagedge(self):
-        return (self._parent.make_name(), self._name, self._score)
     
     def title_score(self, keywords):
         title = self.get_title()
@@ -180,6 +123,59 @@ class DAGEdge(DAGNode):
                     if author_score > 25:
                         author_score = 25
             return(author_score)
+    
+    def paper_score(self):
+        paper_score = sum(self.title_score() + self.author_score()) * 2
+        return(paper_score)
+        
+class PaperNode(Paper, NodeMixin):
+    def __init__(self, DOI, title, author, year, references = None, parent = None, children = None):
+        super().__init__(DOI, title, author, year, references)
+        self.name = self.make_name()
+        self.parent = parent
+        if children:
+            self.children = children
+    
+    def add_children(self, children):
+        if not children: 
+            return
+        self.children = children
+
+    def add_child_node(self, child_node): 
+        if not child_node: 
+            return
+        if type(child_node) != PaperNode: 
+            raise ValueError("Function .add_child_node() can only take PaperNode for parameter child_node") 
+        if child_node in self.get_children(): 
+            return
+        previous_children = self.get_children()
+        new_children = list(previous_children)
+        new_children.append(child_node)
+        self.children = new_children
+    
+    def get_children(self): 
+        return self.children
+    
+    def clear_children(self): 
+        self.children = tuple()
+    
+    def count_ancestors(self):
+        ancestors = list(self.ancestors)
+        num_ancestors = len(ancestors)
+        return num_ancestors
+    
+class DAGNode(Paper):
+    def __init__(self, DOI, title, author, year, references = None, parent= None, score = None):
+        super().__init__(DOI, title, author, year, references)
+        self._name = self.make_name()
+        self._parent=parent
+        self._score = self.node_score()
+    
+    def set_parent(self, parent): 
+        self._parent = parent
+    
+    def get_parent(self): 
+        return self._parent
 
     def frequency_score(self, edge_list):
         counter = 0
@@ -187,9 +183,9 @@ class DAGEdge(DAGNode):
             if self.make_name() in dagedge:
                 counter = counter + 1
         if counter > 25:
-            frequency_score =  25
+            frequency_score = 25 * 2
         else:
-            frequency_score = counter
+            frequency_score = counter * 2
         return(frequency_score)
 
     def depth_score(self, starting_papers, node_list, edge_list):
@@ -207,14 +203,14 @@ class DAGEdge(DAGNode):
             root_distance.append[shortest_root_node]
         max_depth = max(root_distance)
         if max_depth > 25:
-            depth_score =  25
+            depth_score =  25 * 2
         else:
-            depth_score = max_depth
+            depth_score = max_depth * 2
         return(depth_score)
     
-    def calculate_score(self):
-        score = sum(self.title_score() + self.author_score() + self.frequency_score() + self.depth_score()) 
-        return(score)       
+    def node_score(self):
+        self._score = sum(self.frequency_score() + self.depth_score()) 
+        return(self._score)       
 
 
 
