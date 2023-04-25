@@ -15,8 +15,9 @@ from random import random, choice
 from anytree import Node, RenderTree
 from unidecode import unidecode
 from Surf import SurfWrapper, BackToStart, InvalidReferences, NewPaper, PreviouslySeenPaper
-from Paper import Paper, PaperNode, DAGNode, DAGEdge
+from Paper import Paper, PaperNode, DAGNode
 import networkx as nx 
+import matplotlib.pyplot as plt
 
 def make_paper_from_query(query):
     message = query['message']
@@ -26,7 +27,7 @@ def make_paper_from_query(query):
     date_time = message['created']['date-time']
     year = datetime.fromisoformat(date_time).year
     references = message['reference'] if message['references-count'] > 0 else None
-    return PaperNode(DOI=doi,
+    return DAGNode(DOI=doi,
                  title=title,
                  author=author,
                  year=year,
@@ -96,9 +97,9 @@ def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_sta
                        action=BackToStart())
 """""
 def copy_node(node): 
-    """
+    
     Return deep copy of node
-    """
+
     new_node = PaperNode(node.get_DOI(), node.get_title(), node._author, 
                          node.get_year(), parent = node.get_parent())
     return new_node
@@ -168,8 +169,13 @@ def main():
     for _ in range(10): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
-                         keywords=['pharmacokinetics', 'pharmacodynamics'], back_to_start_weight=0.15)
+                                 back_to_start_weight=0.15)
         new_paper = new_wrapped_paper.get_paper_node()
+        new_paper_score = new_paper.score_paper()
+           #if the paper scores very low from title and authors, skip over it, likely irrelevant 
+        if new_paper_score < 5:
+             print(f"Low paper score, likely irrelevant")
+            # choice list starting vs surf vs choice list seen?? vs go back some how 'Dal segno al coda'
 
         if new_paper not in node_list:
                 node_list.append(new_paper)
@@ -207,6 +213,28 @@ def main():
 
     for i,j in sorted_paper_counter: 
         print(f"Paper {i.make_name()} {i.get_title()} DOI {i.get_DOI()} seen {j} times")
+    
+    for node in edge_list:
+        scored_node = node.score_node(starting_papers, node_list, edge_list)
+        node = scored_node
+    
+    DAG = nx.DiGraph
+    DAG.add_nodes_from(node_list)
+    DAG.add_edges_from(edge_list)
+    nx.draw_networkx(DAG, pos)
+
+    with open('rs_output_10.csv', 'w', newline='') as csvfile:
+
+        writer = csv.writer(csvfile, delimiter=",")
+        writer.writerow(['DOI', 'author', 'title', 'times_seen'])
+        for paper,times_seen in paper_counter.items(): 
+            writer.writerow([paper.get_DOI(), 
+                             paper.get_title(), 
+                             paper.get_first_author(),
+                             times_seen])
+
+main()
+
 """""
     for leaf in tree:
      try: 
@@ -226,83 +254,4 @@ def main():
         for pre, fill, node in RenderTree(root): 
                     treestr = u"%s%s" % (pre, node.name)
                     print(treestr.ljust(8))
-"""
-#for node in edge list, calculate score - then draw graph...
-
-    with open('rs_output_10.csv', 'w', newline='') as csvfile:
-
-        writer = csv.writer(csvfile, delimiter=",")
-        writer.writerow(['DOI', 'author', 'title', 'times_seen'])
-        for paper,times_seen in paper_counter.items(): 
-            writer.writerow([paper.get_DOI(), 
-                             paper.get_title(), 
-                             paper.get_first_author(),
-                             times_seen])
-
-main()
-   
-"""""
-        ##paper_score = 5
-
-        #weight title by keywords
-        title = new_paper.get_title()
-        title = unidecode.unidecode(title)
-        title = title.lower()      
-        if title:  
-            for i in keywords: 
-                if i not in title:
-                    back_to_start_weight = back_to_start_weight + 0.1
-                    ##paper_score = paper_score -1
-                    if back_to_start_weight < 0:
-                        back_to_start_weight = 0
-        
-        #weight authors by author list
-        first_author = new_paper.get_first_author()
-        all_authors = new_paper.get_authors()
-        first_author = unidecode.unidecode(first_author)
-        all_authors = unidecode.unidecode(all_authors)
-        first_author = first_author.lower()
-        all_authors = all_authors.lower()
-        if first_author:
-            for a in important_authors:
-                if a in first_author:
-                    back_to_start_weight = back_to_start_weight - 0.1
-                    ##paper_score = paper_score + 1
-                    if back_to_start_weight < 0:
-                        back_to_start_weight = 0
-                if a not in all_authors:
-                    back_to_start_weight = back_to_start_weight + 0.01
-                    ##paper_score = paper_score - 0.2
-                    if back_to_start_weight < 0:
-                            back_to_start_weight = 0
-        
-        #weight by depth 
-        depth = paper_pointer.depth
-        if 1 < depth < 4:
-            back_to_start_weight = back_to_start_weight - 0.05
-            #paper_score = paper_score + 0.5
-        if 4 <= depth < 6:
-            back_to_start_weight = back_to_start_weight - 0.1
-            #paper_score = paper_score + 1
-        if depth >= 6:
-            back_to_start_weight = back_to_start_weight - 0.149
-            #paper_score = paper_score + 2
-
-        #weight by times_seen
-        paper_pointer, times_seen in paper_counter.items():
-        if 1 < times_seen <= 3:
-            back_to_start_weight = back_to_start_weight - 0.05
-            #paper_score = paper_score + 0.5
-            if back_to_start_weight < 0:
-                back_to_start_weight = 0
-        if 3 < times_seen <= 5: 
-            back_to_start_weight = back_to_start_weight - 0.10
-            #paper_score = paper_score + 1
-            if back_to_start_weight < 0:
-                back_to_start_weight = 0
-        if times_seen > 5:
-            back_to_start_weight = back_to_start_weight - 0.14
-            #paper_score = paper_score + 2
-            if back_to_start_weight < 0:
-                back_to_start_weight = 0
 """
