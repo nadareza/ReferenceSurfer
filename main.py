@@ -143,7 +143,7 @@ def main():
     #IMPORTANT_AUTHORS = 'important_authors.csv'
 
     keywords = [] 
-    important_authors = [] 
+    important_authors = ['Morales', 'Chua', 'Scaglione', 'Smith', 'Wilbaux', 'Craig', 'Drusano', 'Rao', 'Babl'] 
 
     with open(KEYWORDS, 'r') as csvfile:
         reader = csv.DictReader(csvfile)
@@ -171,7 +171,7 @@ def main():
         node_list[paper] = dag_node
 
     paper_pointer = choice(list(starting_papers))
-    for _ in range(10): 
+    for _ in range(50): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                                  back_to_start_weight=0.15)
@@ -180,7 +180,7 @@ def main():
         new_node = make_dagnode_from_paper(new_paper)
            #if the paper scores very low from title and authors, skip over it, likely irrelevant 
         if new_paper_score < 1:
-             print(f"Low paper score, likely irrelevant")
+             print(f"Low paper score {new_paper_score}, likely irrelevant")
              continue
             # choice list starting_papers vs surf vs choice list seen_papers?? vs go back 'Dal segno al coda'
 
