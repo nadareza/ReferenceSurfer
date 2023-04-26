@@ -135,9 +135,9 @@ def main():
     starting_papers = set()
     seen_papers = set()
     paper_counter = dict()
-    node_list = []
+    node_list = dict()
     paired_node_list = []
-    edge_list = [] 
+    edge_list = dict()
 
     KEYWORDS = 'keywords.csv'
     #IMPORTANT_AUTHORS = 'important_authors.csv'
@@ -168,7 +168,7 @@ def main():
         paper = make_paper_from_query(result)
         starting_papers.add(paper)
         dag_node = make_dagnode_from_paper(paper)
-        node_list.append(dag_node)
+        node_list[paper] = dag_node
 
     paper_pointer = choice(list(starting_papers))
     for _ in range(10): 
@@ -176,16 +176,16 @@ def main():
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                                  back_to_start_weight=0.15)
         new_paper = new_wrapped_paper.get_paper()
-        new_paper_score = new_paper.score_paper()
+        new_paper_score = new_paper.score_paper(keywords, important_authors)
         new_node = make_dagnode_from_paper(new_paper)
            #if the paper scores very low from title and authors, skip over it, likely irrelevant 
-        if new_paper_score < 5:
+        if new_paper_score < 1:
              print(f"Low paper score, likely irrelevant")
              continue
             # choice list starting_papers vs surf vs choice list seen_papers?? vs go back 'Dal segno al coda'
 
         if new_paper not in node_list:
-                node_list.append(new_node)
+                node_list[new_paper] = new_node
 
         if not new_wrapped_paper.is_back_to_start(): 
             new_node.set_parent(paper_pointer)
@@ -228,7 +228,7 @@ def main():
         weight_score = sum(freq_score + depth_score)
         scored_node= node.set_score(weight_score)
         scored_edge = scored_node.make_scored_edge()
-        edge_list.append(scored_edge)    
+        edge_list[node](scored_edge)    
     
     DAG = nx.DiGraph
     DAG.add_nodes_from(node_list)

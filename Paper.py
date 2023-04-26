@@ -90,29 +90,31 @@ class Paper:
     
     def title_score(self, keywords):
         title = self.get_title()
-        title = unidecode.unidecode(title)
-        title = title.lower()
         title_score = 0
         if title:  
+            title = unidecode(title)
+            title = title.lower()
             for keyword in keywords: 
                 if keyword[1] in title:
                     title_score + keyword[2]
             return title_score
+        else:
+            title_score = 0
     
     def author_score(self, important_authors):
         first_author = self.get_first_author()
-        all_authors = self.get_all_authors()
-        last_author = self.get_last_author()
-        first_author = unidecode.unidecode(first_author)
-        all_authors = unidecode.unidecode(all_authors)
-        last_authors = unidecode.unidecode(last_authors)
-        first_author = first_author.lower()
-        all_authors = all_authors.lower()
-        last_authors = last_authors.lower()
-
         author_score = 0
 
         if first_author:
+            all_authors = self.get_all_authors()
+            last_author = self.get_last_author()
+            first_author = unidecode(first_author)
+            last_author = unidecode(last_author)
+            first_author = first_author.lower()
+            last_author = last_author.lower()
+            for author in all_authors:
+                author = unidecode(author)
+                author = author.lower()
             for author in important_authors:
                 if author in first_author:
                     author_score = author_score + (25 * 0.375)
@@ -123,9 +125,15 @@ class Paper:
                     if author_score > 25:
                         author_score = 25
             return(author_score)
+        else: 
+            author_score = 0
     
-    def score_paper(self):
-        paper_score = sum(self.title_score() + self.author_score()) * 2
+    def score_paper(self, keywords, important_authors):
+        try:
+            paper_score = sum(self.title_score(keywords) + self.author_score(important_authors))
+            paper_score = paper_score * 2
+        except:
+            paper_score = 0
         return(paper_score)
         
 class PaperNode(Paper, NodeMixin):
