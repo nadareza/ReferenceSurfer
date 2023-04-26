@@ -124,7 +124,7 @@ class Paper:
                         author_score = 25
             return(author_score)
     
-    def paper_score(self):
+    def score_paper(self):
         paper_score = sum(self.title_score() + self.author_score()) * 2
         return(paper_score)
         
@@ -169,7 +169,7 @@ class DAGNode(Paper):
         super().__init__(DOI, title, author, year, references)
         self._name = self.make_name()
         self._parent=parent
-        self._score = self.node_score()
+        self._score = score
     
     def set_parent(self, parent): 
         self._parent = parent
@@ -208,7 +208,7 @@ class DAGNode(Paper):
             depth_score = max_depth * 2
         return(depth_score)
     
-    def node_score(self):
+    def score_node(self):
         self._score = sum(self.frequency_score() + self.depth_score()) 
         return(self._score)       
 

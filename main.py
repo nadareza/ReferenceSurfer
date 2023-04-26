@@ -27,7 +27,7 @@ def make_paper_from_query(query):
     date_time = message['created']['date-time']
     year = datetime.fromisoformat(date_time).year
     references = message['reference'] if message['references-count'] > 0 else None
-    return DAGNode(DOI=doi,
+    return Paper(DOI=doi,
                  title=title,
                  author=author,
                  year=year,
@@ -47,6 +47,10 @@ def query_from_DOI(doi):
     
     print(f"Unable to pull {doi}")
     return None
+
+def make_dagnode_from_paper(paper : Paper):
+    dagnode = DAGNode(paper)
+    return(dagnode)
 
 def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_start_weight=0.15, 
          keyword_discard=0.8, keywords=[]):
@@ -162,7 +166,7 @@ def main():
         result = query_from_DOI(i)
         paper = make_paper_from_query(result)
         starting_papers.add(paper)
-        dag_node = DAGNode(paper)
+        dag_node = make_dagnode_from_paper(paper)
         node_list.append(dag_node)
 
     paper_pointer = choice(list(starting_papers))
