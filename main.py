@@ -143,14 +143,14 @@ def main():
     #IMPORTANT_AUTHORS = 'important_authors.csv'
 
     keywords = [] 
-    important_authors = ['Morales', 'Chua', 'Scaglione', 'Smith', 'Wilbaux', 'Craig', 'Drusano', 'Rao', 'Babl'] 
+    important_authors = ['morales', 'chua', 'scaglione', 'smith', 'wilbaux', 'craig', 'drusano', 'rao', 'babl'] 
 
     with open(KEYWORDS, 'r') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             keyterm = row['keyterms']
             value = row['value']
-            keyword = [keyterm, value]
+            keyword = [unidecode(keyterm).lower(), value]
             keywords.append(keyword)
     
     """""
@@ -179,11 +179,13 @@ def main():
         new_paper_score = new_paper.score_paper(keywords, important_authors)
         new_node = make_dagnode_from_paper(new_paper)
            #if the paper scores very low from title and authors, skip over it, likely irrelevant 
-        if new_paper_score < 1:
-             print(f"Low paper score {new_paper_score}, likely irrelevant")
+        if new_paper_score < 0.5:
+             print(f"Low paper score: {new_paper.get_title} by {new_paper.get_first_author()}, Total ={new_paper_score}, Title = {new_paper.title_score(keywords)}, Author = {new_paper.author_score(important_authors)} - therefore likely irrelevant")
              continue
             # choice list starting_papers vs surf vs choice list seen_papers?? vs go back 'Dal segno al coda'
-
+        else:
+            print(f"Great paper score! {new_paper.get_title} by {new_paper.get_first_author()}, Total ={new_paper_score}, Title = {new_paper.title_score(keywords)}, Author = {new_paper.author_score(important_authors)} - paper included")
+              
         if new_paper not in node_list:
                 node_list[new_paper] = new_node
 
