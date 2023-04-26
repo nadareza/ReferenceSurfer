@@ -136,6 +136,7 @@ def main():
     seen_papers = set()
     paper_counter = dict()
     node_list = []
+    paired_node_list = []
     edge_list = [] 
 
     KEYWORDS = 'keywords.csv'
@@ -174,31 +175,34 @@ def main():
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                                  back_to_start_weight=0.15)
-        new_paper = new_wrapped_paper.get_paper_node()
+        new_paper = new_wrapped_paper.get_paper()
         new_paper_score = new_paper.score_paper()
+        new_node = make_dagnode_from_paper(new_paper)
            #if the paper scores very low from title and authors, skip over it, likely irrelevant 
         if new_paper_score < 5:
              print(f"Low paper score, likely irrelevant")
-            # choice list starting vs surf vs choice list seen?? vs go back some how 'Dal segno al coda'
+             continue
+            # choice list starting_papers vs surf vs choice list seen_papers?? vs go back 'Dal segno al coda'
 
         if new_paper not in node_list:
-                node_list.append(new_paper)
+                node_list.append(new_node)
 
         if not new_wrapped_paper.is_back_to_start(): 
-            new_paper.set_parent(paper_pointer)
-            edge_list.append(new_paper)
+            new_node.set_parent(paper_pointer)
+            new_edge = new_node.make_scoreless_edge()
+            paired_node_list.append(new_edge)
             
         if new_paper not in starting_papers: 
-            if new_paper in edge_list:
+            new_node.set_parent(paper_pointer)
+            new_edge = new_node.make_scoreless_edge()
+            if new_edge in paired_node_list:
                 # if we already have a node for this paper in edge list, add another node only
                 # if parent different to previously recorded nodes
-                previous_nodes = [i for i in edge_list if i == new_paper]
+                previous_nodes = [i for i in edge_list if i == new_edge]
                 if not any([True for i in previous_nodes if i.get_parent() == paper_pointer]): 
-                    new_paper.set_parent(paper_pointer)
-                    edge_list.append(new_paper)
+                    paired_node_list.append(new_edge)
             else: 
-                new_paper.set_parent(paper_pointer)
-                edge_list.append(new_paper)
+                paired_node_list.append(new_edge)
             if new_paper not in seen_papers: 
                 paper_counter[new_paper] = 1
                 seen_DOIs.add(new_paper.get_DOI())
@@ -218,9 +222,13 @@ def main():
     for i,j in sorted_paper_counter: 
         print(f"Paper {i.make_name()} {i.get_title()} DOI {i.get_DOI()} seen {j} times")
     
-    for node in edge_list:
-        scored_node = node.score_node(starting_papers, node_list, edge_list)
-        node = scored_node
+    for node in paired_node_list:
+        freq_score = node.frequency_score(paper_counter)
+        depth_score = node.depth_score(starting_papers, node_list, paired_node_list)
+        weight_score = sum(freq_score + depth_score)
+        scored_node= node.set_score(weight_score)
+        scored_edge = scored_node.make_scored_edge()
+        edge_list.append(scored_edge)    
     
     DAG = nx.DiGraph
     DAG.add_nodes_from(node_list)

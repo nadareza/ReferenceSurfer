@@ -8,7 +8,7 @@
 
 """Surfing classes"""
 
-from Paper import PaperNode
+from Paper import Paper
 from Paper import DAGNode
 
 class SurfAction():
@@ -35,12 +35,12 @@ class PreviouslySeenPaper(SurfAction):
         super().__init__(is_back_to_start=False)
 
 class SurfWrapper(): 
-    def __init__(self, paper: DAGNode, action: SurfAction): 
+    def __init__(self, paper: Paper, action: SurfAction): 
         self._paper = paper
         self._action = action
     
     def is_back_to_start(self): 
         return self._action.is_back_to_start()
     
-    def get_paper_node(self): 
+    def get_paper(self): 
         return self._paper

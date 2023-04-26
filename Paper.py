@@ -165,30 +165,33 @@ class PaperNode(Paper, NodeMixin):
         return num_ancestors
     
 class DAGNode(Paper):
-    def __init__(self, DOI, title, author, year, references = None, parent= None, score = None):
-        super().__init__(DOI, title, author, year, references)
-        self._name = self.make_name()
-        self._parent=parent
-        self._score = score
+    def __init__(self, id : Paper, parent : Paper = None):
+        self._name = id.make_name()
+        if parent:
+            self._parent= parent.make_name()
     
     def set_parent(self, parent): 
         self._parent = parent
     
     def get_parent(self): 
         return self._parent
+    
+    def make_scoreless_edge(self):
+        dag_edge = (self._parent, self._name)
+        return(dag_edge)
+    
+    def make_scored_edge(self):
+        dag_edge = (self._parent, self._name, self._score)
+        return(dag_edge)
 
-    def frequency_score(self, edge_list):
-        counter = 0
-        for dagedge in edge_list:
-            if self.make_name() in dagedge:
-                counter = counter + 1
-        if counter > 25:
+    def frequency_score(self, paper_counter):
+        if paper_counter[self] > 25:
             frequency_score = 25 * 2
         else:
-            frequency_score = counter * 2
+            frequency_score = paper_counter[self] * 2
         return(frequency_score)
 
-    def depth_score(self, starting_papers, node_list, edge_list):
+    def depth_score(self, starting_papers, node_list, paired_node_list):
         root_nodes = []
         for paper in starting_papers:
             root_node = DAGNode(paper) 
@@ -196,7 +199,7 @@ class DAGNode(Paper):
         self_node = DAGNode(self) 
         DAG = nx.DiGraph
         DAG.add_nodes_from(node_list)
-        DAG.add_edges_from(edge_list)
+        DAG.add_edges_from(paired_node_list)
         root_distance = [] 
         for root in root_nodes:
             shortest_root_node = nx.shortest_path(DAG, source=root, target=self_node)
@@ -208,8 +211,8 @@ class DAGNode(Paper):
             depth_score = max_depth * 2
         return(depth_score)
     
-    def score_node(self):
-        self._score = sum(self.frequency_score() + self.depth_score()) 
+    def set_score(self, score):
+        self._score = score
         return(self._score)       
 
 
