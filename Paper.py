@@ -85,7 +85,10 @@ class Paper:
         return self._year   
     
     def make_name(self):
-        name = f"{self.get_first_author()} et al, {self.get_year()} ({self.get_DOI()})" 
+        name = f"""
+        {self.get_first_author()} 
+        {self.get_year()}""" 
+        {self.get_DOI()} 
         return name
     
     def title_score(self, keywords):

@@ -16,10 +16,9 @@ from anytree import Node, RenderTree
 from unidecode import unidecode
 from Surf import SurfWrapper, BackToStart, InvalidReferences, NewPaper, PreviouslySeenPaper
 from Paper import Paper, PaperNode, DAGNode
-import networkx as nx 
+import numpy as np
 import matplotlib.pyplot as plt
 import networkx as nx 
-
 
 def make_paper_from_query(query):
     message = query['message']
@@ -267,31 +266,56 @@ def main():
         paper_name = paper.make_name()
         if paper_name in node_list:
             root_nodes.append(paper_name)
+    labels = {}
+    node_name_list = []
+    for node in node_list:
+        name = node.get_name()
+        labels[name] = f"{name}"  
+        node_name_list.append(name)
+    print(f"""
+    Labels: {labels}""")
+    print(f"""Node Name List: 
+    {node_name_list}""")
+    print(f"""Paired Node List:
+           {paired_node_list}""")
+    print(f"""Edge List:
+           {edge_list}""")
+    print(f"""Concatenated Paired List:
+           {concat_paired_nodes}""")
+    print(f"""Paper Counter:
+           {paper_counter}""")
+    
+    seed = 16454
     scoring_DAG = nx.DiGraph()
-    scoring_DAG.add_nodes_from(node_list)
+    pos = nx.spring_layout(scoring_DAG, seed=seed)
+    scoring_DAG.add_nodes_from(node_name_list)
     scoring_DAG.add_edges_from(concat_paired_nodes)
-    nx.draw(scoring_DAG)
+    nx.draw(scoring_DAG, with_labels = True, font_weight= 'bold', font_size=6)
+    #nx.draw_networkx_labels(scoring_DAG, pos=nx.spring_layout(scoring_DAG), labels=labels, font_size=8, font_color='green')
     plt.show()
-    for paper_name in node_list:
+    
+    """""
+    for paper_name in node_name_list:
         root_distances = [] 
         for root in root_nodes:
             shortest_root_node = nx.shortest_path_length(scoring_DAG, source=root, target=paper_name)
             print(f"shortest path:{shortest_root_node}")
             root_distances.append[shortest_root_node]
-        print("hello!")
-        print(root_distances)
-        depth_score = max(root_distances)
-        freq_score = len(paired_node_list[paper_name])
-        weight_score = freq_score + depth_score
-        paper_name.set_score(weight_score)
-        scored_edge = paper_name.make_scored_edge()
-        edge_list[paper](scored_edge) 
-
+    print("hello!")
+    print(root_distances)
+    """
+        #depth_score = max(root_distances)
+        #freq_score = len(paired_node_list[paper_name])
+        #weight_score = freq_score + depth_score
+        #paper_name.set_score(weight_score)
+        #scored_edge = paper_name.make_scored_edge()
+        #edge_list[paper](scored_edge) 
+    """""
     DAG = nx.DiGraph()
     DAG.add_nodes_from(edge_list)
     DAG.add_edges_from(edge_list)
     nx.draw_networkx(DAG, pos)
-
+    """
     with open('rs_output_10.csv', 'w', newline='') as csvfile:
 
         writer = csv.writer(csvfile, delimiter=",")
