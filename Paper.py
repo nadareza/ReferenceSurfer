@@ -104,34 +104,40 @@ class Paper:
     
     def author_score(self, important_authors):
         first_author = self.get_first_author()
+        last_author = self.get_last_author()
+        all_authors = self.get_all_authors()
         author_score = float(0)
 
         if first_author:
-            all_authors = self.get_all_authors()
-            last_author = self.get_last_author()
             first_author = unidecode(first_author)
-            last_author = unidecode(last_author)
             first_author = first_author.lower()
-            last_author = last_author.lower()
-            for author in all_authors[:25]:
-                author = unidecode(author)
-                author = author.lower()
             for author in important_authors:
                 if author in first_author:
                     author_score = author_score + (25 * 0.375)
+        else:
+            author_score = float(0)
+        if last_author:
+            last_author = unidecode(last_author)
+            last_author = last_author.lower()
+            for author in important_authors:
                 if author in last_author:
                     author_score = author_score + (25 * 0.375)
-                if author in all_authors:
-                    author_score = author_score + (1 * 0.25)
-                    if author_score > 25:
-                        author_score = 25
-            return(author_score)
-        else: 
+        else:
             author_score = float(0)
+        if all_authors:
+            for author in all_authors[:25]:
+                author = unidecode(author)
+                author = author.lower()
+            if author in all_authors:
+                author_score = author_score + (1 * 0.25)
+        else:
+            author_score = float(0)
+        if author_score > 25:
+            author_score = float(25)
+        return(author_score)
     
     def score_paper(self, keywords, important_authors):
-        paper_score = self.title_score(keywords) + self.author_score(important_authors)
-        paper_score = float(paper_score) * 2
+        paper_score = (3 * float(self.title_score(keywords)) + float(self.author_score(important_authors)))
         return(paper_score)
         
 class PaperNode(Paper, NodeMixin):
@@ -170,11 +176,14 @@ class PaperNode(Paper, NodeMixin):
         num_ancestors = len(ancestors)
         return num_ancestors
     
-class DAGNode(Paper):
-    def __init__(self, id : Paper, parent : Paper = None):
-        self._name = id.make_name()
+class DAGNode():
+    def __init__(self, name, parent : Paper = None, score = None):
+        self._name = name
         if parent:
-            self._parent= parent.make_name()
+            self._parent = parent.make_name()
+        if score:
+            self._score = score
+       
     
     def set_parent(self, parent): 
         self._parent = parent
@@ -182,20 +191,21 @@ class DAGNode(Paper):
     def get_parent(self): 
         return self._parent
     
+    def get_name(self):
+        return self._name
+
     def make_scoreless_edge(self):
-        dag_edge = (self._parent, self._name)
-        return(dag_edge)
+        parent = f"{self._parent}"
+        name = f"{self._name}"
+        dag_edge = (parent, name)
+        return(tuple(dag_edge))
     
     def make_scored_edge(self):
-        dag_edge = (self._parent, self._name, self._score)
-        return(dag_edge)
-
-    def frequency_score(self, paper_counter):
-        if paper_counter[self] > 25:
-            frequency_score = 25 * 2
-        else:
-            frequency_score = paper_counter[self] * 2
-        return(frequency_score)
+        parent = f"{self._parent}"
+        name = f"{self._name}"
+        score = self._score
+        dag_edge = (parent, name, score)
+        return(tuple(dag_edge))
 
     def depth_score(self, starting_papers, node_list, paired_node_list):
         root_nodes = []

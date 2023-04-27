@@ -48,9 +48,13 @@ def query_from_DOI(doi):
     print(f"Unable to pull {doi}")
     return None
 
-def make_dagnode_from_paper(paper : Paper):
-    dagnode = DAGNode(paper)
+def make_dagnode_from_paper(paper_name):
+    dagnode = DAGNode(paper_name)
     return(dagnode)
+
+def get_dagnode(paper: Paper):
+    id = paper.make_name()
+    return(tuple(id, ))
 
 def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_start_weight=0.15, 
          keyword_discard=0.8, keywords=[]):
@@ -99,6 +103,13 @@ def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_sta
       
     return SurfWrapper(choice(list(starting_papers)), 
                        action=BackToStart())
+
+def frequency_score(paper, paper_counter):
+    if paper_counter[paper] > 25:
+        frequency_score = 25 * 2
+    else:
+        frequency_score = paper_counter[paper] * 2
+    return(frequency_score)
 """""
 def copy_node(node): 
     
@@ -135,15 +146,15 @@ def main():
     starting_papers = set()
     seen_papers = set()
     paper_counter = dict()
-    node_list = dict()
-    paired_node_list = []
+    node_list = set()
+    paired_node_list = dict()
     edge_list = dict()
 
     KEYWORDS = 'keywords.csv'
-    #IMPORTANT_AUTHORS = 'important_authors.csv'
+    IMPORTANT_AUTHORS = 'important_authors.csv'
 
     keywords = [] 
-    important_authors = ['morales', 'chua', 'scaglione', 'smith', 'wilbaux', 'craig', 'drusano', 'rao', 'babl'] 
+    important_authors = [] 
 
     with open(KEYWORDS, 'r') as csvfile:
         reader = csv.DictReader(csvfile)
@@ -153,22 +164,37 @@ def main():
             keyword = [unidecode(keyterm).lower(), value]
             keywords.append(keyword)
     
-    """""
     with open(IMPORTANT_AUTHORS, 'r') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            first_author = row['author'][0]
-            last_author = row['author'][-1]
-            important_authors.append(first_author)
-            important_authors.append(last_author)
-    """
+            author = row['Last']
+            author = unidecode(author)
+            author = author.lower()
+            important_authors.append(author)
 
     for i in starting_DOIs:
         result = query_from_DOI(i)
         paper = make_paper_from_query(result)
         starting_papers.add(paper)
-        dag_node = make_dagnode_from_paper(paper)
-        node_list[paper] = dag_node
+        paper_name = paper.make_name()
+        dag_node = make_dagnode_from_paper(paper_name)
+        node_list.add(dag_node)
+        try:
+            first_author = paper.get_first_author()
+            first_author = unidecode(first_author)
+            first_author = first_author.lower()
+            if first_author not in important_authors:
+                important_authors.append(first_author)
+        except:
+            pass
+        try:
+            last_author = paper.get_last_author()
+            last_author = unidecode(last_author)
+            last_author = last_author.lower()
+            if last_author not in important_authors:
+                important_authors.append(last_author)
+        except:
+            pass 
 
     paper_pointer = choice(list(starting_papers))
     for _ in range(50): 
@@ -177,34 +203,35 @@ def main():
                                  back_to_start_weight=0.15)
         new_paper = new_wrapped_paper.get_paper()
         new_paper_score = new_paper.score_paper(keywords, important_authors)
-        new_node = make_dagnode_from_paper(new_paper)
+        new_paper_name = new_paper.make_name()
+        new_node = make_dagnode_from_paper(new_paper_name)
+        
+
            #if the paper scores very low from title and authors, skip over it, likely irrelevant 
-        if new_paper_score < 0.5:
+        if new_paper_score < 10:
              print(f"Low paper score: {new_paper.get_title} by {new_paper.get_first_author()}, Total ={new_paper_score}, Title = {new_paper.title_score(keywords)}, Author = {new_paper.author_score(important_authors)} - therefore likely irrelevant")
              continue
             # choice list starting_papers vs surf vs choice list seen_papers?? vs go back 'Dal segno al coda'
         else:
             print(f"Great paper score! {new_paper.get_title} by {new_paper.get_first_author()}, Total ={new_paper_score}, Title = {new_paper.title_score(keywords)}, Author = {new_paper.author_score(important_authors)} - paper included")
-              
-        if new_paper not in node_list:
-                node_list[new_paper] = new_node
+
+        if new_node not in node_list:
+            node_list.add(new_node)
 
         if not new_wrapped_paper.is_back_to_start(): 
-            new_node.set_parent(paper_pointer)
+            parent_name = paper_pointer.make_name()
+            new_node.set_parent(parent_name)
             new_edge = new_node.make_scoreless_edge()
-            paired_node_list.append(new_edge)
-            
+            if new_paper_name not in paired_node_list:
+                paired_node_list[new_paper_name] = []
+                paired_node_list[new_paper_name].append(new_edge)
+            else:
+                if new_edge not in paired_node_list[new_paper_name]:
+                    paired_node_list[new_paper_name].append(new_edge)
+                else:
+                    pass
+        
         if new_paper not in starting_papers: 
-            new_node.set_parent(paper_pointer)
-            new_edge = new_node.make_scoreless_edge()
-            if new_edge in paired_node_list:
-                # if we already have a node for this paper in edge list, add another node only
-                # if parent different to previously recorded nodes
-                previous_nodes = [i for i in edge_list if i == new_edge]
-                if not any([True for i in previous_nodes if i.get_parent() == paper_pointer]): 
-                    paired_node_list.append(new_edge)
-            else: 
-                paired_node_list.append(new_edge)
             if new_paper not in seen_papers: 
                 paper_counter[new_paper] = 1
                 seen_DOIs.add(new_paper.get_DOI())
@@ -224,13 +251,15 @@ def main():
     for i,j in sorted_paper_counter: 
         print(f"Paper {i.make_name()} {i.get_title()} DOI {i.get_DOI()} seen {j} times")
     
-    for node in paired_node_list:
-        freq_score = node.frequency_score(paper_counter)
-        depth_score = node.depth_score(starting_papers, node_list, paired_node_list)
+    for paper in paired_node_list.keys():
+        freq_score = len(paired_node_list[paper])
+        print(paired_node_list.values())
+        depth_score = float(paper.depth_score(starting_papers, node_list, paired_node_list))
         weight_score = sum(freq_score + depth_score)
-        scored_node= node.set_score(weight_score)
-        scored_edge = scored_node.make_scored_edge()
-        edge_list[node](scored_edge)    
+        for i in paired_node_list[paper]:
+            scored_node= i.set_score(weight_score)
+            scored_edge = scored_node.make_scored_edge()
+            edge_list[paper](scored_edge)    
     
     DAG = nx.DiGraph
     DAG.add_nodes_from(node_list)
