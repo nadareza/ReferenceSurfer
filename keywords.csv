@@ -1,0 +1,72 @@
+﻿index,keyterms,value
+1,pharmacokinetic,3
+2,pharmacodynamic,3
+3,MIC,2
+4,PK-PD target,5
+5,PK/PD target,5
+6,pharmacodynamic target,5
+7,pharmacokinetic-pharmacodynamic,5
+8,pharmacokinetic/pharmacodynamic,5
+9,AUC:MIC,5
+10,AUIC,3
+11,AUC,3
+12,AUC/MIC,5
+13,T>MIC,5
+14,time above MIC,5
+15,time above,3
+16,time dependent,4
+17,Cmax:MIC,5
+18,Cmax/MIC,5
+19,peak:MIC,5
+20,peak concentration,3
+21,concentration dependent,4
+22,index,1
+23,target,1
+24,target magnitude,4
+25,target attainment,4
+26,antimicrobial,0.5
+27,antibiotic,0.5
+28,antibacterial,0.5
+29,bacterial,0.5
+30,dosing,0.5
+31,schedule,0.5
+32,regimen,0.5
+33,efficacy,0.5
+34,resistance,0.5
+35,amoxicillin,1
+36,clavulanic acid,1
+37,clavulanate,1
+38,co-amoxiclav,1
+39,ampicillin,1
+40,azithromycin,1
+41,benzylpenicillin,1
+42,cefalexin,1
+43,cefixime,1
+44,cefotaxime,1
+45,ceftazidime,1
+46,ceftriaxone,1
+47,ciprofloxacin,1
+48,clarithromycin,1
+49,cloxacillin,1
+50,flucloxacillin,1
+51,doxycycline,1
+52,erythromycin,1
+53,gentamicin,1
+54,metronidazole,1
+55,nitrofurantoin,1
+56,phenoxymethylpenicillin,1
+57,spectinomycin,1
+58,tetracycline,1
+59,trimethoprim,1
+60,sulfamethoxazole,1
+61,co-trimoxazole,1
+62,vancomycin,1
+63,coamoxiclav,1
+64,cotrimoxazole,1
+65,penicillin,1
+66,beta-lactam,0.5
+67,macrolide,0.5
+68,cephalosporin,0.5
+69,aminoglycoside,0.5
+70,fluoroquinolone,0.5
+71,glycopeptide,0.5
