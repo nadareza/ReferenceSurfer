@@ -208,13 +208,21 @@ def main():
            #if the paper scores very low from title and authors, skip over it, likely irrelevant 
         if new_paper_score < 10:
              print(f"""
-             Low paper score: {new_paper.get_title} by {new_paper.get_first_author()}, Total ={new_paper_score}, Title = {new_paper.title_score(keywords)}, Author = {new_paper.author_score(important_authors)} - therefore likely irrelevant
+             Low paper score: {new_paper.get_title} by {new_paper.get_first_author()}, 
+             Total ={new_paper_score}, 
+             Title = {new_paper.title_score(keywords)}, 
+             Author = {new_paper.author_score(important_authors)} 
+             - excluded (likely irrelevant)
              """)
              continue
             # choice list starting_papers vs surf vs choice list seen_papers?? vs go back 'Dal segno al coda'
         else:
             print(f"""
-            Great paper score! {new_paper.get_title} by {new_paper.get_first_author()}, Total ={new_paper_score}, Title = {new_paper.title_score(keywords)}, Author = {new_paper.author_score(important_authors)} - paper included""")
+            Great paper score! {new_paper.get_title} by {new_paper.get_first_author()}, 
+            Total ={new_paper_score}, 
+            Title = {new_paper.title_score(keywords)}, 
+            Author = {new_paper.author_score(important_authors)} 
+            - included""")
 
         if new_node not in node_list:
             node_list.add(new_node)
@@ -281,34 +289,22 @@ def main():
     ####pos = nx.spring_layout(scoring_DAG, seed=seed)
     ####nx.draw_networkx_labels(scoring_DAG, pos=nx.spring_layout(scoring_DAG), labels=labels, font_size=8, font_color='green')
     freq_list = {}
+    score_list = {}
     for paper, frequency in paper_counter.items():
         id = paper.make_name()
         freq_list[id] = frequency
-    """
-    depth_list = {}
-    starting_roots = []
-    path_lengths = {}
-    for paper in starting_papers:
-        root_name = paper.make_name()
-        starting_roots.append(root_name)
-    for node in scoring_DAG.nodes():
-        root for root in starting_roots if root in scoring_DAG.nodes():
-                if nx.has_path(scoring_DAG, node, root) == True:
-                    print(f"NODES LINKED TO ROOTS {node}")
-                    if node not in starting_roots:
-                        path_lengths[node] = max(nx.shortest_path_length(scoring_DAG, node, root) for root in starting_roots)
-    """
-    
-    """""
-    for paper_name in node_name_list:
-        root_distances = [] 
-        for root in root_nodes:
-            shortest_root_node = nx.shortest_path_length(scoring_DAG, source=root, target=paper_name)
-            print(f"shortest path:{shortest_root_node}")
-            root_distances.append[shortest_root_node]
-    print("hello!")
-    print(root_distances)
-    """
+    for pap_name in node_name_list:
+        if pap_name in freq_list:
+            freq_score = freq_list[pap_name]
+        else:
+            freq_score = 0
+        if pap_name in depth_list and depth_list[pap_name] != None: 
+            depth_score = depth_list[pap_name]
+        else:
+            depth_score = 0
+        score = freq_score + depth_score
+        score_list[pap_name] =  score
+
         #depth_score = max(root_distances)
         #freq_score = len(paired_node_list[paper_name])
         #weight_score = freq_score + depth_score
@@ -317,8 +313,8 @@ def main():
         #edge_list[paper](scored_edge) 
 
     print(f"""
-    DEPTH LIST:
-    {depth_list}""")
+    SCORE LIST:
+    {score_list}""")
 
     DAG = nx.DiGraph()
     DAG.add_nodes_from(node_name_list)
