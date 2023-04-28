@@ -19,6 +19,8 @@ from Paper import Paper, DAGNode
 import numpy as np
 import matplotlib.pyplot as plt
 import networkx as nx 
+from matplotlib.patches import FancyArrowPatch
+import scipy
 
 def make_paper_from_query(query):
     message = query['message']
@@ -196,18 +198,16 @@ def main():
             title = paper.get_title()
             title = unidecode(title)
             title = title.lower()
+            node_colours[paper_name] = []
             for ab in abx_list:
                 if ab in title:
-                    if paper_name in node_colours:
-                        node_colours[paper_name] += abx_colours[ab]
-                    else:
-                        node_colours[paper_name] = abx_colours[ab]
+                   node_colours[paper_name].append(abx_colours[ab])           
         except:
             pass
-    
+
     #Start surfing
     paper_pointer = choice(list(starting_papers))
-    for _ in range(20): 
+    for _ in range(10): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                                  back_to_start_weight=0.15)
@@ -260,12 +260,15 @@ def main():
         
         #Assign a colour
         new_paper_title = new_paper.get_title()
-        for ab in abx_list:
-            if ab in new_paper_title:
-                    if new_paper_name in node_colours:
-                        node_colours[new_paper_name] += abx_colours[ab]
-                    else:
-                        node_colours[new_paper_name] = abx_colours[ab]
+        if new_paper_name not in node_colours:
+            node_colours[new_paper_name] = []
+            for ab in abx_list:
+                if ab in new_paper_title:
+                    node_colours[new_paper_name].append(abx_colours[ab])
+        else:
+            for ab in abx_list:
+                if ab in new_paper_title:
+                    node_colours[new_paper_name].append(abx_colours[ab])
         
         #Keep track of how many times we have seen this paper
         if new_paper not in starting_papers: 
@@ -318,38 +321,57 @@ def main():
             depth_score = depth_list[pap_name]
         else:
             depth_score = 0
-        score = freq_score + depth_score + 1
+        score = (freq_score + depth_score + 1) *600
         score_list[pap_name] =  score
+
+    print(f"""
+        NODE COLOURS:
+        {node_colours}""") 
 
     #Colour DAG nodes according to antibiotic
     colour_list = dict()
     for paper_name in node_colours:
-        print(f"{node_colours[paper_name]}")
-        collist = [node_colours[paper_name]]
-        print(f"{colour_list}")
-        if len(collist) == 1:
-            colour_list[paper_name] = node_colours[paper_name]
-        if len(collist) > 1:
-            print(f"{collist}")
-            colset = set([node_colours[paper_name]])
-            print(f"{colset}")
+        collist = []
+        for col in node_colours[paper_name]:
+            collist.append(col)
+        if len(collist) == 0:
+            colour_list[paper_name] = '#f2f2f2'
+        elif len(collist) == 1:
+            colour_list[paper_name] = collist[0]
+        else:
+            colset = set(node_colours[paper_name])
             if len(collist) != len(colset):
-               node_colours[paper_name] = list(colset)
-               if len(node_colours[paper_name]) > 1: 
-                    colour_list[paper_name] = 'gray'
+               colsetlist = list(colset)
+               if len(colsetlist) <= 1:
+                   colour_list[paper_name] = colsetlist[0]
+               else: 
+                    colour_list[paper_name] = '#e5d8bd'
+        print(f"""{paper_name}:
+             {collist}
+             {colour_list[paper_name]}
+              """)
     for paper_name in node_name_list:
-        if paper_name not in node_colours:
-            colour_list[paper_name] = 'black'
+        if paper_name not in colour_list.keys():
+            colour_list[paper_name] = '#f2f2f2'
 
     print(f"""
     COLOUR LIST:
     {colour_list}""")
 
+    print(f"""
+    SCORE LIST:
+    {score_list}""")
+
     DAG = nx.MultiDiGraph()
     DAG.add_nodes_from(node_name_list)
+    nx.set_node_attributes(DAG, score_list, 'size')
+    nx.set_node_attributes(DAG, colour_list, 'color')
     DAG.add_edges_from(concat_paired_nodes)
-    edge_attr = {'alpha' : 0.5}
-    nx.draw(DAG, with_labels = True, font_weight= 'bold', font_size=6, node_size=0, edge_color='blue', **edge_attr)
+    #nx.draw(DAG, with_labels = True, font_weight= 'bold', font_size=6, edge_color='blue', **edge_attr)
+    pos= nx.spring_layout(DAG)
+    nx.draw_networkx_nodes(DAG, pos, node_size=[score_list[n] for n in DAG.nodes()], node_color=[colour_list[n] for n in DAG.nodes()], alpha=0.5, linewidths=2)
+    nx.draw_networkx_edges(DAG, pos, arrowsize=10, arrowstyle='simple')
+    nx.draw_networkx_labels(DAG, pos, font_size=6, font_weight='bold', font_family='sans-serif', horizontalalignment = 'right', verticalalignment = 'top')
     plt.show()
 
     with open('rs_output_10.csv', 'w', newline='') as csvfile:
