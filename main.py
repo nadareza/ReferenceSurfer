@@ -147,6 +147,24 @@ def main():
             author = unidecode(author)
             author = author.lower()
             important_authors.append(author)
+    
+    #Colour nodes by antibiotic class
+    ABX_COLOURS = 'antibiotic_colours.csv'
+
+    abx_list = []
+    abx_colours = dict()
+    abx_classes = dict()
+    node_colours = dict()
+
+    with open(ABX_COLOURS, 'r') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            abx = row['abx']
+            colour = row['colour']
+            abxclass = row['class']
+            abx_colours[abx] = colour
+            abx_classes[abx] = abxclass
+            abx_list.append(abx)
 
     #Add starting corpus as papers, DAG nodes (of depth 0) and calculate scores
     for i in starting_DOIs:
@@ -174,10 +192,22 @@ def main():
                 important_authors.append(last_author)
         except:
             pass 
+        try: 
+            title = paper.get_title()
+            title = unidecode(title)
+            title = title.lower()
+            for ab in abx_list:
+                if ab in title:
+                    if paper_name in node_colours:
+                        node_colours[paper_name] += abx_colours[ab]
+                    else:
+                        node_colours[paper_name] = abx_colours[ab]
+        except:
+            pass
     
     #Start surfing
     paper_pointer = choice(list(starting_papers))
-    for _ in range(100): 
+    for _ in range(20): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                                  back_to_start_weight=0.15)
@@ -190,7 +220,7 @@ def main():
         #If the paper scores very low based on title and authors, skip over it, likely irrelevant 
         if new_paper_score < 10:
              print(f"""
-             Low paper score: {new_paper.get_title} by {new_paper.get_first_author()}, 
+             Low paper score: {new_paper.get_title()} by {new_paper.get_first_author()}, 
              Total ={new_paper_score}, 
              Title = {new_paper.title_score(keywords)}, 
              Author = {new_paper.author_score(important_authors)} 
@@ -200,7 +230,7 @@ def main():
             # ???choice list starting_papers vs surf vs choice list seen_papers?? vs go back 'Dal segno al coda'
         else:
             print(f"""
-            Great paper score! {new_paper.get_title} by {new_paper.get_first_author()}, 
+            Great paper score! {new_paper.get_title()} by {new_paper.get_first_author()}, 
             Total ={new_paper_score}, 
             Title = {new_paper.title_score(keywords)}, 
             Author = {new_paper.author_score(important_authors)} 
@@ -227,6 +257,15 @@ def main():
                     paired_node_list[new_paper_name].append(new_edge)
                 else:
                     pass
+        
+        #Assign a colour
+        new_paper_title = new_paper.get_title()
+        for ab in abx_list:
+            if ab in new_paper_title:
+                    if new_paper_name in node_colours:
+                        node_colours[new_paper_name] += abx_colours[ab]
+                    else:
+                        node_colours[new_paper_name] = abx_colours[ab]
         
         #Keep track of how many times we have seen this paper
         if new_paper not in starting_papers: 
@@ -279,12 +318,32 @@ def main():
             depth_score = depth_list[pap_name]
         else:
             depth_score = 0
-        score = freq_score + depth_score
+        score = freq_score + depth_score + 1
         score_list[pap_name] =  score
 
+    #Colour DAG nodes according to antibiotic
+    colour_list = dict()
+    for paper_name in node_colours:
+        print(f"{node_colours[paper_name]}")
+        collist = [node_colours[paper_name]]
+        print(f"{colour_list}")
+        if len(collist) == 1:
+            colour_list[paper_name] = node_colours[paper_name]
+        if len(collist) > 1:
+            print(f"{collist}")
+            colset = set([node_colours[paper_name]])
+            print(f"{colset}")
+            if len(collist) != len(colset):
+               node_colours[paper_name] = list(colset)
+               if len(node_colours[paper_name]) > 1: 
+                    colour_list[paper_name] = 'gray'
+    for paper_name in node_name_list:
+        if paper_name not in node_colours:
+            colour_list[paper_name] = 'black'
+
     print(f"""
-    SCORE LIST:
-    {score_list}""")
+    COLOUR LIST:
+    {colour_list}""")
 
     DAG = nx.MultiDiGraph()
     DAG.add_nodes_from(node_name_list)
