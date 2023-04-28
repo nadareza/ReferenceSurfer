@@ -49,8 +49,8 @@ def query_from_DOI(doi):
     print(f"Unable to pull {doi}")
     return None
 
-def make_dagnode_from_paper(paper_name):
-    dagnode = DAGNode(paper_name)
+def make_dagnode_from_paper(paper_name, score : float = None, depth : float = None):
+    dagnode = DAGNode(paper_name, score, depth)
     return(dagnode)
 
 def get_dagnode(paper: Paper):
@@ -142,6 +142,7 @@ def main():
     seen_papers = set()
     paper_counter = dict()
     node_list = set()
+    depth_list = dict()
     paired_node_list = dict()
     edge_list = dict()
 
@@ -173,7 +174,9 @@ def main():
         starting_papers.add(paper)
         paper_name = paper.make_name()
         dag_node = make_dagnode_from_paper(paper_name)
+        dag_node.set_depth(0)
         node_list.add(dag_node)
+        depth_list[paper_name] = dag_node.get_depth()
         try:
             first_author = paper.get_first_author()
             first_author = unidecode(first_author)
@@ -192,7 +195,7 @@ def main():
             pass 
 
     paper_pointer = choice(list(starting_papers))
-    for _ in range(100): 
+    for _ in range(10): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                                  back_to_start_weight=0.15)
@@ -205,21 +208,13 @@ def main():
            #if the paper scores very low from title and authors, skip over it, likely irrelevant 
         if new_paper_score < 10:
              print(f"""
-             Low paper score: {new_paper.get_title} by {new_paper.get_first_author()}, 
-             Total ={new_paper_score}, 
-             Title = {new_paper.title_score(keywords)}, 
-             Author = {new_paper.author_score(important_authors)} 
-             - therefore likely irrelevant
+             Low paper score: {new_paper.get_title} by {new_paper.get_first_author()}, Total ={new_paper_score}, Title = {new_paper.title_score(keywords)}, Author = {new_paper.author_score(important_authors)} - therefore likely irrelevant
              """)
              continue
             # choice list starting_papers vs surf vs choice list seen_papers?? vs go back 'Dal segno al coda'
         else:
             print(f"""
-            Great paper score! {new_paper.get_title} by {new_paper.get_first_author()}, 
-            Total ={new_paper_score}, 
-            Title = {new_paper.title_score(keywords)}, 
-            Author = {new_paper.author_score(important_authors)} 
-            - paper included""")
+            Great paper score! {new_paper.get_title} by {new_paper.get_first_author()}, Total ={new_paper_score}, Title = {new_paper.title_score(keywords)}, Author = {new_paper.author_score(important_authors)} - paper included""")
 
         if new_node not in node_list:
             node_list.add(new_node)
@@ -227,6 +222,11 @@ def main():
         if not new_wrapped_paper.is_back_to_start(): 
             parent_name = paper_pointer.make_name()
             new_node.set_parent(parent_name)
+            parent_depth = depth_list[parent_name]
+            new_depth = parent_depth + 1
+            new_node.set_depth(new_depth)
+            new_node_depth = new_node.get_depth()
+            depth_list[new_paper_name] = new_node_depth
             new_edge = new_node.make_scoreless_edge()
             if new_paper_name not in paired_node_list:
                 paired_node_list[new_paper_name] = []
@@ -315,10 +315,10 @@ def main():
         #paper_name.set_score(weight_score)
         #scored_edge = paper_name.make_scored_edge()
         #edge_list[paper](scored_edge) 
-    
+
     print(f"""
-    FREQUENCY LIST:
-    {freq_list}""")
+    DEPTH LIST:
+    {depth_list}""")
 
     DAG = nx.DiGraph()
     DAG.add_nodes_from(node_name_list)

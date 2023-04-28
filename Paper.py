@@ -185,12 +185,14 @@ class PaperNode(Paper, NodeMixin):
         return num_ancestors
     
 class DAGNode():
-    def __init__(self, name, parent : Paper = None, score = None):
+    def __init__(self, name, parent : Paper = None, depth = None, score = None):
         self._name = name
         if parent:
             self._parent = parent.make_name()
         if score:
-            self._score = score     
+            self._score = score 
+        if depth:
+            self._depth = depth    
     
     def set_parent(self, parent_name): 
         self._parent = parent_name
@@ -200,6 +202,16 @@ class DAGNode():
     
     def get_name(self):
         return self._name
+    
+    def set_depth(self, depth):
+        self._depth = depth
+    
+    def get_depth(self):
+        try:
+            print(f"{self._depth}")
+            return self._depth
+        except:
+            return None
 
     def make_scoreless_edge(self):
         parent = f"{self._parent}"
@@ -213,7 +225,7 @@ class DAGNode():
         score = self._score
         dag_edge = (parent, name, score)
         return(tuple(dag_edge))
-    
+    """""
     def set_freq_score(self, freq_score):
         self._freq_score = freq_score
         return self._freq_score
@@ -221,7 +233,7 @@ class DAGNode():
     def set_depth_score(self, depth_score):
         self._depth_score = depth_score
         return self._depth_score
-    """""
+    
     def depth_score(self, starting_papers, node_list, paired_node_list):
         root_nodes = []
         for paper in starting_papers:
