@@ -140,7 +140,10 @@ class Paper:
         return(author_score)
     
     def score_paper(self, keywords, important_authors):
-        wt_title_score = float(3 * self.title_score(keywords))
+        if self.title_score(keywords):
+            wt_title_score = float(3 * self.title_score(keywords))
+        else:
+            wt_title_score = float(0)
         author_score = self.author_score(important_authors)
         paper_score = (wt_title_score + author_score)
         return(paper_score)

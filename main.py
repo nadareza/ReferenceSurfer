@@ -192,7 +192,7 @@ def main():
             pass 
 
     paper_pointer = choice(list(starting_papers))
-    for _ in range(50): 
+    for _ in range(100): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                                  back_to_start_weight=0.15)
@@ -272,27 +272,32 @@ def main():
         name = node.get_name()
         labels[name] = f"{name}"  
         node_name_list.append(name)
-    print(f"""
-    Labels: {labels}""")
-    print(f"""Node Name List: 
-    {node_name_list}""")
-    print(f"""Paired Node List:
-           {paired_node_list}""")
-    print(f"""Edge List:
-           {edge_list}""")
-    print(f"""Concatenated Paired List:
-           {concat_paired_nodes}""")
-    print(f"""Paper Counter:
-           {paper_counter}""")
     
     seed = 16454
     scoring_DAG = nx.DiGraph()
-    pos = nx.spring_layout(scoring_DAG, seed=seed)
     scoring_DAG.add_nodes_from(node_name_list)
     scoring_DAG.add_edges_from(concat_paired_nodes)
-    nx.draw(scoring_DAG, with_labels = True, font_weight= 'bold', font_size=6)
-    #nx.draw_networkx_labels(scoring_DAG, pos=nx.spring_layout(scoring_DAG), labels=labels, font_size=8, font_color='green')
-    plt.show()
+    #nx.draw(scoring_DAG, with_labels = True, font_weight= 'bold', font_size=6)
+    ####pos = nx.spring_layout(scoring_DAG, seed=seed)
+    ####nx.draw_networkx_labels(scoring_DAG, pos=nx.spring_layout(scoring_DAG), labels=labels, font_size=8, font_color='green')
+    freq_list = {}
+    for paper, frequency in paper_counter.items():
+        id = paper.make_name()
+        freq_list[id] = frequency
+    """
+    depth_list = {}
+    starting_roots = []
+    path_lengths = {}
+    for paper in starting_papers:
+        root_name = paper.make_name()
+        starting_roots.append(root_name)
+    for node in scoring_DAG.nodes():
+        root for root in starting_roots if root in scoring_DAG.nodes():
+                if nx.has_path(scoring_DAG, node, root) == True:
+                    print(f"NODES LINKED TO ROOTS {node}")
+                    if node not in starting_roots:
+                        path_lengths[node] = max(nx.shortest_path_length(scoring_DAG, node, root) for root in starting_roots)
+    """
     
     """""
     for paper_name in node_name_list:
@@ -310,12 +315,18 @@ def main():
         #paper_name.set_score(weight_score)
         #scored_edge = paper_name.make_scored_edge()
         #edge_list[paper](scored_edge) 
-    """""
+    
+    print(f"""
+    FREQUENCY LIST:
+    {freq_list}""")
+
     DAG = nx.DiGraph()
-    DAG.add_nodes_from(edge_list)
-    DAG.add_edges_from(edge_list)
-    nx.draw_networkx(DAG, pos)
-    """
+    DAG.add_nodes_from(node_name_list)
+    DAG.add_edges_from(concat_paired_nodes)
+    edge_attr = {'alpha' : 0.5}
+    nx.draw(DAG, with_labels = True, font_weight= 'bold', font_size=6, node_size=0, edge_color='blue', **edge_attr)
+    plt.show()
+
     with open('rs_output_10.csv', 'w', newline='') as csvfile:
 
         writer = csv.writer(csvfile, delimiter=",")
