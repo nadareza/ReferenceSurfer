@@ -147,43 +147,7 @@ class Paper:
         author_score = self.author_score(important_authors)
         paper_score = (wt_title_score + author_score)
         return(paper_score)
-        
-class PaperNode(Paper, NodeMixin):
-    def __init__(self, DOI, title, author, year, references = None, parent = None, children = None):
-        super().__init__(DOI, title, author, year, references)
-        self.name = self.make_name()
-        self.parent = parent
-        if children:
-            self.children = children
-    
-    def add_children(self, children):
-        if not children: 
-            return
-        self.children = children
 
-    def add_child_node(self, child_node): 
-        if not child_node: 
-            return
-        if type(child_node) != PaperNode: 
-            raise ValueError("Function .add_child_node() can only take PaperNode for parameter child_node") 
-        if child_node in self.get_children(): 
-            return
-        previous_children = self.get_children()
-        new_children = list(previous_children)
-        new_children.append(child_node)
-        self.children = new_children
-    
-    def get_children(self): 
-        return self.children
-    
-    def clear_children(self): 
-        self.children = tuple()
-    
-    def count_ancestors(self):
-        ancestors = list(self.ancestors)
-        num_ancestors = len(ancestors)
-        return num_ancestors
-    
 class DAGNode():
     def __init__(self, name, parent : Paper = None, depth = None, score = None):
         self._name = name
@@ -218,45 +182,17 @@ class DAGNode():
         name = f"{self._name}"
         dag_edge = (parent, name)
         return(tuple(dag_edge))
+
+    def set_score(self, score):
+        self._score = score
+        return(self._score)   
     
     def make_scored_edge(self):
         parent = f"{self._parent}"
         name = f"{self._name}"
         score = self._score
         dag_edge = (parent, name, score)
-        return(tuple(dag_edge))
-    """""
-    def set_freq_score(self, freq_score):
-        self._freq_score = freq_score
-        return self._freq_score
-    
-    def set_depth_score(self, depth_score):
-        self._depth_score = depth_score
-        return self._depth_score
-    
-    def depth_score(self, starting_papers, node_list, paired_node_list):
-        root_nodes = []
-        for paper in starting_papers:
-            root_node = DAGNode(paper) 
-            root_nodes.append(root_node) 
-        self_node = DAGNode(self) 
-        DAG = nx.DiGraph
-        DAG.add_nodes_from(node_list)
-        DAG.add_edges_from(paired_node_list)
-        root_distance = [] 
-        for root in root_nodes:
-            shortest_root_node = nx.shortest_path(DAG, source=root, target=self_node)
-            root_distance.append[shortest_root_node]
-        max_depth = max(root_distance)
-        if max_depth > 25:
-            depth_score =  25 * 2
-        else:
-            depth_score = max_depth * 2
-        return(depth_score)
-    """ 
-    def set_score(self, score):
-        self._score = score
-        return(self._score)       
+        return(tuple(dag_edge))    
 
 
 

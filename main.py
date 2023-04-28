@@ -15,7 +15,7 @@ from random import random, choice
 from anytree import Node, RenderTree
 from unidecode import unidecode
 from Surf import SurfWrapper, BackToStart, InvalidReferences, NewPaper, PreviouslySeenPaper
-from Paper import Paper, PaperNode, DAGNode
+from Paper import Paper, DAGNode
 import numpy as np
 import matplotlib.pyplot as plt
 import networkx as nx 
@@ -105,25 +105,6 @@ def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_sta
     return SurfWrapper(choice(list(starting_papers)), 
                        action=BackToStart())
 
-"""""
-def copy_node(node): 
-    
-    Return deep copy of node
-
-    new_node = PaperNode(node.get_DOI(), node.get_title(), node._author, 
-                         node.get_year(), parent = node.get_parent())
-    return new_node
-
-def walk_tree(node): 
-    if not node.get_parent(): 
-        return node
-    else: 
-        new_node = copy_node(node.get_parent())
-        new_node.clear_children()
-        new_node.add_children(node.get_children())
-        return walk_tree(new_node)
-"""
-
 def main(): 
     cr = Crossref()
     STARTING_CORPUS_PATH = 'corpus.csv'
@@ -144,7 +125,6 @@ def main():
     node_list = set()
     depth_list = dict()
     paired_node_list = dict()
-    edge_list = dict()
 
     KEYWORDS = 'keywords.csv'
     IMPORTANT_AUTHORS = 'important_authors.csv'
@@ -168,6 +148,7 @@ def main():
             author = author.lower()
             important_authors.append(author)
 
+    #Add starting corpus as papers, DAG nodes (of depth 0) and calculate scores
     for i in starting_DOIs:
         result = query_from_DOI(i)
         paper = make_paper_from_query(result)
@@ -193,9 +174,10 @@ def main():
                 important_authors.append(last_author)
         except:
             pass 
-
+    
+    #Start surfing
     paper_pointer = choice(list(starting_papers))
-    for _ in range(10): 
+    for _ in range(100): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                                  back_to_start_weight=0.15)
@@ -205,7 +187,7 @@ def main():
         new_node = make_dagnode_from_paper(new_paper_name)
         
 
-           #if the paper scores very low from title and authors, skip over it, likely irrelevant 
+        #If the paper scores very low based on title and authors, skip over it, likely irrelevant 
         if new_paper_score < 10:
              print(f"""
              Low paper score: {new_paper.get_title} by {new_paper.get_first_author()}, 
@@ -215,7 +197,7 @@ def main():
              - excluded (likely irrelevant)
              """)
              continue
-            # choice list starting_papers vs surf vs choice list seen_papers?? vs go back 'Dal segno al coda'
+            # ???choice list starting_papers vs surf vs choice list seen_papers?? vs go back 'Dal segno al coda'
         else:
             print(f"""
             Great paper score! {new_paper.get_title} by {new_paper.get_first_author()}, 
@@ -227,6 +209,7 @@ def main():
         if new_node not in node_list:
             node_list.add(new_node)
 
+        #If current paper has been arrived at from another paper without jumping - set parent and increase depth
         if not new_wrapped_paper.is_back_to_start(): 
             parent_name = paper_pointer.make_name()
             new_node.set_parent(parent_name)
@@ -245,6 +228,7 @@ def main():
                 else:
                     pass
         
+        #Keep track of how many times we have seen this paper
         if new_paper not in starting_papers: 
             if new_paper not in seen_papers: 
                 paper_counter[new_paper] = 1
@@ -259,21 +243,20 @@ def main():
             paper_pointer = choice(list(seen_papers))
         else: 
             paper_pointer = choice(list(starting_papers))
-        
+
+    #Print our list of papers and how many times we have seen them, in order of frequency   
     sorted_paper_counter = sorted(paper_counter.items(), key=lambda item: item[1], reverse=True)
 
     for i,j in sorted_paper_counter: 
         print(f"Paper {i.make_name()} {i.get_title()} DOI {i.get_DOI()} seen {j} times")
 
+    #Make pairs for DAG edges
     concat_paired_nodes = []
-    root_nodes = []
     for paper_name in paired_node_list:
         for pair in paired_node_list[paper_name]:
             concat_paired_nodes.append(pair)
-    for paper in starting_papers:
-        paper_name = paper.make_name()
-        if paper_name in node_list:
-            root_nodes.append(paper_name)
+    
+    #Make labels for DAG nodes
     labels = {}
     node_name_list = []
     for node in node_list:
@@ -281,13 +264,7 @@ def main():
         labels[name] = f"{name}"  
         node_name_list.append(name)
     
-    seed = 16454
-    scoring_DAG = nx.DiGraph()
-    scoring_DAG.add_nodes_from(node_name_list)
-    scoring_DAG.add_edges_from(concat_paired_nodes)
-    #nx.draw(scoring_DAG, with_labels = True, font_weight= 'bold', font_size=6)
-    ####pos = nx.spring_layout(scoring_DAG, seed=seed)
-    ####nx.draw_networkx_labels(scoring_DAG, pos=nx.spring_layout(scoring_DAG), labels=labels, font_size=8, font_color='green')
+    #Calculate scores for DAG node size
     freq_list = {}
     score_list = {}
     for paper, frequency in paper_counter.items():
@@ -305,18 +282,11 @@ def main():
         score = freq_score + depth_score
         score_list[pap_name] =  score
 
-        #depth_score = max(root_distances)
-        #freq_score = len(paired_node_list[paper_name])
-        #weight_score = freq_score + depth_score
-        #paper_name.set_score(weight_score)
-        #scored_edge = paper_name.make_scored_edge()
-        #edge_list[paper](scored_edge) 
-
     print(f"""
     SCORE LIST:
     {score_list}""")
 
-    DAG = nx.DiGraph()
+    DAG = nx.MultiDiGraph()
     DAG.add_nodes_from(node_name_list)
     DAG.add_edges_from(concat_paired_nodes)
     edge_attr = {'alpha' : 0.5}
@@ -334,24 +304,3 @@ def main():
                              times_seen])
 
 main()
-
-"""""
-    for leaf in tree:
-     try: 
-         print(f" ID:{leaf.name}, parent:{leaf.parent.name}, children{leaf.children.name}")
-     except: 
-         continue
-
-    tree_roots = set()
-    for leaf in tree:
-        if leaf.parent == None:
-            tree_roots.add(leaf)
-        else: 
-            continue
-    
-    for root in tree_roots:
-        print(f"Root: {root}")
-        for pre, fill, node in RenderTree(root): 
-                    treestr = u"%s%s" % (pre, node.name)
-                    print(treestr.ljust(8))
-"""
