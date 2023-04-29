@@ -207,7 +207,7 @@ def main():
 
     #Start surfing
     paper_pointer = choice(list(starting_papers))
-    for _ in range(10): 
+    for _ in range(200): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                                  back_to_start_weight=0.15)
@@ -321,7 +321,7 @@ def main():
             depth_score = depth_list[pap_name]
         else:
             depth_score = 0
-        score = (freq_score + depth_score + 1) *600
+        score = (freq_score + depth_score + 1) *300
         score_list[pap_name] =  score
 
     print(f"""
@@ -335,24 +335,22 @@ def main():
         for col in node_colours[paper_name]:
             collist.append(col)
         if len(collist) == 0:
-            colour_list[paper_name] = '#f2f2f2'
+            colour_list[paper_name] = '#ADACAC'
         elif len(collist) == 1:
             colour_list[paper_name] = collist[0]
         else:
             colset = set(node_colours[paper_name])
             if len(collist) != len(colset):
                colsetlist = list(colset)
-               if len(colsetlist) <= 1:
-                   colour_list[paper_name] = colsetlist[0]
-               else: 
-                    colour_list[paper_name] = '#e5d8bd'
-        print(f"""{paper_name}:
-             {collist}
-             {colour_list[paper_name]}
-              """)
+               print(f"dupes: {colsetlist}")
+               if len(colsetlist) > 1:
+                    colour_list[paper_name] = '#D8C292'
+               else:
+                    colour_list[paper_name] = colsetlist[0]
+
     for paper_name in node_name_list:
         if paper_name not in colour_list.keys():
-            colour_list[paper_name] = '#f2f2f2'
+            colour_list[paper_name] = '#ADACAC'
 
     print(f"""
     COLOUR LIST:
@@ -368,10 +366,10 @@ def main():
     nx.set_node_attributes(DAG, colour_list, 'color')
     DAG.add_edges_from(concat_paired_nodes)
     #nx.draw(DAG, with_labels = True, font_weight= 'bold', font_size=6, edge_color='blue', **edge_attr)
-    pos= nx.spring_layout(DAG)
+    pos= nx.spring_layout(DAG, k=0.5)
     nx.draw_networkx_nodes(DAG, pos, node_size=[score_list[n] for n in DAG.nodes()], node_color=[colour_list[n] for n in DAG.nodes()], alpha=0.5, linewidths=2)
-    nx.draw_networkx_edges(DAG, pos, arrowsize=10, arrowstyle='simple')
-    nx.draw_networkx_labels(DAG, pos, font_size=6, font_weight='bold', font_family='sans-serif', horizontalalignment = 'right', verticalalignment = 'top')
+    nx.draw_networkx_edges(DAG, pos, arrowsize=8, arrowstyle='<|-', min_source_margin = 3, min_target_margin =3 )
+    nx.draw_networkx_labels(DAG, pos, font_size=6, font_weight='bold', font_family='sans-serif', horizontalalignment = 'left', verticalalignment = 'center')
     plt.show()
 
     with open('rs_output_10.csv', 'w', newline='') as csvfile:
