@@ -207,7 +207,7 @@ def main():
 
     #Start surfing
     paper_pointer = choice(list(starting_papers))
-    for _ in range(200): 
+    for _ in range(500): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                                  back_to_start_weight=0.15)
@@ -367,9 +367,11 @@ def main():
     DAG.add_edges_from(concat_paired_nodes)
     #nx.draw(DAG, with_labels = True, font_weight= 'bold', font_size=6, edge_color='blue', **edge_attr)
     pos= nx.spring_layout(DAG, k=0.5)
-    nx.draw_networkx_nodes(DAG, pos, node_size=[score_list[n] for n in DAG.nodes()], node_color=[colour_list[n] for n in DAG.nodes()], alpha=0.5, linewidths=2)
+    nx.draw_networkx_nodes(DAG, pos, node_size=[score_list[n] for n in DAG.nodes()], 
+                           node_color=[colour_list[n] for n in DAG.nodes()], alpha=0.5, linewidths=2)
     nx.draw_networkx_edges(DAG, pos, arrowsize=8, arrowstyle='<|-', min_source_margin = 3, min_target_margin =3 )
-    nx.draw_networkx_labels(DAG, pos, font_size=6, font_weight='bold', font_family='sans-serif', horizontalalignment = 'left', verticalalignment = 'center')
+    nx.draw_networkx_labels(DAG, pos, font_size=6, font_weight='bold', font_family='sans-serif', 
+                            horizontalalignment = 'left', verticalalignment = 'center')
     plt.show()
 
     with open('rs_output_10.csv', 'w', newline='') as csvfile:
