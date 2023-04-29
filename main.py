@@ -207,7 +207,7 @@ def main():
 
     #Start surfing
     paper_pointer = choice(list(starting_papers))
-    for _ in range(20): 
+    for _ in range(50): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                                  back_to_start_weight=0.15)
@@ -353,11 +353,11 @@ def main():
     line_width_list = {}
     for paper in starting_papers:
         name = paper.make_name()
-        alpha_list[name] = 0.2
+        alpha_list[name] = 0.7
         line_width_list[name] = 7
     for paper_name in node_name_list:
         if paper_name not in alpha_list:
-            alpha_list[paper_name] = 0.5
+            alpha_list[paper_name] = 0.9
         if paper_name not in line_width_list:
             line_width_list[paper_name] = 2
 
@@ -384,23 +384,21 @@ def main():
                            node_color=[colour_list[n] for n in DAG.nodes()], 
                            alpha=[alpha_list[n] for n in DAG.nodes()], 
                            linewidths=[line_width_list[n] for n in DAG.nodes()])
-    nx.draw_networkx_edges(DAG, pos, arrowsize=8, arrowstyle='<|-', min_source_margin = 3, min_target_margin =3 )
+    nx.draw_networkx_edges(DAG, pos, alpha = 0.3, arrowsize=8, arrowstyle='wedge', min_source_margin = 3, min_target_margin =3 )
     nx.draw_networkx_labels(DAG, pos, font_size=6, font_weight='bold', font_family='sans-serif', 
                             horizontalalignment = 'left', verticalalignment = 'center')
    
 
-    #Pring nodes with highest incoming edges! (i.e. most referenced)
+    #Pring nodes with highest incoming edges (i.e. most referenced)
     in_values = dict()
     top_10_cited = dict()
     for n in DAG.nodes:
         in_value = DAG.in_degree(n)
         in_values[n] = f"{in_value}"
-    top_10_cited = sorted(in_values.items(), key=lambda item: item[1], reverse=True)[:10]
-    print(f"Top 10 cited:")
+    top_10_cited = sorted(in_values.items(), key=lambda item: item[1], reverse=True)[:20]
+    print(f"TOP 10 CITED:")
     for key,value in sorted(top_10_cited, key=lambda item: item[1], reverse=True):
-         print(f"Paper {key} cited {value} times")
-    
-        
+         print(f"Paper {key} cited {value} times")   
 
     with open('output.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=",")
