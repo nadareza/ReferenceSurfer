@@ -180,7 +180,7 @@ class DAGNode():
     def make_scoreless_edge(self):
         parent = f"{self._parent}"
         name = f"{self._name}"
-        dag_edge = (parent, name)
+        dag_edge = (name, parent)
         return(tuple(dag_edge))
 
     def set_score(self, score):
@@ -191,7 +191,7 @@ class DAGNode():
         parent = f"{self._parent}"
         name = f"{self._name}"
         score = self._score
-        dag_edge = (parent, name, score)
+        dag_edge = (name, parent, score)
         return(tuple(dag_edge))    
 
 

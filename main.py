@@ -207,7 +207,7 @@ def main():
 
     #Start surfing
     paper_pointer = choice(list(starting_papers))
-    for _ in range(500): 
+    for _ in range(20): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
                                  back_to_start_weight=0.15)
@@ -316,17 +316,14 @@ def main():
         if pap_name in freq_list:
             freq_score = freq_list[pap_name]
         else:
-            freq_score = 0
+            freq_score = 1
         if pap_name in depth_list and depth_list[pap_name] != None: 
             depth_score = depth_list[pap_name]
+            depth_score = depth_score * 3
         else:
             depth_score = 0
-        score = (freq_score + depth_score + 1) *300
+        score = (freq_score + depth_score)
         score_list[pap_name] =  score
-
-    print(f"""
-        NODE COLOURS:
-        {node_colours}""") 
 
     #Colour DAG nodes according to antibiotic
     colour_list = dict()
@@ -342,7 +339,6 @@ def main():
             colset = set(node_colours[paper_name])
             if len(collist) != len(colset):
                colsetlist = list(colset)
-               print(f"dupes: {colsetlist}")
                if len(colsetlist) > 1:
                     colour_list[paper_name] = '#D8C292'
                else:
@@ -352,30 +348,61 @@ def main():
         if paper_name not in colour_list.keys():
             colour_list[paper_name] = '#ADACAC'
 
-    print(f"""
-    COLOUR LIST:
-    {colour_list}""")
+    #Make starting papers look different
+    alpha_list = dict()
+    line_width_list = {}
+    for paper in starting_papers:
+        name = paper.make_name()
+        alpha_list[name] = 0.2
+        line_width_list[name] = 7
+    for paper_name in node_name_list:
+        if paper_name not in alpha_list:
+            alpha_list[paper_name] = 0.5
+        if paper_name not in line_width_list:
+            line_width_list[paper_name] = 2
 
-    print(f"""
-    SCORE LIST:
-    {score_list}""")
-
+    #Add elements to the the DAG
     DAG = nx.MultiDiGraph()
     DAG.add_nodes_from(node_name_list)
     nx.set_node_attributes(DAG, score_list, 'size')
     nx.set_node_attributes(DAG, colour_list, 'color')
+    nx.set_node_attributes(DAG, alpha_list, 'alpha')
+    nx.set_node_attributes(DAG, line_width_list, 'line_width')
+    nx.set_node_attributes(DAG, node_name_list, 'name')
     DAG.add_edges_from(concat_paired_nodes)
-    #nx.draw(DAG, with_labels = True, font_weight= 'bold', font_size=6, edge_color='blue', **edge_attr)
-    pos= nx.spring_layout(DAG, k=0.5)
-    nx.draw_networkx_nodes(DAG, pos, node_size=[score_list[n] for n in DAG.nodes()], 
-                           node_color=[colour_list[n] for n in DAG.nodes()], alpha=0.5, linewidths=2)
+    
+    #Adjust score list to create DAG node sizes
+    for i in score_list:
+        score_list[i] *= 100
+        n = float(DAG.number_of_nodes())
+        score_list[i] += ((300/n)*100)
+
+    #Draw DAG    
+    pos= nx.spring_layout(DAG, k=1)
+    nx.draw_networkx_nodes(DAG, pos, 
+                           node_size=[score_list[n] for n in DAG.nodes()], 
+                           node_color=[colour_list[n] for n in DAG.nodes()], 
+                           alpha=[alpha_list[n] for n in DAG.nodes()], 
+                           linewidths=[line_width_list[n] for n in DAG.nodes()])
     nx.draw_networkx_edges(DAG, pos, arrowsize=8, arrowstyle='<|-', min_source_margin = 3, min_target_margin =3 )
     nx.draw_networkx_labels(DAG, pos, font_size=6, font_weight='bold', font_family='sans-serif', 
                             horizontalalignment = 'left', verticalalignment = 'center')
-    plt.show()
+   
 
-    with open('rs_output_10.csv', 'w', newline='') as csvfile:
+    #Pring nodes with highest incoming edges! (i.e. most referenced)
+    in_values = dict()
+    top_10_cited = dict()
+    for n in DAG.nodes:
+        in_value = DAG.in_degree(n)
+        in_values[n] = f"{in_value}"
+    top_10_cited = sorted(in_values.items(), key=lambda item: item[1], reverse=True)[:10]
+    print(f"Top 10 cited:")
+    for key,value in sorted(top_10_cited, key=lambda item: item[1], reverse=True):
+         print(f"Paper {key} cited {value} times")
+    
+        
 
+    with open('output.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=",")
         writer.writerow(['DOI', 'author', 'title', 'times_seen'])
         for paper,times_seen in paper_counter.items(): 
@@ -383,5 +410,7 @@ def main():
                              paper.get_title(), 
                              paper.get_first_author(),
                              times_seen])
+    
+    plt.show()
 
 main()
