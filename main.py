@@ -14,13 +14,35 @@ from datetime import datetime
 from random import random, choice
 from anytree import Node, RenderTree
 from unidecode import unidecode
-from Surf import SurfWrapper, BackToStart, InvalidReferences, NewPaper, PreviouslySeenPaper
+from Surf import SurfWrapper, BackToStart, InvalidReferences, NewPaper, PreviouslySeenPaper, LowScorePaper
 from Paper import Paper, DAGNode
 import numpy as np
 import matplotlib.pyplot as plt
 import networkx as nx 
 from matplotlib.patches import FancyArrowPatch
 import scipy
+
+KEYWORDS = 'keywords.csv'
+IMPORTANT_AUTHORS = 'important_authors.csv'
+
+keywords = [] 
+important_authors = [] 
+
+with open(KEYWORDS, 'r') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        keyterm = row['keyterms']
+        value = row['value']
+        keyword = [unidecode(keyterm).lower(), value]
+        keywords.append(keyword)
+    
+with open(IMPORTANT_AUTHORS, 'r') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        author = row['Last']
+        author = unidecode(author)
+        author = author.lower()
+        important_authors.append(author)
 
 def make_paper_from_query(query):
     message = query['message']
@@ -59,12 +81,16 @@ def get_dagnode(paper: Paper):
     id = paper.make_name()
     return(tuple(id, ))
 
-def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_start_weight=0.15, 
-         keyword_discard=0.8, keywords=[]):
+def surf(current_paper, starting_papers, seen_DOIs, seen_papers, keywords, important_authors, cr, back_to_start_weight=0.15):
+    
+    if seen_papers:
+        papers = seen_papers.union(starting_papers)
+    else:
+        papers = starting_papers
         
     if not current_paper.get_references(): 
         print(f"Current paper does not have references on system: {current_paper.get_title()}")
-        return SurfWrapper(choice(list(starting_papers)), 
+        return SurfWrapper(choice(list(papers)), 
                            action=InvalidReferences())
     
     if random() < back_to_start_weight: 
@@ -92,8 +118,60 @@ def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_sta
                 continue
             try:
                 random_paper = make_paper_from_query(query)
-                return SurfWrapper(random_paper, 
-                                   action=NewPaper())
+                random_paper_score = random_paper.score_paper(keywords, important_authors)
+
+                if random_paper_score <= 10:
+                    print(f"""
+                    Very low paper score: {random_paper.get_title()} by {random_paper.get_first_author()}, 
+                    Total ={random_paper_score}, 
+                    Title = {random_paper.title_score(keywords)}, 
+                    Author = {random_paper.author_score(important_authors)} 
+                    - likely irrelevent, surf again
+                    """)
+
+                    back_to_start_weight = 0.15
+                    return SurfWrapper(choice(list(papers)), 
+                           action=LowScorePaper())
+        
+                elif 10 < random_paper_score < 20:
+                    print(f"""
+                    Moderate paper score: {random_paper.get_title()} by {random_paper.get_first_author()}, 
+                    Total ={random_paper_score}, 
+                    Title = {random_paper.title_score(keywords)}, 
+                    Author = {random_paper.author_score(important_authors)} 
+                    - may be relevant, accept paper but increase BTS 
+                    """)
+                    
+                    back_to_start_weight = 0.8
+                    return SurfWrapper(random_paper, 
+                                        action=NewPaper())
+                
+                elif random_paper_score > 40:
+                    print(f"""
+                    Excellent paper score: {random_paper.get_title()} by {random_paper.get_first_author()}, 
+                    Total ={random_paper_score}, 
+                    Title = {random_paper.title_score(keywords)}, 
+                    Author = {random_paper.author_score(important_authors)} 
+                    - highly likely relevant as are subsequent references, reduce BTS
+                    """)
+                    
+                    back_to_start_weight = 0.05
+                    return SurfWrapper(random_paper, 
+                                        action=NewPaper())
+                
+                else:
+                    print(f"""
+                    Good paper score: {random_paper.get_title()} by {random_paper.get_first_author()}, 
+                    Total ={random_paper_score}, 
+                    Title = {random_paper.title_score(keywords)}, 
+                    Author = {random_paper.author_score(important_authors)} 
+                    - likely relevant, continue
+                    """)
+
+                    back_to_start_weight = 0.15
+                    return SurfWrapper(random_paper, 
+                                        action=NewPaper())
+
             except: 
                 print(f"Unable to make paper from query for: {random_reference.get_title()}")
                 continue
@@ -104,7 +182,7 @@ def surf(current_paper, starting_papers, seen_DOIs, seen_papers, cr, back_to_sta
             return SurfWrapper(random_paper, 
                                action=PreviouslySeenPaper())
       
-    return SurfWrapper(choice(list(starting_papers)), 
+    return SurfWrapper(choice(list(papers)), 
                        action=BackToStart())
 
 def main(): 
@@ -127,28 +205,6 @@ def main():
     node_list = set()
     depth_list = dict()
     paired_node_list = dict()
-
-    KEYWORDS = 'keywords.csv'
-    IMPORTANT_AUTHORS = 'important_authors.csv'
-
-    keywords = [] 
-    important_authors = [] 
-
-    with open(KEYWORDS, 'r') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            keyterm = row['keyterms']
-            value = row['value']
-            keyword = [unidecode(keyterm).lower(), value]
-            keywords.append(keyword)
-    
-    with open(IMPORTANT_AUTHORS, 'r') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            author = row['Last']
-            author = unidecode(author)
-            author = author.lower()
-            important_authors.append(author)
     
     #Colour nodes by antibiotic class
     ABX_COLOURS = 'antibiotic_colours.csv'
@@ -207,34 +263,14 @@ def main():
 
     #Start surfing
     paper_pointer = choice(list(starting_papers))
-    for _ in range(50): 
+    for _ in range(500): 
         print(f"iteration {_}")
-        new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, cr=cr,
+        new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, keywords, important_authors, cr=cr,
                                  back_to_start_weight=0.15)
         new_paper = new_wrapped_paper.get_paper()
-        new_paper_score = new_paper.score_paper(keywords, important_authors)
+        #new_paper_score = new_paper.score_paper(keywords, important_authors)
         new_paper_name = new_paper.make_name()
         new_node = make_dagnode_from_paper(new_paper_name)
-        
-
-        #If the paper scores very low based on title and authors, skip over it, likely irrelevant 
-        if new_paper_score < 10:
-             print(f"""
-             Low paper score: {new_paper.get_title()} by {new_paper.get_first_author()}, 
-             Total ={new_paper_score}, 
-             Title = {new_paper.title_score(keywords)}, 
-             Author = {new_paper.author_score(important_authors)} 
-             - excluded (likely irrelevant)
-             """)
-             continue
-            # ???choice list starting_papers vs surf vs choice list seen_papers?? vs go back 'Dal segno al coda'
-        else:
-            print(f"""
-            Great paper score! {new_paper.get_title()} by {new_paper.get_first_author()}, 
-            Total ={new_paper_score}, 
-            Title = {new_paper.title_score(keywords)}, 
-            Author = {new_paper.author_score(important_authors)} 
-            - included""")
 
         if new_node not in node_list:
             node_list.add(new_node)
@@ -375,16 +411,16 @@ def main():
     for i in score_list:
         score_list[i] *= 100
         n = float(DAG.number_of_nodes())
-        score_list[i] += ((300/n)*100)
+        #score_list[i] += ((300/n)*100)
 
     #Draw DAG    
-    pos= nx.spring_layout(DAG, k=1)
+    pos= nx.spring_layout(DAG, k=0.2)
     nx.draw_networkx_nodes(DAG, pos, 
                            node_size=[score_list[n] for n in DAG.nodes()], 
                            node_color=[colour_list[n] for n in DAG.nodes()], 
                            alpha=[alpha_list[n] for n in DAG.nodes()], 
                            linewidths=[line_width_list[n] for n in DAG.nodes()])
-    nx.draw_networkx_edges(DAG, pos, alpha = 0.3, arrowsize=8, arrowstyle='wedge', min_source_margin = 3, min_target_margin =3 )
+    nx.draw_networkx_edges(DAG, pos, alpha = 0.3,  arrowstyle='<|-', min_source_margin = 3, min_target_margin =3 )
     nx.draw_networkx_labels(DAG, pos, font_size=6, font_weight='bold', font_family='sans-serif', 
                             horizontalalignment = 'left', verticalalignment = 'center')
    
