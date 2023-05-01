@@ -27,8 +27,8 @@ from matplotlib.patches import FancyArrowPatch
 import metapub
 from networkx.drawing.nx_agraph import graphviz_layout as graphviz_layout
 
-Entrez.email = 'nada.reza@liverpool.ac.uk'
-API_KEY='65478ca57c7d02eb33394567bcaa28824408'
+Entrez.email = 'youremail@email.com'
+NCBI_API_KEY='your_API_key'
 fetch = PubMedFetcher()
 #into terminal: export NCBI_API_KEY='YOUR API-KEY'
 
