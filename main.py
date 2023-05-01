@@ -21,6 +21,7 @@ import matplotlib.pyplot as plt
 import networkx as nx 
 from matplotlib.patches import FancyArrowPatch
 import scipy
+from networkx.drawing.nx_agraph import graphviz_layout as graphviz_layout
 
 KEYWORDS = 'keywords.csv'
 IMPORTANT_AUTHORS = 'important_authors.csv'
@@ -334,12 +335,17 @@ def main():
         for pair in paired_node_list[paper_name]:
             concat_paired_nodes.append(pair)
     
-    #Make labels for DAG nodes
+    #Make labels for DAG nodes - label all initial papers
+    labelled_list = [] 
     labels = {}
     node_name_list = []
+    print(f"starting {starting_papers}")
+    for paper in starting_papers:
+        papername = paper.make_name() 
+        labelled_list.append(papername)
+    print(f"labelled starting {labelled_list}")
     for node in node_list:
-        name = node.get_name()
-        labels[name] = f"{name}"  
+        name = node.get_name() 
         node_name_list.append(name)
     
     #Calculate scores for DAG node size
@@ -398,7 +404,7 @@ def main():
             line_width_list[paper_name] = 2
 
     #Add elements to the the DAG
-    DAG = nx.MultiDiGraph()
+    DAG = nx.DiGraph()
     DAG.add_nodes_from(node_name_list)
     nx.set_node_attributes(DAG, score_list, 'size')
     nx.set_node_attributes(DAG, colour_list, 'color')
@@ -409,32 +415,54 @@ def main():
     
     #Adjust score list to create DAG node sizes
     for i in score_list:
-        score_list[i] *= 100
-        n = float(DAG.number_of_nodes())
+        score_list[i] *= 20
+        #n = float(DAG.number_of_nodes())
         #score_list[i] += ((300/n)*100)
 
     #Draw DAG    
-    pos= nx.spring_layout(DAG, k=0.2)
+    pos= nx.nx_agraph.graphviz_layout(DAG, prog = "dot")
     nx.draw_networkx_nodes(DAG, pos, 
                            node_size=[score_list[n] for n in DAG.nodes()], 
                            node_color=[colour_list[n] for n in DAG.nodes()], 
                            alpha=[alpha_list[n] for n in DAG.nodes()], 
                            linewidths=[line_width_list[n] for n in DAG.nodes()])
-    nx.draw_networkx_edges(DAG, pos, alpha = 0.3,  arrowstyle='<|-', min_source_margin = 3, min_target_margin =3 )
-    nx.draw_networkx_labels(DAG, pos, font_size=6, font_weight='bold', font_family='sans-serif', 
-                            horizontalalignment = 'left', verticalalignment = 'center')
-   
-
+    nx.draw_networkx_edges(DAG, pos, arrowstyle='<|-')
+    
     #Pring nodes with highest incoming edges (i.e. most referenced)
     in_values = dict()
-    top_10_cited = dict()
+    top_cited = dict()
     for n in DAG.nodes:
-        in_value = DAG.in_degree(n)
+        in_value = DAG.out_degree(n)
         in_values[n] = f"{in_value}"
-    top_10_cited = sorted(in_values.items(), key=lambda item: item[1], reverse=True)[:20]
-    print(f"TOP 10 CITED:")
-    for key,value in sorted(top_10_cited, key=lambda item: item[1], reverse=True):
+    top_cited = sorted(in_values.items(), key=lambda item: item[1], reverse=True)[:10]
+    print(f"TOP CITED:")
+    for key,value in sorted(top_cited, key=lambda item: item[1], reverse=True):
          print(f"Paper {key} cited {value} times")   
+
+    #Make more labels for DAG Nodes - label all highly cited papers
+    
+    for n in DAG.nodes:
+        citedness = DAG.out_degree(n)
+        if citedness >= 2:
+            if n not in labelled_list:
+                labelled_list.append(n)
+    
+    print(f"initial labelled list: {labelled_list}")
+    print(f"top cited: {top_cited}")
+    """
+    for n in top_cited:
+        if n not in labelled_list:
+            labelled_list.append(n)
+    """
+    for name in labelled_list:
+            labels[name] = f"{name}" 
+    
+    print(f"labelled list: {labelled_list}")
+
+    nx.draw_networkx_labels(DAG, pos = nx.nx_agraph.graphviz_layout(DAG, prog = "dot"), 
+                            labels = {n:lab for n,lab in labels.items() if n in pos}, 
+                            font_size=6, font_weight='bold', font_family='sans-serif', 
+                            horizontalalignment = 'center', verticalalignment = 'center')
 
     with open('output.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=",")

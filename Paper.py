@@ -85,9 +85,7 @@ class Paper:
         return self._year   
     
     def make_name(self):
-        name = f"""
-        {self.get_first_author()} 
-        {self.get_year()}""" 
+        name = f""" \n {self.get_first_author()} \n {self.get_year()}""" 
         {self.get_DOI()} 
         return name
     
