@@ -1,11 +1,4 @@
-﻿key,title,authors,year,DOI,antibiotic,source_author,source_year,source_doi,source_rayyan,,,,,
-rayyan-951107791,Beta-Lactams Therapeutic Monitoring in Septic Children-What Target Are We Aiming for? A Scoping Review,Morales Junior R. and Pereira G.O. and Tiguman G.M.B. and Juodinis V.D. and Telles J.P. and de Souza D.C. and Santos S.R.C.J.,2022,https://dx.doi.org/10.3389/fped.2022.777854,Co-amoxiclav,De Cock,2015,doi: 10.1128/AAC.01368-15,,,,,,
-rayyan-951109893,Combatting the Rising Tide of Antimicrobial Resistance: Pharmacokinetic/Pharmacodynamic Dosing Strategies for Maximal Precision,"Chua H.C. and Tse A. and Smith N.M. and Mergenhagen K.A. and Cha R. and Tsuji B.T.     AO  - Tsuji, Brian T.; ORCID: https://orcid.org/0000-0002-2413-2118",2021,https://dx.doi.org/10.1016/j.ijantimicag.2020.106269,Vancomycin,Zamoner,2019,10.1111/1440-1681.13066,,,,,,
-rayyan-951525415,Influence of pharmacokinetics/pharmacodynamics of antibacterials in their dosing regimen selection,"Scaglione, F. and Paraboni, L.",2006,10.1586/14787210.4.3.479,Ceftriaxone,Craig,1998,https://doi.org/10.1086/516284,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
+﻿key,title,authors,year,DOI
+rayyan-951109893,Combatting the Rising Tide of Antimicrobial Resistance: Pharmacokinetic/Pharmacodynamic Dosing Strategies for Maximal Precision,"Chua H.C. and Tse A. and Smith N.M. and Mergenhagen K.A. and Cha R. and Tsuji B.T.     AO  - Tsuji, Brian T.; ORCID: https://orcid.org/0000-0002-2413-2118",2021,https://dx.doi.org/10.1016/j.ijantimicag.2020.106269
+rayyan-951525415,Influence of pharmacokinetics/pharmacodynamics of antibacterials in their dosing regimen selection,"Scaglione, F. and Paraboni, L.",2006,10.1586/14787210.4.3.479
+rayyan-951107791,Beta-Lactams Therapeutic Monitoring in Septic Children-What Target Are We Aiming for? A Scoping Review,Morales Junior R. and Pereira G.O. and Tiguman G.M.B. and Juodinis V.D. and Telles J.P. and de Souza D.C. and Santos S.R.C.J.,2022,https://dx.doi.org/10.3389/fped.2022.777854

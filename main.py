@@ -9,6 +9,10 @@
 """Documentation"""
 
 from habanero import Crossref
+from Bio import Entrez
+from metapub import PubMedFetcher
+import urllib.request
+from urllib.error import HTTPError
 import csv
 from datetime import datetime
 from random import random, choice
@@ -20,8 +24,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import networkx as nx 
 from matplotlib.patches import FancyArrowPatch
-import scipy
+import metapub
 from networkx.drawing.nx_agraph import graphviz_layout as graphviz_layout
+
+Entrez.email = 'nada.reza@liverpool.ac.uk'
+API_KEY='65478ca57c7d02eb33394567bcaa28824408'
+fetch = PubMedFetcher()
+#into terminal: export NCBI_API_KEY='YOUR API-KEY'
 
 KEYWORDS = 'keywords.csv'
 IMPORTANT_AUTHORS = 'important_authors.csv'
@@ -48,10 +57,28 @@ with open(IMPORTANT_AUTHORS, 'r') as csvfile:
 def make_paper_from_query(query):
     message = query['message']
     doi = message['DOI']
+    if '.org/' in doi:
+        pmiddoi = doi.rpartition('.org/')[-1]
+    else:
+        pmiddoi = doi
+    pmid = fetch.pmids_for_query(pmiddoi)
+    article = fetch.article_by_pmid(pmid)
     title = message['title']
+    if title == None:
+        try:
+            title = article.title
+        except:
+            pass
     author = message['author']
+    if author == None:
+        author = article.authors
+        author = article.authors[0]
+        author = author.rpartition(" ")[0]        
     date_time = message['created']['date-time']
-    year = datetime.fromisoformat(date_time).year
+    if article.year:
+        year = article.year
+    else: 
+        year = datetime.fromisoformat(date_time).year
     references = message['reference'] if message['references-count'] > 0 else None
     return Paper(DOI=doi,
                  title=title,
@@ -264,7 +291,7 @@ def main():
 
     #Start surfing
     paper_pointer = choice(list(starting_papers))
-    for _ in range(500): 
+    for _ in range(1000): 
         print(f"iteration {_}")
         new_wrapped_paper = surf(paper_pointer, starting_papers, seen_DOIs, seen_papers, keywords, important_authors, cr=cr,
                                  back_to_start_weight=0.15)
@@ -339,7 +366,6 @@ def main():
     labelled_list = [] 
     labels = {}
     node_name_list = []
-    print(f"starting {starting_papers}")
     for paper in starting_papers:
         papername = paper.make_name() 
         labelled_list.append(papername)
@@ -404,7 +430,7 @@ def main():
             line_width_list[paper_name] = 2
 
     #Add elements to the the DAG
-    DAG = nx.DiGraph()
+    DAG = nx.MultiDiGraph()
     DAG.add_nodes_from(node_name_list)
     nx.set_node_attributes(DAG, score_list, 'size')
     nx.set_node_attributes(DAG, colour_list, 'color')
@@ -426,7 +452,7 @@ def main():
                            node_color=[colour_list[n] for n in DAG.nodes()], 
                            alpha=[alpha_list[n] for n in DAG.nodes()], 
                            linewidths=[line_width_list[n] for n in DAG.nodes()])
-    nx.draw_networkx_edges(DAG, pos, arrowstyle='<|-')
+    nx.draw_networkx_edges(DAG, pos, alpha=0.4, arrowstyle='<|-')
     
     #Pring nodes with highest incoming edges (i.e. most referenced)
     in_values = dict()
@@ -443,12 +469,11 @@ def main():
     
     for n in DAG.nodes:
         citedness = DAG.out_degree(n)
-        if citedness >= 2:
+        if citedness >= 3:
             if n not in labelled_list:
                 labelled_list.append(n)
     
-    print(f"initial labelled list: {labelled_list}")
-    print(f"top cited: {top_cited}")
+    #ALTERNATIVE TO DECIDING TOP SITED FOR LABELLING#
     """
     for n in top_cited:
         if n not in labelled_list:
@@ -456,8 +481,6 @@ def main():
     """
     for name in labelled_list:
             labels[name] = f"{name}" 
-    
-    print(f"labelled list: {labelled_list}")
 
     nx.draw_networkx_labels(DAG, pos = nx.nx_agraph.graphviz_layout(DAG, prog = "dot"), 
                             labels = {n:lab for n,lab in labels.items() if n in pos}, 

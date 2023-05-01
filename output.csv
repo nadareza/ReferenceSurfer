@@ -1,118 +1,209 @@
 DOI,author,title,times_seen
-10.1097/ccm.0b013e3181961bff,Pharmacokinetic issues for antibiotics in the critically ill patient,Roberts,13
-10.1093/infdis/158.4.831,Correlation of Antimicrobial Pharmacokinetic Parameters with Therapeutic Efficacy in an Animal Model,Vogelman,17
-10.1097/qco.0000000000000494,How to optimize antibiotic pharmacokinetic/pharmacodynamics for Gram-negative infections in critically ill patients,Heffernan,11
-10.1093/jac/31.suppl_d.1,Pharmacokinetics of antibiotics in natural and experimental superficial compartments in animals and humans,Ryan,7
-10.1128/aac.42.9.2235,Pharmacokinetic Profiles of High-Dose Intravenous Ciprofloxacin in Severe Sepsis,Lipman,14
-10.1177/0091270006291035,Population Pharmacokinetic Analysis and Dosing Regimen Optimization of Meropenem in Adult Patients,Li,9
-10.1177/106002809202600101,"Dose-Ranging Pharmacokinetic Study of Ciprofloxacin after 200-, 300-, and 400-mg Intravenous Doses",Nix,9
-10.1128/aac.26.2.208,Pharmacokinetics of intravenously administered ciprofloxacin,Wise,11
-10.1007/bf01061469,Building population pharmacokineticpharmacodynamic models. I. Models for covariate effects,Mandema,8
-10.1016/s0149-2918(04)80001-8,Optimizing antimicrobial pharmacodynamics: dosage strategies for meropenem,Mattoes,4
-10.1093/ajhp/60.6.565,Economic benefit of a meropenem dosage strategy based on pharmacodynamic concepts,Kuti,8
-10.2165/00003088-200544020-00005,Pharmacokinetic/Pharmacodynamic Modelling of Antibacterials In Vitro and In Vivo Using Bacterial Growth and Kill Kinetics,Mouton,10
-10.1002/j.1552-4604.1996.tb04164.x,Pharmacokinetics of Ceftriaxone in Patients Undergoing Continuous Veno-Venous Hemofiltration,Kroh,5
-10.1093/infdis/162.3.717,AntibactERial Activity of Four Cephalosporins in an ExpERimental Infection in Relation to In Vitro Effect and Pharmacokinetics,Mattie,9
-10.1093/jac/33.4.795,Comparative pharmacokinetics and safety of ciprofloxacin 400 mg iv thrice daily versus 750 mg po twice daily,Shah,11
-10.1007/bf02013983,Pharmacokinetics of ciprofloxacin in healthy volunteers after oral and intravenous administration,Borner,3
-10.1002/jps.2600751108,A Pharmacodynamic Model for the Activity of Antibiotics Against Microorganisms under Nonsaturable Conditions,Zhi,5
-10.1128/aac.49.1.461-463.2005,Pharmacodynamic Evaluation of Extending the Administration Time of Meropenem using a Monte Carlo Simulation,Lomaestro,4
-10.1016/s0924-8579(01)00406-x,Macrolides: pharmacokinetics and pharmacodynamics,Van Bambeke,8
-10.1093/jac/47.4.500,Use of the t &gt; MIC to choose between different dosing regimens of beta-lactam antibiotics,Mouton,6
-10.1097/mcc.0000000000000235,New antibiotics and antimicrobial combination therapy for the treatment of gram-negative bacterial infections,Bassetti,6
-10.1086/516284,State‐of‐the‐Art Clinical Article: Pharmacokinetic/Pharmacodynamic Parameters: Rationale for Antibacterial Dosing of Mice and Men,Craig,13
-10.1111/j.1365-2125.2011.04005.x,Population pharmacokinetics of ceftriaxone in critically ill septic patients: a reappraisal,Garot,4
-10.1128/aac.22.5.816,Pharmacokinetic characteristics of intravenous ceftriaxone in normal adults,Pollock,4
-10.2165/00003088-200645050-00004,Population Pharmacokinetics of Ceftriaxone and Pharmacodynamic Considerations in Haemodialysed Patients,Simon,7
-10.1128/aac.01885-13,Clinical Population Pharmacokinetics and Toxicodynamics of Linezolid,Boak,4
-10.1128/aac.43.1.163,"Pharmacokinetics in Serum and Leukocyte Exposures of Oral Azithromycin, 1,500 Milligrams, Given over a 3- or 5-Day Period in Healthy Subjects",Amsden,3
-10.1128/aac.41.9.1910,Activities of vancomycin and teicoplanin against penicillin-resistant pneumococci in vitro and in vivo and correlation to pharmacokinetic parameters in the mouse peritonitis model,Knudsen,5
-10.1093/jac/38.1.103,Pharmacokinetics of intravenous ciprofloxacin in normal and renally impaired subjects,Shah,6
-10.1093/jac/dkx121,Pharmacodynamics of dose-escalated ‘front-loading’ polymyxin B regimens against polymyxin-resistant mcr-1-harbouring Escherichia coli,Smith,4
+10.1093/jac/dkx121,Pharmacodynamics of dose-escalated ‘front-loading’ polymyxin B regimens against polymyxin-resistant mcr-1-harbouring Escherichia coli,Smith,12
+10.1128/aac.00327-13,New Dosing Strategies for an Old Antibiotic: Pharmacodynamics of Front-Loaded Regimens of Colistin at Simulated Pharmacokinetics in Patients with Kidney or Liver Disease,Rao,12
+10.1093/jac/dkp069,Daptomycin pharmacodynamics against Staphylococcus aureus hemB mutants displaying the small colony variant phenotype,Begic,9
+10.1016/j.bmc.2016.11.008,Animal models in the pharmacokinetic/pharmacodynamic evaluation of antimicrobial agents,Zhao,11
+10.1007/s10096-019-03535-w,Target attainment of cefotaxime in critically ill children with meningococcal septic shock as a model for cefotaxime dosing in severe pediatric sepsis,Hartman,12
+10.1093/infdis/155.1.93,Clinical Response to Aminoglycoside Therapy: Importance of the Ratio of Peak Concentration to Minimal Inhibitory Concentration,Moore,9
+10.4103/0976-500x.179356,"Variability in plasma concentration of cefotaxime in critically ill patients in an Intensive Care Unit of India and its pharmacodynamic outcome: A nonrandomized, prospective, open-label, analytical study",Abhilash,12
+10.5863/1551-6776-22.4.276,Population Pharmacokinetics and Pharmacodynamic Target Attainment of Meropenem in Critically Ill Young Children,Cies,14
+10.1128/aac.02089-15,Population Pharmacokinetics and Pharmacodynamics of Extended-Infusion Piperacillin and Tazobactam in Critically Ill Children,Nichols,11
+10.1592/phco.23.3.291.32110,"Integration of Population Pharmacokinetics, a Pharmacodynamic Target, and Microbiologic Surveillance Data to Generate a Rational Empiric Dosing Strategy for Cefepime against<i>Pseudomonas aeruginosa</i>",Tam,9
+10.1592/phco.19.18.1392.30900,Comparison of Five β-Lactam Antibiotics Against Common Nosocomial Pathogens Using the Time Above MIC at Different Creatinine Clearances,Kays,14
+10.1093/infdis/158.4.831,Correlation of Antimicrobial Pharmacokinetic Parameters with Therapeutic Efficacy in an Animal Model,Vogelman,11
+10.1093/jac/dkaa170,Population pharmacokinetics of ceftazidime in critically ill children: impact of cystic fibrosis,Bui,6
+10.1002/jcph.505,Population pharmacokinetics and pharmacodynamics of piperacillin and tazobactam administered by prolonged infusion in obese and nonobese patients,Chung,7
+10.1086/516284,State‐of‐the‐Art Clinical Article: Pharmacokinetic/Pharmacodynamic Parameters: Rationale for Antibacterial Dosing of Mice and Men,Craig,22
+10.1186/s13054-018-2155-1,Pharmacokinetics–pharmacodynamics issues relevant for the clinical use of beta-lactam antibiotics in critically ill patients,Veiga,15
+10.1016/j.ijantimicag.2012.09.004,Steady-state pharmacokinetics and pharmacodynamics of piperacillin and tazobactam administered by prolonged infusion in obese patients,Cheatham,4
+10.1016/j.coph.2017.10.014,Ensuring quality pharmacokinetic analyses in antimicrobial drug development programs,Lakota,5
+10.1128/aac.00090-11,"Evaluation of Pharmacokinetic/Pharmacodynamic Relationships of PD-0162819, a Biotin Carboxylase Inhibitor Representing a New Class of Antibacterial Compounds, Using
+            <i>In Vitro</i>
+            Infection Models",Ogden,9
+10.1016/j.ijantimicag.2004.09.012,Pharmacokinetic-pharmacodynamic modelling of antibacterial activity of cefpodoxime and cefixime in in vitro kinetic models,Liu,9
+10.1016/j.ijantimicag.2007.12.009,Evaluation of area under the inhibitory curve (AUIC) and time above the minimum inhibitory concentration (T&gt;MIC) as predictors of outcome for cefepime and ceftazidime in serious bacterial infections,McKinnon,7
+10.1016/j.ijantimicag.2009.07.004,Steady-state pharmacokinetics and pharmacodynamics of piperacillin/tazobactam administered by prolonged infusion in hospitalised patients,Shea,9
+10.1097/mcc.0000000000000235,New antibiotics and antimicrobial combination therapy for the treatment of gram-negative bacterial infections,Bassetti,5
+10.1128/aac.00267-10,"<i>In Vivo</i>
+            Pharmacodynamic Activity of Tomopenem (formerly CS-023) against
+            <i>Pseudomonas aeruginosa</i>
+            and Methicillin-Resistant
+            <i>Staphylococcus aureus</i>
+            in a Murine Thigh Infection Model",Sugihara,9
+10.1128/aac.00972-08,"Pharmacodynamics of SMP-601 (PTZ601) against Vancomycin-Resistant
+            <i>Enterococcus faecium</i>
+            and Methicillin-Resistant
+            <i>Staphylococcus aureus</i>
+            in Neutropenic Murine Thigh Infection Models",Eguchi,5
+10.1016/s0732-8893(02)00416-9,Pharmacodynamic profiling of continuously infused piperacillin/tazobactam against Pseudomonas aeruginosa using Monte Carlo analysis,Kuti,6
+10.1128/aac.41.4.733,Pharmacokinetic-pharmacodynamic modeling of activity of ceftazidime during continuous and intermittent infusion,Mouton,5
+10.1128/aac.01252-07,"In Vivo Pharmacodynamic Profiling of Doripenem against
+            <i>Pseudomonas aeruginosa</i>
+            by Simulating Human Exposures",Kim,8
+10.1592/phco.26.9.1320,Application of Antimicrobial Pharmacodynamic Concepts into Clinical Practice: Focus on β-Lactam Antibiotics: Insights from the Society of Infectious Diseases Pharmacists,Lodise,12
+10.1093/jac/dkf130,Pharmacodynamics of cefepime in patients with Gram-negative infections,Tam,11
+10.1016/j.ejps.2021.105868,Population pharmacokinetics-pharmacodynamics of ceftazidime in neonates and young infants: Dosing optimization for neonatal sepsis,Li,12
+10.1016/j.clinthera.2010.04.003,Pharmacodynamic modeling of intravenous antibiotics against gram-negative bacteria collected in the United States,Koomanachai,7
+10.1038/nrmicro862,Antimicrobial pharmacodynamics: critical interactions of 'bug and drug',Drusano,11
+10.1177/0091270003257225,Use of Monte Carlo Simulation to Design an Optimized Pharmacodynamic Dosing Strategy for Meropenem,Kuti,5
+10.1128/aac.01733-10,Population Pharmacokinetics of Colistin Methanesulfonate and Formed Colistin in Critically Ill Patients from a Multicenter Study Provide Dosing Suggestions for Various Categories of Patients,Garonzik,7
 10.1128/aac.00903-09,"Pharmacokinetic/Pharmacodynamic Investigation of Colistin against
             <i>Pseudomonas aeruginosa</i>
             Using an
             <i>In Vitro</i>
-            Model",Bergen,5
-10.1093/jac/dkm511,"Comparison of once-, twice- and thrice-daily dosing of colistin on antibacterial effect and emergence of resistance: studies with Pseudomonas aeruginosa in an in vitro pharmacodynamic model",Bergen,3
-10.1592/phco.26.9.1320,Application of Antimicrobial Pharmacodynamic Concepts into Clinical Practice: Focus on β-Lactam Antibiotics: Insights from the Society of Infectious Diseases Pharmacists,Lodise,8
-10.1128/aac.31.11.1782,Effect of dose on serum pharmacokinetics of intravenous ciprofloxacin with identification and characterization of extravascular compartments using noncompartmental and compartmental pharmacokinetic models,Dudley,4
-10.1093/jac/dkp434,In vitro pharmacodynamic models to determine the effect of antibacterial drugs,Gloede,9
-10.1016/j.coph.2017.10.014,Ensuring quality pharmacokinetic analyses in antimicrobial drug development programs,Lakota,5
-10.1007/bf01062551,Microbial pharmacodynamics of piperacillin in neutropenic mice of systematic infection due toPseudomonas aeruginosa,Zhi,7
-10.1007/s40262-017-0602-9,Population Pharmacokinetic Model to Optimize Cefotaxime Dosing Regimen in Critically Ill Children,Béranger,1
-10.1099/jmm.0.45994-0,Activity of moxifloxacin against Bacteroides fragilis and Escherichia coli in an in vitro pharmacokinetic/pharmacodynamic model employing pure and mixed cultures,Schaumann,4
-10.1128/aac.39.4.1003,Pharmacokinetics of high-dose intravenous ciprofloxacin in young and elderly and in male and female subjects,Shah,3
-10.1016/j.ijantimicag.2007.12.009,Evaluation of area under the inhibitory curve (AUIC) and time above the minimum inhibitory concentration (T&gt;MIC) as predictors of outcome for cefepime and ceftazidime in serious bacterial infections,McKinnon,4
-10.1128/aac.01737-10,"Antimicrobial Activity of CXA-101, a Novel Cephalosporin Tested in Combination with Tazobactam against Enterobacteriaceae, Pseudomonas aeruginosa, and Bacteroides fragilis Strains Having Various Resistance Phenotypes",Sader,4
-10.1016/j.ijantimicag.2017.04.008,Population pharmacokinetics of cefepime in febrile neutropenia: implications for dose-dependent susceptibility and contemporary dosing regimens,Rhodes,1
-10.1093/infdis/155.1.93,Clinical Response to Aminoglycoside Therapy: Importance of the Ratio of Peak Concentration to Minimal Inhibitory Concentration,Moore,4
-10.1080/1120009x.2004.11782371,The Role of PK/PD Parameters to Avoid Selection and Increase of Resistance: Mutant Prevention Concentration,Blondeau,3
-10.1002/cpt1979253358,Simultaneous modeling of pharmacokinetics and pharmacodynamics: Application to<i>d</i>-tubocurarine,Sheiner,2
-10.1007/bf00541533,Ceftriaxone pharmacokinetics during peritoneal dialysis,Koup,6
-10.1016/j.clinthera.2016.06.015,Pharmacokinetic and Pharmacodynamic Principles of Anti-infective Dosing,Onufrak,2
-10.1128/aac.37.5.1073,Pharmacodynamics of intravenous ciprofloxacin in seriously ill patients,Forrest,2
-10.1016/j.coph.2017.09.010,Clinical pharmacokinetic–pharmacodynamic analyses: a critical element for developing antibacterial agents,Bhavnani,4
-10.1086/420739,Use of Pharmacodynamic End Points in the Evaluation of Gatifloxacin for the Treatment of Acute Maxillary Sinusitis,Ambrose,3
-10.1016/s0732-8893(02)00416-9,Pharmacodynamic profiling of continuously infused piperacillin/tazobactam against Pseudomonas aeruginosa using Monte Carlo analysis,Kuti,1
-10.1128/aac.38.5.931,Killing of Pseudomonas aeruginosa during continuous and intermittent infusion of ceftazidime in an in vitro pharmacokinetic model,Mouton,3
-10.1093/jac/25.suppl_a.73,The pharmacokinetics of azithromycin in human serum and tissues,Foulds,3
-10.1001/jama.279.2.125,Pharmacodynamics of Levofloxacin,Preston,6
-10.1016/j.pupt.2011.12.007,Bronchopulmonary pharmacokinetic and pharmacodynamic profiles of levofloxacin 750 mg once daily in adults undergoing treatment for acute exacerbation of chronic bronchitis,Nicolau,3
-10.1159/000220525,Measurement and Interpretation of Certain Biopharmaceutic and Pharmacodynamic Parameters,Glbaldi,3
-10.1016/s0924-8579(02)00029-8,How predictive is PK/PD for antibacterial agents?,Frimodt-Møller,1
-10.1128/aac.42.7.1842,Dosing of Aminoglycosides To Rapidly Attain Pharmacodynamic Goals and Hasten Therapeutic Response by Using Individualized Pharmacokinetic Monitoring of Patients with Pneumonia Caused by Gram-Negative Organisms,Kashuba,1
-10.1128/aac.27.3.375,Pharmacokinetics of ciprofloxacin after oral and parenteral administration,Höffken,2
-10.1002/jps.2600600618,Pharmacodynamics of Chemotherapeutic Effects: Dose-Time-Response Relationships for Phase-Nonspecific Agents,Jusko,1
+            Model",Bergen,7
+10.1093/jac/dkl512,In vitro pharmacodynamics of colistin against Acinetobacter baumannii clinical isolates,Owen,6
+10.1086/510079,Antimicrobial Resistance: Pharmacokinetics‐Pharmacodynamics of Antimicrobial Therapy: It’s Not Just for Mice Anymore,Ambrose,8
+10.1128/aac.46.11.3484-3489.2002,In Vivo Pharmacodynamics of a New Oxazolidinone (Linezolid),Andes,14
+10.1093/jac/27.suppl_c.29,Pharmacodynamics of amikacin in vitro and in mouse thigh and lung infections,Craig,9
+10.1089/sur.2018.141,Pharmacokinetic and Pharmacodynamic Analysis of Ceftazidime/Avibactam in Critically Ill Patients,Stein,5
+10.2165/00003088-200443130-00005,Pharmacodynamics of Vancomycin and Other Antimicrobials in Patients with Staphylococcus aureus Lower Respiratory Tract Infections,Moise-Broder,5
+10.1128/aac.38.9.2034,"Bactericidal activities of teicoplanin, vancomycin, and gentamicin alone and in combination against Staphylococcus aureus in an in vitro pharmacodynamic model of endocarditis",McGrath,7
+10.1177/106002809102501003,"Mathematical Examination of Dual Individualization Principles (I): Relationships between AUC above MIC and Area under the Inhibitory Curve for Cefmenoxime, Ciprofloxacin, and Tobramycin",Schentag,6
+10.1128/aac.33.5.608,Postantibiotic effect of penicillin plus gentamicin versus Enterococcus faecalis in vitro and in vivo,Hessen,6
+10.1128/aac.49.9.3944-3947.2005,Use of Pharmacokinetic-Pharmacodynamic Target Attainment Analyses To Support Phase 2 and 3 Dosing Strategies for Doripenem,Bhavnani,4
+10.1016/s0891-5520(03)00065-5,"Basic pharmacodynamics of antibacterials with clinical applications to the use of β-lactams, glycopeptides, and linezolid",Craig,12
+10.1002/jcph.566,Ceftolozane/tazobactam pharmacokinetic/pharmacodynamic‐derived dose justification for phase 3 studies in patients with nosocomial pneumonia,Xiao,6
+10.1086/514621,Pharmacodynamic Interactions of Antibiotics Alone and in Combination,Schentag,6
+10.1016/s0924-8579(01)00406-x,Macrolides: pharmacokinetics and pharmacodynamics,Van Bambeke,7
+10.1016/s0149-2918(04)80001-8,Optimizing antimicrobial pharmacodynamics: dosage strategies for meropenem,Mattoes,7
+10.1007/s001340050885,Pharmacokinetics of cefpirome during the posttraumatic systemic inflammatory response syndrome,Jacolot,3
+10.1128/aac.49.1.209-219.2005,"Pharmacodynamic Modeling of Ciprofloxacin Resistance in
+            <i>Staphylococcus aureus</i>",Campion,6
+10.1592/phco.28.6.691,Steady-State Pharmacokinetics and Pharmacodynamics of Meropenem in Hospitalized Patients,Cheatham,2
+10.1592/phco.27.3.333,"Pharmacodynamic Target Attainment of Six β-Lactams and Two Fluoroquinolones Against<i>Pseudomonas aeruginosa</i>,<i>Acinetobacter baumannii</i>,<i>Escherichia coli</i>, and<i>Klebsiella</i>Species Collected from United States Intensive Care Units in 2004",DeRyke,6
+10.1097/ccm.0b013e3181961bff,Pharmacokinetic issues for antibiotics in the critically ill patient,Roberts,7
+10.1128/aac.46.6.1665-1670.2002,Pharmacodynamics of the New Fluoroquinolone Gatifloxacin in Murine Thigh and Lung Infection Models,Andes,5
+10.1093/jac/40.suppl_1.45,Pharmacokinetics and pharmacodynamics of oral grepafloxacin in patients with acute bacterial exacerbations of chronic bronchitis,Forrest,4
+10.1093/infdis/147.5.910,Impact of Dosing Intervals on Activity of Gentamicin and Ticarcillin Against Pseudomonas aeruginosa in Granulocytopenic Mice,Gerber,2
+10.1128/aac.50.3.994-1000.2006,"Pharmacokinetic-Pharmacodynamic Relationships Describing the Efficacy of Oritavancin in Patients with
+            <i>Staphylococcus aureus</i>
+            Bacteremia",Bhavnani,7
+10.1093/jac/47.6.811,"Pharmacodynamics of moxifloxacin, levofloxacin and sparfloxacin against Streptococcus pneumoniae",Lister,6
+10.1128/aac.00494-06,"Pharmacokinetics of CS-023 (RO4908463), a Novel Parenteral Carbapenem, in Healthy Male Caucasian Volunteers",Shibayama,2
 10.1128/aac.45.10.2793-2797.2001,"Pharmacodynamics of Fluoroquinolones against
             <i>Streptococcus pneumoniae</i>
-            in Patients with Community-Acquired Respiratory Tract Infections",Ambrose,1
-10.1016/j.bmc.2016.11.008,Animal models in the pharmacokinetic/pharmacodynamic evaluation of antimicrobial agents,Zhao,2
-10.1159/000480902,"Comparison of the Pharmacokinetics of Five β-Lactam
-Antibiotics between Neonatal and Adult Rats",Morita,4
-10.1093/jac/dkl349,Pharmacokinetic-pharmacodynamic rationale for cefepime dosing regimens in intensive care units,Roos,2
-10.1128/aac.40.3.784,"Alteration of postantibiotic effect during one dosing interval of tobramycin, simulated in an in vitro pharmacokinetic model",den Hollander,1
-10.1371/journal.pone.0156131,Defining the Active Fraction of Daptomycin against Methicillin-Resistant Staphylococcus aureus (MRSA) Using a Pharmacokinetic and Pharmacodynamic Approach,Garonzik,1
-10.1016/j.ijantimicag.2006.08.049,Pharmacokinetic/pharmacodynamic modeling of in vitro activity of azithromycin against four different bacterial strains,Treyaprasert,1
-10.1016/s0149-2918(01)80046-1,In vitro activity and pharmacodynamics of azithromycin and clarithromycin against Streptococcus pneumoniae based on serum and intrapulmonary pharmacokinetics,Kays,2
-10.1128/aac.42.4.927,Effect of Grapefruit Juice on Clarithromycin Pharmacokinetics,Cheng,1
-10.1128/aac.38.10.2351,Pharmacodynamics of piperacillin alone and in combination with tazobactam against piperacillin-resistant and -susceptible organisms in an in vitro model of infection,Strayer,1
-10.2165/00003088-199937050-00003,Clinical Pharmacokinetics of Clarithromycin,Rodvold,2
-10.2165/00003088-199325030-00003,Clarithromycin Clinical Pharmacokinetics,Fraschini,1
-10.1093/jac/dkw293,"Polymyxin B in combination with doripenem against heteroresistant
-            <i>Acinetobacter baumannii</i>
-            : pharmacodynamics of new dosing strategies",Rao,1
+            in Patients with Community-Acquired Respiratory Tract Infections",Ambrose,7
+10.1001/jama.279.2.125,Pharmacodynamics of Levofloxacin,Preston,8
+10.1128/aac.02486-17,Population Pharmacokinetics and Dosing Optimization of Ceftazidime in Infants,Shi,3
+10.1093/infdis/153.4.707,The Importance of Pharmacodynamics in Determining the Dosing Interval in Therapy for Experimental Pseudomonas Endocarditis in the Rat,Ingerman,6
+10.1086/314035,Analysis of 42 Cases of Septicemia Caused by an Epidemic Strain of Methicillin-Resistant Staphylococcus aureus: Evidence of Resistance to Vancomycin,Burnie,3
+10.2165/00003088-200342150-00007,Clinical Pharmacodynamics of Linezolid in Seriously Ill Patients Treated in a Compassionate Use Programme,Rayner,5
+10.1093/jac/43.1.79,Pharmacodynamics of levofloxacin and ciprofloxacin against Streptococcus pneumoniae,Lister,6
+10.1093/clinids/17.3.491,Clinical Pharmacokinetics of Continuous Intravenous Administration of Penicillins,Visser,4
+10.1128/aac.41.9.2053,In vitro pharmacodynamics of ceftazidime against Pseudomonas aeruginosa isolates from cystic fibrosis patients,Manduru,5
+10.1093/ajhp/60.6.565,Economic benefit of a meropenem dosage strategy based on pharmacodynamic concepts,Kuti,3
+10.1016/j.ijantimicag.2009.10.008,First-dose and steady-state population pharmacokinetics and pharmacodynamics of piperacillin by continuous or intermittent dosing in critically ill patients with sepsis,Roberts,6
+10.1016/j.ijantimicag.2004.08.012,Pharmacokinetics of piperacillin–tazobactam: intermittent dosing versus continuous infusion,Buck,4
+10.1128/aac.41.9.1926,Rationale behind high-dose amoxicillin therapy for acute otitis media due to penicillin-nonsusceptible pneumococci: support from in vitro pharmacodynamic studies,Lister,5
+10.1128/aac.43.10.2473,Use of Pharmacodynamic Indices To Predict Efficacy of Combination Therapy In Vivo,Mouton,3
+10.1128/aac.39.8.1711,"In vitro pharmacodynamics of piperacillin, piperacillin-tazobactam, and ciprofloxacin alone and in combination against Staphylococcus aureus, Klebsiella pneumoniae, Enterobacter cloacae, and Pseudomonas aeruginosa",Hyatt,5
+10.1080/17512433.2019.1695600,GAPPS (Grading and Assessment of Pharmacokinetic-Pharmacodynamic Studies) a critical appraisal system for antimicrobial PKPD studies – development and application in pediatric antibiotic studies,Gastine,2
+10.1128/aac.49.9.3624-3630.2005,"Pharmacodynamics of Polymyxin B against
+            <i>Pseudomonas aeruginosa</i>",Tam,6
+10.1016/s0149-2918(01)80046-1,In vitro activity and pharmacodynamics of azithromycin and clarithromycin against Streptococcus pneumoniae based on serum and intrapulmonary pharmacokinetics,Kays,3
+10.1093/jac/dkg337,Pharmacodynamic profile of daptomycin against Enterococcus species and methicillin-resistant Staphylococcus aureus in a murine thigh infection model,Dandekar,3
+10.1592/phco.22.8.569.33209,Pharmacokinetic and Pharmacodynamic Evaluation of Two Dosing Regimens for Piperacillin-Tazobactam,Kim,5
+10.1093/cid/cit334,Population Pharmacokinetics of Intravenous Polymyxin B in Critically Ill Patients: Implications for Selection of Dosage Regimens,Sandri,9
+10.1128/aac.06426-11,"Application of a Loading Dose of Colistin Methanesulfonate in Critically Ill Patients: Population Pharmacokinetics, Protein Binding, and Prediction of Bacterial Kill",Mohamed,4
+10.1089/sur.2017.262,Pharmacokinetics and Pharmacodynamics of Antimicrobials in Critically Ill Patients,Owen,7
+10.1007/s40262-018-0682-1,Piperacillin Population Pharmacokinetics and Dosing Regimen Optimization in Critically Ill Children with Normal and Augmented Renal Clearance,Béranger,4
+10.1093/jac/dkv288,Is prolonged infusion of piperacillin/tazobactam and meropenem in critically ill patients associated with improved pharmacokinetic/pharmacodynamic and patient outcomes? An observation from the Defining Antibiotic Levels in Intensive care unit patients (DALI) cohort,Abdul-Aziz,2
+10.1128/aac.41.4.721,Importance of beta-lactamase inhibitor pharmacokinetics in the pharmacodynamics of inhibitor-drug combinations: studies with piperacillin-tazobactam and piperacillin-sulbactam,Lister,3
+10.1016/s0924-8579(02)00022-5,Animal model pharmacokinetics and pharmacodynamics: a critical review,Andes,6
+10.1016/j.bcp.2005.10.038,The role of pharmacodynamic research in the assessment and development of new antibacterial drugs,Lister,3
+10.1128/aac.36.12.2741,"Pharmacodynamics of once-daily amikacin in various combinations with cefepime, aztreonam, and ceftazidime against Pseudomonas aeruginosa in an in vitro infection model",McGrath,3
+10.1097/qco.0000000000000494,How to optimize antibiotic pharmacokinetic/pharmacodynamics for Gram-negative infections in critically ill patients,Heffernan,4
+10.1093/jac/dkq226,fAUC/MIC is the most predictive pharmacokinetic/pharmacodynamic index of colistin against Acinetobacter baumannii in murine thigh and lung infection models,Dudhani,4
+10.1016/j.cmi.2015.06.007,Use of old antibiotics now and in the future from a pharmacokinetic/pharmacodynamic perspective,Muller,3
+10.1111/j.1469-0691.2011.03752.x,The role of pharmacokinetics/pharmacodynamics in setting clinical MIC breakpoints: the EUCAST approach,Mouton,2
+10.1016/j.drup.2011.02.005,Conserving antibiotics for the future: New ways to use old and new drugs from a pharmacokinetic and pharmacodynamic perspective,Mouton,1
+10.1128/aac.01114-09,"Elucidation of the Pharmacokinetic/Pharmacodynamic Determinant of Colistin Activity against
+            <i>Pseudomonas aeruginosa</i>
+            in Murine Thigh and Lung Infection Models",Dudhani,8
+10.1128/aac.43.3.672,"Pharmacodynamic Comparisons of Levofloxacin, Ciprofloxacin, and Ampicillin against
+            <i>Streptococcus pneumoniae</i>
+            in an In Vitro Model of Infection",Lacy,7
+10.1128/aac.31.7.1054,Comparative study with enoxacin and netilmicin in a pharmacodynamic model to determine importance of ratio of antibiotic peak concentration to MIC for bactericidal activity and emergence of resistance,Blaser,2
+10.1093/infdis/jiaa118,Optimizing Pharmacokinetics-Pharmacodynamics of Antimicrobial Management in Patients with Sepsis: A Review,Phe,5
+10.1128/aac.47.3.905-909.2003,"Synergistic Activity of Colistin and Ceftazidime against Multiantibiotic-Resistant
+            <i>Pseudomonas aeruginosa</i>
+            in an In Vitro Pharmacodynamic Model",Gunderson,2
+10.1038/clpt.1989.4,Once-daily dosing decreases renal accumulation of gentamicin and netilmicin,Verpooten,1
+10.1093/jac/dkp434,In vitro pharmacodynamic models to determine the effect of antibacterial drugs,Gloede,4
+10.1016/j.coph.2017.09.004,In vivo infection models in the pre-clinical pharmacokinetic/pharmacodynamic evaluation of antimicrobial agents,Andes,7
+10.1093/ajhp/61.12.1264,Clinical and economic benefits of a meropenem dosage strategy based on pharmacodynamic concepts,Kotapati,3
+10.1055/s-0034-1398490,Applying Pharmacokinetic/Pharmacodynamic Principles in Critically Ill Patients: Optimizing Efficacy and Reducing Resistance Development,Abdul-Aziz,4
+10.1016/j.ijantimicag.2016.09.010,Pharmacokinetics/pharmacodynamics of colistin and polymyxin B: are we there yet?,Tran,2
+10.1128/aac.37.3.483,Pharmacodynamics of a fluoroquinolone antimicrobial agent in a neutropenic rat model of Pseudomonas sepsis,Drusano,2
+10.1128/aac.48.12.4718-4724.2004,Pharmacodynamic Profiling of Piperacillin in the Presence of Tazobactam in Patients through the Use of Population Pharmacokinetic Models and Monte Carlo Simulation,Lodise,3
+10.1016/0002-9343(91)90311-k,Pharmacodynamics and pharmacokinetics of antibiotics with special reference to the fluoroquinolones,Dudley,2
 10.1128/aac.00881-09,"Attenuation of Colistin Bactericidal Activity by High Inoculum of
             <i>Pseudomonas aeruginosa</i>
-            Characterized by a New Mechanism-Based Population Pharmacodynamic Model",Bulitta,4
-10.1128/aac.01119-08,Bone Penetration of Amoxicillin and Clavulanic Acid Evaluated by Population Pharmacokinetics and Monte Carlo Simulation,Landersdorfer,2
-10.1542/peds.2004-2294,Explaining the Poor Bacteriologic Eradication Rate of Single-Dose Ceftriaxone in Group A Streptococcal Tonsillopharyngitis: A Reverse Engineering Solution Using Pharmacodynamic Modeling,Blumer,1
-10.1542/peds.108.5.1180,Unexplained Reduced Microbiological Efficacy of Intramuscular Benzathine Penicillin G and of Oral Penicillin V in Eradication of  Group A Streptococci From Children With Acute Pharyngitis,Kaplan,1
-10.1016/s0924-8579(01)00474-5,Pharmacokinetics and pharmacodynamics of meropenem in critically ill patients,Kitzes-Cohen,1
-10.1128/aac.50.4.1376-1383.2006,"Pharmacodynamics of a New Cephalosporin, PPI-0903 (TAK-599), Active against Methicillin-Resistant
+            Characterized by a New Mechanism-Based Population Pharmacodynamic Model",Bulitta,5
+10.1016/j.mib.2013.06.010,PK/PD models in antibacterial development,Velkov,2
+10.1097/00006454-199603000-00015,Pharmacokinetics and pharmacodynamics of antibiotics in otitis media,CRAIG,6
+10.1111/j.1469-0691.2007.01710.x,A new in-vitro kinetic model to study the pharmacodynamics of antifungal agents: inhibition of the fungicidal activity of amphotericin B against Candida albicans by voriconazole,Lignell,2
+10.1128/aac.37.5.1073,Pharmacodynamics of intravenous ciprofloxacin in seriously ill patients,Forrest,6
+10.1093/jac/dki079,Standardization of pharmacokinetic/pharmacodynamic (PK/PD) terminology for anti-infective drugs: an update,Mouton,4
+10.1128/aac.35.9.1834,Pharmacodynamic effects of subinhibitory concentrations of beta-lactam antibiotics in vitro,Odenholt-Tornqvist,2
+10.1128/aac.49.1.276-280.2005,"Pharmacodynamic Profile of Ertapenem against
+            <i>Klebsiella pneumoniae</i>
+            and
+            <i>Escherichia coli</i>
+            in a Murine Thigh Model",Maglio,4
+10.1086/518137,Pharmacokinetics and Pharmacodynamics of Antimicrobials,Drusano,2
+10.1016/s0891-5520(03)00061-8,Clinical pharmacodynamics of quinolones,Ambrose,4
+10.1128/aac.00238-10,"<i>In Vivo</i>
+            Pharmacodynamics of New Lipopeptide MX-2401",Craig,1
+10.1016/s0002-9343(84)80073-x,"Cefmenoxime Efficacy, Safety, and Pharmacokinetics in Critical Care Patients with Nosocomial Pneumonia",Schentag,2
+10.1128/aac.00736-05,"Mechanism-Based Pharmacodynamic Models of Fluoroquinolone Resistance in
+            <i>Staphylococcus aureus</i>",Chung,1
+10.1086/424849,"Selection of a Moxifloxacin Dose That Suppresses Drug Resistance in<i>Mycobacterium tuberculosis,</i>by Use of an In Vitro Pharmacodynamic Infection Model and Mathematical Modeling",Gumbo,3
+10.1128/aac.42.4.744,Use of Pharmacodynamic Parameters To Predict Efficacy of Combination Therapy by Using Fractional Inhibitory Concentration Kinetics,den Hollander,2
+10.1093/jac/dkm511,"Comparison of once-, twice- and thrice-daily dosing of colistin on antibacterial effect and emergence of resistance: studies with Pseudomonas aeruginosa in an in vitro pharmacodynamic model",Bergen,2
+10.1007/s00228-016-2131-0,Target attainment analysis and optimal sampling designs for population pharmacokinetic study on piperacillin/tazobactam in neonates and young infants,Chen,2
+10.1016/j.ijantimicag.2008.08.031,Pharmacokinetic–pharmacodynamic target attainment analysis of doripenem in infected patients,Ikawa,2
+10.1016/0025-5564(90)90141-k,Incorporating prior parameter uncertainty in the design of sampling schedules for pharmacokinetic parameter estimation experiments,D'Argenio,2
+10.1086/491712,The Pharmacokinetic and Pharmacodynamic Properties of Vancomycin,Rybak,4
+10.1016/j.ddtec.2016.08.004,Translational PK/PD of anti-infective therapeutics,Rathi,2
+10.1345/aph.1m304,Comparative Pharmacodynamics of Intermittent and Prolonged Infusions of Piperacillin/Tazobactam Using Monte Carlo Simulations and Steady-State Pharmacokinetic Data from Hospitalized Patients,Shea,3
+10.1086/514622,The Pharmacodynamics of β‐Lactams,Turnidge,7
+10.1128/aac.47.5.1700-1706.2003,"Pharmacodynamics of Oritavancin (LY333328) in a Neutropenic-Mouse Thigh Model of
             <i>Staphylococcus aureus</i>
-            in Murine Thigh and Lung Infection Models: Identification of an In Vivo Pharmacokinetic-Pharmacodynamic Target",Andes,1
-10.1016/j.diagmicrobio.2006.06.019,Pharmacodynamics of cefprozil against Haemophilus influenzae in an in vitro pharmacodynamic model,Smith,3
-10.1128/aac.02089-15,Population Pharmacokinetics and Pharmacodynamics of Extended-Infusion Piperacillin and Tazobactam in Critically Ill Children,Nichols,1
-10.2165/00003088-198611010-00005,Age-Associated Changes in Ceftriaxone Pharmacokinetics,Hayton,1
+            Infection",Boylan,3
+10.1592/phco.30.12.1279,"Resurgence of Colistin: A Review of Resistance, Toxicity, Pharmacodynamics, and Dosing",Lim,1
+10.1128/aac.43.4.876,Pharmacodynamics of Vancomycin for the Treatment of Experimental Penicillin- and Cephalosporin-Resistant Pneumococcal Meningitis,Ahmed,1
+10.1093/jac/14.suppl_d.43,Pharmacokinetics of vancomycin,Moellering,1
+10.1093/jac/31.suppl_e.51,Comparison of the pharmacokinetics of three-day and five-day regimens of azithromycin in plasma and urine,Wildfeuer,1
+10.1128/aac.47.9.2749-2755.2003,Pharmacodynamics of Levofloxacin and Ciprofloxacin in a Murine Pneumonia Model: Peak Concentration/MIC versus Area under the Curve/MIC Ratios,Scaglione,2
+10.1128/aac.39.12.2749,Open-label crossover study to determine pharmacokinetics and penetration of two dose regimens of levofloxacin into inflammatory fluid,Child,2
+10.1128/aac.41.9.1910,Activities of vancomycin and teicoplanin against penicillin-resistant pneumococci in vitro and in vivo and correlation to pharmacokinetic parameters in the mouse peritonitis model,Knudsen,1
+10.1093/jac/45.5.623,Streptococcus pneumoniae in the USA: in vitro susceptibility and pharmacodynamic analysis,Mason,1
+10.1111/j.1365-2125.2004.02114.x,Quantitative justification for target concentration intervention - parameter variability and predictive performance using population pharmacokinetic models for aminoglycosides,Matthews,1
+10.1093/jac/dkm536,Antimicrobial breakpoints for Gram-negative aerobic bacteria based on pharmacokinetic–pharmacodynamic models with Monte Carlo simulation,Frei,1
+10.4172/2167-1052.s1-007,The Hollow Fiber Infection Model for Antimicrobial Pharmacodynamics and Pharmacokinetics,J.S. Cadwell,5
+10.1086/319281,"Hollow‐Fiber Unit Evaluation of a New Human Immunodeficiency Virus Type 1 Protease Inhibitor, BMS‐232632, for Determination of the Linked Pharmacodynamic Variable",Drusano,1
+10.1016/j.diagmicrobio.2004.08.019,Assessment of pharmacokinetic–pharmacodynamic target attainment of gemifloxacin against Streptococcus pneumoniae,Owens,1
+10.1128/aac.42.3.521,Pharmacodynamic Evaluation of Factors Associated with the Development of Bacterial Resistance in Acutely Ill Patients during Therapy,Thomas,1
+10.1128/aac.40.3.627,Twenty-four-hour area under the concentration-time curve/MIC ratio as a generic predictor of fluoroquinolone antimicrobial effect by using three strains of Pseudomonas aeruginosa and an in vitro pharmacodynamic model,Madaras-Kelly,1
+10.1128/aac.36.2.453,"Pharmacokinetic disposition and bactericidal activities of cefepime, ceftazidime, and cefoperazone in serum and blister fluid",Kalman,2
+10.1128/aac.32.6.848,Vancomycin pharmacokinetics in patients with various degrees of renal function,Rodvold,1
+10.1093/jac/47.4.500,Use of the t &gt; MIC to choose between different dosing regimens of beta-lactam antibiotics,Mouton,1
+10.1128/aac.37.5.1065,Development of a population pharmacokinetic model and optimal sampling strategies for intravenous ciprofloxacin,Forrest,1
+10.1128/aac.01045-16,A Population and Developmental Pharmacokinetic Analysis To Evaluate and Optimize Cefotaxime Dosing Regimen in Neonates and Young Infants,Leroux,1
+10.1093/jac/dki243,Population pharmacokinetics and pharmacodynamics of piperacillin/tazobactam in patients with complicated intra-abdominal infection,Li,1
+10.1128/aac.25.4.433,Pharmacokinetics of vancomycin in patients with various degrees of renal function,Matzke,1
+10.1016/j.accpm.2015.12.012,Assessment of the National French recommendations regarding the dosing regimen of 8mg/kg of gentamicin in patients hospitalised in intensive care units,Allou,1
 10.1128/aac.46.1.69-74.2002,"Pharmacodynamics of Gatifloxacin against
             <i>Streptococcus pneumoniae</i>
             in an In Vitro Pharmacokinetic Model: Impact of Area under the Curve/MIC Ratios on Eradication",Lister,1
 10.1016/s0732-8893(98)00081-9,The prevalence of fluoroquinolone resistance among clinically significant respiratory tract isolates of Streptococcus pneumoniae in the United States and Canada—1997 results from the SENTRY Antimicrobial Surveillance Program,Doern,1
-10.1128/aac.43.8.1901,"Susceptibilities of
-            <i>Streptococcus pneumoniae</i>
-            and
-            <i>Haemophilus influenzae</i>
-            to 10 Oral Antimicrobial Agents Based on Pharmacodynamic Parameters: 1997 U.S. Surveillance Study",Jacobs,1
-10.1016/j.ejps.2021.105868,Population pharmacokinetics-pharmacodynamics of ceftazidime in neonates and young infants: Dosing optimization for neonatal sepsis,Li,1
-10.2165/00044011-199713030-00005,"Comparison of the Plasma, Urine and Blister Fluid Pharmacokinetics of Clarithromycin and Azithromycin in Normal Subjects",Amsden,2
-10.1016/s0891-5520(03)00065-5,"Basic pharmacodynamics of antibacterials with clinical applications to the use of β-lactams, glycopeptides, and linezolid",Craig,1
-10.1093/jac/41.4.451,Pharmacodynamics of penicillin are unaffected by bacterial growth phases of Streptococcus pneumoniae in the mouse peritonitis model,Knudsen,1
-10.1016/j.jcrc.2007.11.011,Ciprofloxacin pharmacokinetics in critically ill patients: A prospective cohort study,van Zanten,2
-10.1177/106002809102501003,"Mathematical Examination of Dual Individualization Principles (I): Relationships between AUC above MIC and Area under the Inhibitory Curve for Cefmenoxime, Ciprofloxacin, and Tobramycin",Schentag,2
-10.1128/aac.28.2.235,Multiple-dose pharmacokinetics of ciprofloxacin administered intravenously to normal volunteers,Gonzalez,1
-10.1080/1120009x.2000.11782309,Fluoroquinolone Pharmacodynamics: Prospective Determination of Relationships Between Exposure and Outcome,Drusano,1
-10.1128/aac.41.2.292,Antibiotic resistance among clinical isolates of Haemophilus influenzae in the United States in 1994 and 1995 and detection of beta-lactamase-positive strains resistant to amoxicillin-clavulanate: results of a national multicenter surveillance study,Doern,2
-10.1016/s0002-9343(84)80073-x,"Cefmenoxime Efficacy, Safety, and Pharmacokinetics in Critical Care Patients with Nosocomial Pneumonia",Schentag,1
-10.1097/00006454-199603000-00015,Pharmacokinetics and pharmacodynamics of antibiotics in otitis media,CRAIG,1
-10.1093/jac/25.suppl_a.49,Pharmacokinetics of azithromycin in rats and dogs,Shepard,1
+10.1128/aac.00118-09,"Bacterial Strain-to-Strain Variation in Pharmacodynamic Index Magnitude, a Hitherto Unconsidered Factor in Establishing Antibiotic Clinical Breakpoints",MacGowan,1
+10.1128/aac.34.10.1925,Assessment of effects of protein binding on daptomycin and vancomycin killing of Staphylococcus aureus by using an in vitro pharmacodynamic model,Garrison,2
+10.1128/aac.48.2.369-377.2004,Issues in Pharmacokinetics and Pharmacodynamics of Anti-Infective Agents: Kill Curves versus MIC,Mueller,2
+10.1128/aac.05298-11,Synergistic Killing of Multidrug-Resistant Pseudomonas aeruginosa at Multiple Inocula by Colistin Combined with Doripenem in an In Vitro Pharmacokinetic/Pharmacodynamic Model,Bergen,1
+10.1093/jac/dkw293,"Polymyxin B in combination with doripenem against heteroresistant
+            <i>Acinetobacter baumannii</i>
+            : pharmacodynamics of new dosing strategies",Rao,1
+10.1128/aac.27.2.141,Antimicrobial therapy of experimental meningitis caused by Streptococcus pneumoniae strains with different susceptibilities to penicillin,McCracken,1

@@ -2,71 +2,74 @@
 1,pharmacokinetic,3
 2,pharmacodynamic,3
 3,MIC,2
-4,PK-PD target,5
-5,PK/PD target,5
-6,pharmacodynamic target,5
-7,pharmacokinetic-pharmacodynamic,5
-8,pharmacokinetic/pharmacodynamic,5
-9,AUC:MIC,5
-10,AUIC,3
-11,AUC,3
-12,AUC/MIC,5
-13,T>MIC,5
-14,time above MIC,5
-15,time above,3
-16,time dependent,4
-17,Cmax:MIC,5
-18,Cmax/MIC,5
-19,peak:MIC,5
-20,peak concentration,3
-21,concentration dependent,4
-22,index,1
-23,target,1
-24,target magnitude,4
-25,target attainment,4
-26,antimicrobial,0.5
-27,antibiotic,0.5
-28,antibacterial,0.5
-29,bacterial,0.5
-30,dosing,0.5
-31,schedule,0.5
-32,regimen,0.5
-33,efficacy,0.5
-34,resistance,0.5
-35,amoxicillin,1
-36,clavulanic acid,1
-37,clavulanate,1
-38,co-amoxiclav,1
-39,ampicillin,1
-40,azithromycin,1
-41,benzylpenicillin,1
-42,cefalexin,1
-43,cefixime,1
-44,cefotaxime,1
-45,ceftazidime,1
-46,ceftriaxone,1
-47,ciprofloxacin,1
-48,clarithromycin,1
-49,cloxacillin,1
-50,flucloxacillin,1
-51,doxycycline,1
-52,erythromycin,1
-53,gentamicin,1
-54,metronidazole,1
-55,nitrofurantoin,1
-56,phenoxymethylpenicillin,1
-57,spectinomycin,1
-58,tetracycline,1
-59,trimethoprim,1
-60,sulfamethoxazole,1
-61,co-trimoxazole,1
-62,vancomycin,1
-63,coamoxiclav,1
-64,cotrimoxazole,1
-65,penicillin,1
-66,beta-lactam,0.5
-67,macrolide,0.5
-68,cephalosporin,0.5
-69,aminoglycoside,0.5
-70,fluoroquinolone,0.5
-71,glycopeptide,0.5
+4,PK/PD,4
+5,PK-PD target,5
+6,PK/PD target,5
+7,pharmacodynamic target,5
+8,pharmacokinetic-pharmacodynamic,5
+9,pharmacokinetic/pharmacodynamic,5
+10,AUC:MIC,5
+11,AUIC,3
+12,AUC,3
+13,AUC/MIC,5
+14,T>MIC,5
+15,time above MIC,5
+16,time above,3
+17,time dependent,4
+18,Cmax:MIC,5
+19,Cmax/MIC,5
+20,peak:MIC,5
+21,peak concentration,3
+22,concentration dependent,4
+23,index,1
+24,target,1
+25,target magnitude,4
+26,target attainment,4
+27,antimicrobial,0.5
+28,antibiotic,0.5
+29,anti-infective,0.5
+30,antibacterial,0.5
+31,bacterial,0.5
+32,dosing,0.5
+33,schedule,0.5
+34,regimen,0.5
+35,efficacy,0.5
+36,resistance,0.5
+37,amoxicillin,1
+38,clavulanic acid,1
+39,clavulanate,1
+40,co-amoxiclav,1
+41,ampicillin,1
+42,azithromycin,1
+43,benzylpenicillin,1
+44,cefalexin,1
+45,cefixime,1
+46,cefotaxime,1
+47,ceftazidime,1
+48,ceftriaxone,1
+49,ciprofloxacin,1
+50,clarithromycin,1
+51,cloxacillin,1
+52,flucloxacillin,1
+53,doxycycline,1
+54,erythromycin,1
+55,gentamicin,1
+56,metronidazole,1
+57,nitrofurantoin,1
+58,phenoxymethylpenicillin,1
+59,spectinomycin,1
+60,tetracycline,1
+61,trimethoprim,1
+62,sulfamethoxazole,1
+63,co-trimoxazole,1
+64,vancomycin,1
+65,coamoxiclav,1
+66,cotrimoxazole,1
+67,penicillin,1
+68,beta-lactam,0.5
+69,macrolide,0.5
+70,cephalosporin,0.5
+71,aminoglycoside,0.5
+72,quinolone,0.5
+73,glycopeptide,0.5
+74,fluoroquinolone,0.5
